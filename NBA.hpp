@@ -16,17 +16,18 @@ struct team
     team* next; //next
     int count; //count
 
-    double pointsPerGame;
-    double shootingPercentage;
-    double reboundPercentage;
-    double defensiveReboundingPercentage;
-    double blockPercentage;
-    double stealsPerDefensivePlay;
-    double turnoversPerPossession;
-    double opponentShootingPercentage;
-    double opponentReboundPercentage;
-    double opponentTurnoversPerPossessionPercentage;
-    double opponentPointsPerGame;
+    //each stat has an ID that we use to get data with
+    double pointsPerGame; //ID 0
+    double shootingPercentage; //ID 1
+    double reboundPercentage; //ID 2
+    double defensiveReboundingPercentage;//ID 3
+    double blockPercentage;//ID 4
+    double stealsPerDefensivePlay;//ID 5
+    double turnoversPerPossession;//ID 6
+    double opponentShootingPercentage;//ID 7
+    double opponentReboundPercentage;//ID 8
+    double opponentTurnoversPerPossessionPercentage;//ID 9
+    double opponentPointsPerGame;//ID 10
 };
 
 
@@ -44,8 +45,8 @@ class NBA {
     ~NBA();
 
     void addTeam(string team); //create a new team struct with name "name" and add it to the hashTable
-    bool isInTable(string word);
-    void incrementCount(string word);
+    bool isInTable(string team);
+    void incrementCount(string team);
     void printTopN(int n);
     int getNumCollisions();
     int getNumItems();
@@ -74,13 +75,6 @@ class NBA {
     void setTeamOpponentReboundPercentage(string url);
     void setOpponentTurnoversPerPossessionPercentage(string url);
     void setTeamOpponentPointsPerGame(string url);
-
-
-    double opponentShootingPercentage;
-    double opponentReboundPercentage;
-    double opponentTurnoversPerPossessionPercentage;
-    double opponentPointsPerGame;
-
 
     void printAllTeams();
 

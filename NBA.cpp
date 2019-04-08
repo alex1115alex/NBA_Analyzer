@@ -222,11 +222,22 @@ void NBA::setTeamNames()
 
 
 //use the url of https://www.teamrankings.com/nba/stat/points-per-game
-
 void NBA::setTeamPointsPerGame()
 {
-  string url = "https://www.teamrankings.com/nba/stat/points-per-game";
+  setStat("https://www.teamrankings.com/nba/stat/points-per-game", 0);
+}
 
+void NBA::setStat(string url, int statID)
+{
+
+  //TODO: DETERMINE DEFAULTS
+  if(url == "")
+  {
+    string url = "https://www.teamrankings.com/nba/stat/points-per-game"; //default to this
+  }
+
+
+  //TODO: FIGURE OUT XPLAT DOWNLOAD
   //cout << "downloading via wget..." << endl;
   //system("wget https://www.teamrankings.com/nba/stat/points-per-game -q");
   //rename("index.html", "pointsPerGame");
@@ -251,10 +262,50 @@ void NBA::setTeamPointsPerGame()
             getline(myfilestream,line);
             getline(myfilestream,line);
 
+            //locate the statistic within the line
             int statisticIndex = line.find(">") + 1; //the index of the statistic within the line
             string statistic = line.substr(statisticIndex, line.find("<", statisticIndex) - statisticIndex);
-
             cout << statistic << endl;
+
+            switch(statID)
+            {
+              case 0:
+                teamHashTable[getHash(name)]->pointsPerGame = stof(statistic);
+              break;
+              case 1:
+                teamHashTable[getHash(name)]->shootingPercentage = stof(statistic);
+              break;
+              case 2:
+
+              break;
+              case 3:
+
+              break;
+              case 4:
+
+              break;
+              case 5:
+
+              break;
+              case 6:
+
+              break;
+              case 7:
+
+              break;
+              case 8:
+
+              break;
+              case 9:
+
+              break;
+              case 10:
+
+              break;
+              default:
+              cout << "What the fuck did you type in" << endl;
+              break;
+            }
           }
       }
   }
