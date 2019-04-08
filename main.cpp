@@ -38,6 +38,7 @@ int main()
   NBA myNBA(30);
   myNBA.setTeamNames(); //initialize all the teams into the array
   myNBA.printAllTeams(); //print all teams in hashTable;
+  myNBA.setTeamPointsPerGame();
 
   return 0;
 }

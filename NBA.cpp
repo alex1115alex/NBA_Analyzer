@@ -222,26 +222,39 @@ void NBA::setTeamNames()
 
 
 //use the url of https://www.teamrankings.com/nba/stat/points-per-game
-/*
+
 void NBA::setTeamPointsPerGame()
 {
   string url = "https://www.teamrankings.com/nba/stat/points-per-game";
 
-  cout << "downloading via wget..." << endl;
-  system("wget " << url << " -q");
-  rename("index.html", "pointsPerGame");
-  cout << "download complete!" << endl;
+  //cout << "downloading via wget..." << endl;
+  //system("wget https://www.teamrankings.com/nba/stat/points-per-game -q");
+  //rename("index.html", "pointsPerGame");
+  //cout << "download complete!" << endl;
 
   ifstream myfilestream;
-  myfilestream.open(pointsPerGame);
+  myfilestream.open("points-per-game");
   if (myfilestream.is_open()) //check if the stream is open
   {
       string line = "";
       while (getline(myfilestream, line)) //while there are more lines to be added
       {
-          if(line.find("text-center") != -1 || line.find("text-right") != -1 || line.find("table-team-logo-text") != -1) //disregard empty lines, or those that are a stop word
+          if(line.find("td class=\"text-left nowrap\" data-sort=\"") != -1) //if the line contains a team name
           {
-            cout << line << endl;
+            //locate the name within the line
+            int nameIndex = line.find("td class=\"text-left nowrap\" data-sort=\"") + 39; //the index of line at which the name starts
+            string name = line.substr(nameIndex, line.find("\"><a") - nameIndex); //' "><a ' is the location at which the name ends
+            cout << "Team name: " << name << endl;
+
+            //because the "last 3" statistic is two lines down from the line with the team name,
+            //we need to go two lines down by calling getline twice.
+            getline(myfilestream,line);
+            getline(myfilestream,line);
+
+            int statisticIndex = line.find(">") + 1; //the index of the statistic within the line
+            string statistic = line.substr(statisticIndex, line.find("<", statisticIndex) - statisticIndex);
+
+            cout << statistic << endl;
           }
       }
   }
@@ -250,4 +263,4 @@ void NBA::setTeamPointsPerGame()
       cout << "Failed to open the file." << endl;
   }
   myfilestream.close(); //close the file stream
-}*/
+}

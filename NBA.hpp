@@ -51,6 +51,11 @@ class NBA {
     int getNumItems();
     int getTotalNumWords();
 
+    /*
+    * Name setter
+    * For each name within file
+    * addTeam(name);
+    */
     void setTeamNames(); //parse all team names and add each with addTeam(name);
 
     /*
@@ -58,7 +63,7 @@ class NBA {
     * For each name within file also locate the corresponding statistic
     * teamHashTable[getHash(name)]->correspondingStat = correspondingData;
     */
-    void setTeamPointsPerGame(string url);
+    void setTeamPointsPerGame();
     void setTeamShootingPercentage(string url);
     void setTeamReboundingPercentage(string url);
     void setTeamDefensiveReboundingPercentage(string url);
