@@ -144,7 +144,11 @@ void NBA::printAllTeams()
       team* p = teamHashTable[i]; //create a pointer towards the current hashTable element
       while(p != nullptr)
       {
-        cout << p->name << endl;
+        cout << "===" << p->name << "===" << endl;
+        cout << "points per game: " << p->pointsPerGame << endl;
+        cout << "shooting percentage: " << p->shootingPercentage << "%" << endl;
+        cout << "rebound percentage: " << p->reboundPercentage << "%" << endl;
+        cout << "defensive rebounding percentage: " << p->defensiveReboundingPercentage << "%" << endl;
         p = p->next;
       }
     }
@@ -245,13 +249,14 @@ void NBA::setStat(string url, int statID)
             //locate the statistic within the line
             int statisticIndex = line.find(">") + 1; //the index of the statistic within the line
             string statistic = line.substr(statisticIndex, line.find("<", statisticIndex) - statisticIndex);
-            //cout << statistic << endl;
-            //cout << stof(statistic) << endl;
+            cout << statistic << endl;
+            cout << stod(statistic) << endl;
 
             switch(statID)
             {
               case 0:
                 teamHashTable[getHash(name)]->pointsPerGame = stod(statistic);
+                cout << teamHashTable[getHash(name)]->pointsPerGame << endl;
               break;
               case 1:
                 teamHashTable[getHash(name)]->shootingPercentage = stod(statistic);
@@ -327,21 +332,21 @@ void NBA::setTeamNames()
   myfilestream.close(); //close the file stream
 }
 
-
-//use the url of https://www.teamrankings.com/nba/stat/points-per-game
-void NBA::setTeamPointsPerGame()
+void NBA::initializeAllStats()
 {
   setStat("https://www.teamrankings.com/nba/stat/points-per-game", 0);
-}
-
-void NBA::setTeamShootingPercentage()
-{
+/*
   setStat("https://www.teamrankings.com/nba/stat/shooting-pct", 1);
-}
-
-void NBA::setTeamReboundingPercentage()
-{
   setStat("https://www.teamrankings.com/nba/stat/offensive-rebounding-pct", 2);
-}
 
-//TODO: Finish creating setter methods
+  setStat("https://www.teamrankings.com/nba/stat/defensive-rebounding-pct", 3);
+
+  setStat("https://www.teamrankings.com/nba/stat/block-pct", 4);
+  setStat("https://www.teamrankings.com/nba/stat/steal-pct", 5);
+  setStat("https://www.teamrankings.com/nba/stat/turnovers-per-possession", 6);
+  setStat("https://www.teamrankings.com/nba/stat/opponent-shooting-pct", 7);
+  setStat("https://www.teamrankings.com/nba/stat/opponent-offensive-rebounding-pct", 8);
+  setStat("https://www.teamrankings.com/nba/stat/opponent-turnovers-per-possession", 9);
+  setStat("https://www.teamrankings.com/nba/stat/opponent-points-per-game", 10);
+  */
+}

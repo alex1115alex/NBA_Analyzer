@@ -76,10 +76,12 @@ class NBA {
      */
     void setStat(string url, int statID);
 
+    //calls setStat for each stat
+    void initializeAllStats();
     /*
     * Setters
     * calls setStat(contextualURL, contextualID);
-    */
+
     void setTeamPointsPerGame();
     void setTeamShootingPercentage();
     void setTeamReboundingPercentage();
@@ -91,6 +93,7 @@ class NBA {
     void setTeamOpponentReboundPercentage();
     void setOpponentTurnoversPerPossessionPercentage();
     void setTeamOpponentPointsPerGame();
+    */
 
     //prints all the team names in the hashTable
     void printAllTeams();

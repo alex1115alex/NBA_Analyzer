@@ -39,9 +39,10 @@ int main()
 
   NBA myNBA(30);
   myNBA.setTeamNames(); //initialize all the teams into the array
-  myNBA.printAllTeams(); //print all teams in hashTable;
-  cout << "set team pts per game" << endl;
-  myNBA.setTeamPointsPerGame();
+  //myNBA.printAllTeams(); //print all teams in hashTable;
+  cout << "initialize all stats" << endl;
+  myNBA.initializeAllStats();
+  myNBA.printAllTeams();
 
   return 0;
 }
