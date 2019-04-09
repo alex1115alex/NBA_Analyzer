@@ -5,6 +5,7 @@
 #include <iomanip>
 #include <stdio.h>
 #include <fstream>
+#include "curlIN/curl.h"
 using namespace std;
 
 //struct that represents a team
@@ -59,23 +60,39 @@ class NBA {
     */
     void setTeamNames(); //parse all team names and add each with addTeam(name);
 
+    //download the url and return the output filename
+    /*
+     * downloadURL(string url, string output)
+     * Uses libcurl to download the HTML of a website at url
+     * Save contents to output
+     */
+    string downloadURL(string url, string output);
+
+    /*
+     * setStat(string url, int statID);
+     * call downloadURL to download the file
+     * parse the file and locate the name and statistic
+     * insert the statistic into the proper team struct
+     */
+    void setStat(string url, int statID);
+
     /*
     * Setters
-    * For each name within file also locate the corresponding statistic
-    * teamHashTable[getHash(name)]->correspondingStat = correspondingData;
+    * calls setStat(contextualURL, contextualID);
     */
     void setTeamPointsPerGame();
-    void setTeamShootingPercentage(string url);
-    void setTeamReboundingPercentage(string url);
-    void setTeamDefensiveReboundingPercentage(string url);
-    void setTeamBlockPercentage(string url);
-    void setTeamStealsPerDefensivePlay(string url);
-    void setTeamTurnoversPerPossession(string url);
-    void setTeamOpponentShootingPercentage(string url);
-    void setTeamOpponentReboundPercentage(string url);
-    void setOpponentTurnoversPerPossessionPercentage(string url);
-    void setTeamOpponentPointsPerGame(string url);
+    void setTeamShootingPercentage();
+    void setTeamReboundingPercentage();
+    void setTeamDefensiveReboundingPercentage();
+    void setTeamBlockPercentage();
+    void setTeamStealsPerDefensivePlay();
+    void setTeamTurnoversPerPossession();
+    void setTeamOpponentShootingPercentage();
+    void setTeamOpponentReboundPercentage();
+    void setOpponentTurnoversPerPossessionPercentage();
+    void setTeamOpponentPointsPerGame();
 
+    //prints all the team names in the hashTable
     void printAllTeams();
 
   private:

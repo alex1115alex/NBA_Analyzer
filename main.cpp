@@ -1,9 +1,7 @@
-#include <iostream>
-#include <iomanip>
-#include <stdio.h>
-#include <fstream>
 #include "NBA.hpp"
-using namespace std;
+
+
+
 
 int main()
 {
@@ -35,9 +33,14 @@ int main()
   myfilestream.close(); //close the file stream
   */
 
+
+
+
+
   NBA myNBA(30);
   myNBA.setTeamNames(); //initialize all the teams into the array
   myNBA.printAllTeams(); //print all teams in hashTable;
+  cout << "set team pts per game" << endl;
   myNBA.setTeamPointsPerGame();
 
   return 0;

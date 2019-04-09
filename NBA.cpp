@@ -184,67 +184,47 @@ team* NBA::searchTable(string name)
   return p; //if p is nullptr or it's the correct team, return it
 }
 
-
-//use the url of https://www.teamrankings.com/nba/stat/points-per-game
-//set all the teams names
-void NBA::setTeamNames()
+//helper function for downloadURL
+static size_t write_data(void *ptr, size_t size, size_t nmemb, void *stream)
 {
-  string url = "https://www.teamrankings.com/nba/stat/points-per-game";
-
-  //cout << "downloading via wget..." << endl;
-  //system("wget https://www.teamrankings.com/nba/stat/points-per-game -q");
-  //rename("index.html", "pointsPerGame");
-  //cout << "download complete!" << endl;
-
-  ifstream myfilestream;
-  myfilestream.open("points-per-game");
-  if (myfilestream.is_open()) //check if the stream is open
-  {
-      string line = "";
-      while (getline(myfilestream, line)) //while there are more lines to be added
-      {
-          if(line.find("td class=\"text-left nowrap\" data-sort=\"") != -1) //disregard empty lines, or those that are a stop word
-          {
-            //cout << line << endl;
-            int nameIndex = line.find("td class=\"text-left nowrap\" data-sort=\"") + 39; //the index of line at which the name starts
-            string name = line.substr(nameIndex, line.find("\"><a") - nameIndex); //' "><a ' is the location at which the name ends
-            cout << name << endl;
-            addTeam(name); //add the team to the roster
-          }
-      }
-  }
-  else //if it couldn't be opened, print this
-  {
-      cout << "Failed to open the file." << endl;
-  }
-  myfilestream.close(); //close the file stream
+  size_t written = fwrite(ptr, size, nmemb, (FILE *)stream);
+  return written;
 }
 
-
-//use the url of https://www.teamrankings.com/nba/stat/points-per-game
-void NBA::setTeamPointsPerGame()
+string NBA::downloadURL(string urlString, string outputString)
 {
-  setStat("https://www.teamrankings.com/nba/stat/points-per-game", 0);
+  //first we convert the string parameters into arrays of chars
+  //It's a stupid process
+  char url[urlString.length() + 1];
+  strcpy(url, urlString.c_str());
+
+  char output[outputString.length() + 1];
+  strcpy(output, outputString.c_str());
+
+  //create CURL instance
+  CURL *curl = curl_easy_init();
+  char *fileName = output;
+  FILE *file;
+  if(curl)
+  {
+    curl_easy_setopt(curl, CURLOPT_URL, url);
+    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);
+    file = fopen(fileName, "wb");
+    if(file)
+    {
+      curl_easy_setopt(curl, CURLOPT_WRITEDATA, file); //write the data to the output file
+      curl_easy_perform(curl); //do the stuff! Download it!
+      fclose(file); //close the file now that we're done
+    }
+    curl_easy_cleanup(curl); //I'm not sure what this does but all the libcurl examples use it
+  }
+  return output;
 }
 
 void NBA::setStat(string url, int statID)
 {
-
-  //TODO: DETERMINE DEFAULTS
-  if(url == "")
-  {
-    string url = "https://www.teamrankings.com/nba/stat/points-per-game"; //default to this
-  }
-
-
-  //TODO: FIGURE OUT XPLAT DOWNLOAD
-  //cout << "downloading via wget..." << endl;
-  //system("wget https://www.teamrankings.com/nba/stat/points-per-game -q");
-  //rename("index.html", "pointsPerGame");
-  //cout << "download complete!" << endl;
-
   ifstream myfilestream;
-  myfilestream.open("points-per-game");
+  myfilestream.open(downloadURL(url, "fileOPT"));
   if (myfilestream.is_open()) //check if the stream is open
   {
       string line = "";
@@ -265,45 +245,46 @@ void NBA::setStat(string url, int statID)
             //locate the statistic within the line
             int statisticIndex = line.find(">") + 1; //the index of the statistic within the line
             string statistic = line.substr(statisticIndex, line.find("<", statisticIndex) - statisticIndex);
-            cout << statistic << endl;
+            //cout << statistic << endl;
+            //cout << stof(statistic) << endl;
 
             switch(statID)
             {
               case 0:
-                teamHashTable[getHash(name)]->pointsPerGame = stof(statistic);
+                teamHashTable[getHash(name)]->pointsPerGame = stod(statistic);
               break;
               case 1:
-                teamHashTable[getHash(name)]->shootingPercentage = stof(statistic);
+                teamHashTable[getHash(name)]->shootingPercentage = stod(statistic);
               break;
               case 2:
-
+                teamHashTable[getHash(name)]->reboundPercentage = stod(statistic);
               break;
               case 3:
-
+                teamHashTable[getHash(name)]->defensiveReboundingPercentage = stod(statistic);
               break;
               case 4:
-
+                teamHashTable[getHash(name)]->blockPercentage = stod(statistic);
               break;
               case 5:
-
+                teamHashTable[getHash(name)]->stealsPerDefensivePlay = stod(statistic);
               break;
               case 6:
-
+                teamHashTable[getHash(name)]->turnoversPerPossession = stod(statistic);
               break;
               case 7:
-
+                teamHashTable[getHash(name)]->opponentShootingPercentage = stod(statistic);
               break;
               case 8:
-
+                teamHashTable[getHash(name)]->opponentReboundPercentage = stod(statistic);
               break;
               case 9:
-
+                teamHashTable[getHash(name)]->opponentTurnoversPerPossessionPercentage = stod(statistic);
               break;
               case 10:
-
+                teamHashTable[getHash(name)]->opponentPointsPerGame = stod(statistic);
               break;
               default:
-              cout << "What the fuck did you type in" << endl;
+              cout << "What the fuck did you type in?" << endl;
               break;
             }
           }
@@ -315,3 +296,52 @@ void NBA::setStat(string url, int statID)
   }
   myfilestream.close(); //close the file stream
 }
+
+//use the url of https://www.teamrankings.com/nba/stat/points-per-game
+//set all the teams names
+void NBA::setTeamNames()
+{
+  string url = "https://www.teamrankings.com/nba/stat/points-per-game";
+
+  ifstream myfilestream;
+  myfilestream.open(downloadURL(url, "fileOPT"));
+  if (myfilestream.is_open()) //check if the stream is open
+  {
+      string line = "";
+      while (getline(myfilestream, line)) //while there are more lines to be added
+      {
+          if(line.find("td class=\"text-left nowrap\" data-sort=\"") != -1) //disregard empty lines, or those that are a stop word
+          {
+            //cout << line << endl;
+            int nameIndex = line.find("td class=\"text-left nowrap\" data-sort=\"") + 39; //the index of line at which the name starts
+            string name = line.substr(nameIndex, line.find("\"><a") - nameIndex); //' "><a ' is the location at which the name ends
+            //cout << name << endl;
+            addTeam(name); //add the team to the roster
+          }
+      }
+  }
+  else //if it couldn't be opened, print this
+  {
+      cout << "Failed to open the file." << endl;
+  }
+  myfilestream.close(); //close the file stream
+}
+
+
+//use the url of https://www.teamrankings.com/nba/stat/points-per-game
+void NBA::setTeamPointsPerGame()
+{
+  setStat("https://www.teamrankings.com/nba/stat/points-per-game", 0);
+}
+
+void NBA::setTeamShootingPercentage()
+{
+  setStat("https://www.teamrankings.com/nba/stat/shooting-pct", 1);
+}
+
+void NBA::setTeamReboundingPercentage()
+{
+  setStat("https://www.teamrankings.com/nba/stat/offensive-rebounding-pct", 2);
+}
+
+//TODO: Finish creating setter methods
