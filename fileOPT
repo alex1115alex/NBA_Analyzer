@@ -11,9 +11,9 @@
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>NBA Stats - NBA Team Points per Game on TeamRankings.com</title>
+        <title>NBA Stats - NBA Team Opponent Points per Game on TeamRankings.com</title>
         <meta name="apple-mobile-web-app-title" content="TeamRankings">
-        <meta name="description" content="NBA points per game, by team."/>
+        <meta name="description" content="NBA opponent points per game, by team."/>
 		
 				
 				
@@ -317,16 +317,16 @@
 		        	<div class="section-nav-header">Premium Picks & Tools</div>
 		        	<ul class="nav-list nav-list-with-lines">			        
 						<li><a href="#" class="section-nav-trigger" data-section="betting" data-track-category="Mobile Nav" data-track-action="Level 1" data-track-label="Betting Picks">Betting Picks<svg class="icon icon-arrow-right2"><use xlink:href="#icon-arrow-right2"></use></svg></a></li>
-				        <li><a href="/ncaa-bracket-picks/" data-track-category="Mobile Nav" data-track-action="Level 1" data-track-label="NCAA Bracket Picks">NCAA Bracket Picks 2019</a></li>				        				        	    		        
+				        				        				        	    		        
 			        </ul>
 
 		        	<div class="section-nav-header">In-Season Sports</div>
 		        	<ul class="nav-list nav-list-with-lines">
-					    					    <li><a href="#" class="section-nav-trigger" data-section="nba" data-track-category="Mobile Nav" data-track-action="Level 1" data-track-label="NBA">NBA <svg class="icon icon-arrow-right2"><use xlink:href="#icon-arrow-right2"></use></svg></a></li>					    <li><a href="#" class="section-nav-trigger" data-section="mlb" data-track-category="Mobile Nav" data-track-action="Level 1" data-track-label="MLB">MLB <svg class="icon icon-arrow-right2"><use xlink:href="#icon-arrow-right2"></use></svg></a></li>					    					    <li><a href="#" class="section-nav-trigger" data-section="ncb" data-track-category="Mobile Nav" data-track-action="Level 1" data-track-label="NCAAB">NCAAB <svg class="icon icon-arrow-right2"><use xlink:href="#icon-arrow-right2"></use></svg></a></li>		        	</ul>
+					    					    <li><a href="#" class="section-nav-trigger" data-section="nba" data-track-category="Mobile Nav" data-track-action="Level 1" data-track-label="NBA">NBA <svg class="icon icon-arrow-right2"><use xlink:href="#icon-arrow-right2"></use></svg></a></li>					    <li><a href="#" class="section-nav-trigger" data-section="mlb" data-track-category="Mobile Nav" data-track-action="Level 1" data-track-label="MLB">MLB <svg class="icon icon-arrow-right2"><use xlink:href="#icon-arrow-right2"></use></svg></a></li>					    					    		        	</ul>
 
 		        	<div class="section-nav-header">More Sports</div>
 		        	<ul class="nav-list nav-list-with-lines">
-					    <li><a href="#" class="section-nav-trigger" data-section="nfl" data-track-category="Mobile Nav" data-track-action="Level 1" data-track-label="NFL">NFL <svg class="icon icon-arrow-right2"><use xlink:href="#icon-arrow-right2"></use></svg></a></li>					    					    					    <li><a href="#" class="section-nav-trigger" data-section="ncf" data-track-category="Mobile Nav" data-track-action="Level 1" data-track-label="NCAAF">NCAAF <svg class="icon icon-arrow-right2"><use xlink:href="#icon-arrow-right2"></use></svg></a></li>					    		        	</ul>
+					    <li><a href="#" class="section-nav-trigger" data-section="nfl" data-track-category="Mobile Nav" data-track-action="Level 1" data-track-label="NFL">NFL <svg class="icon icon-arrow-right2"><use xlink:href="#icon-arrow-right2"></use></svg></a></li>					    					    					    <li><a href="#" class="section-nav-trigger" data-section="ncf" data-track-category="Mobile Nav" data-track-action="Level 1" data-track-label="NCAAF">NCAAF <svg class="icon icon-arrow-right2"><use xlink:href="#icon-arrow-right2"></use></svg></a></li>					    <li><a href="#" class="section-nav-trigger" data-section="ncb" data-track-category="Mobile Nav" data-track-action="Level 1" data-track-label="NCAAB">NCAAB <svg class="icon icon-arrow-right2"><use xlink:href="#icon-arrow-right2"></use></svg></a></li>		        	</ul>
 
 		        	<div class="section-nav-header">Other</div>
 		        	<ul class="nav-list nav-list-with-lines">
@@ -537,20 +537,20 @@
 				<li><a href="/mlb/schedules/"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Daily Schedule">Daily Schedule</a></li>
 				<li><a href="/mlb/schedules/season/"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Season Schedule">Season Schedule</a></li>
                                 
-                                                                                          <li><a href="/mlb/matchup/indians-tigers-2019-04-09"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 1">Cleveland @ Detroit</a></li>
-                                                              <li><a href="/mlb/matchup/blue-jays-red-sox-2019-04-09"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 2">Toronto @ Boston</a></li>
-                                                              <li><a href="/mlb/matchup/rays-white-sox-2019-04-09"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 3">Tampa Bay @ Chi Sox</a></li>
-                                                              <li><a href="/mlb/matchup/marlins-reds-2019-04-09"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 4">Miami @ Cincinnati</a></li>
-                                                              <li><a href="/mlb/matchup/athletics-orioles-2019-04-09"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 5">Oakland @ Baltimore</a></li>
-                                                              <li><a href="/mlb/matchup/nationals-phillies-2019-04-09"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 6">Washington @ Philadelphia</a></li>
-                                                              <li><a href="/mlb/matchup/twins-mets-2019-04-09"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 7">Minnesota @ NY Mets</a></li>
-                                                              <li><a href="/mlb/matchup/dodgers-cardinals-2019-04-09"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 8">LA Dodgers @ St. Louis</a></li>
-                                                              <li><a href="/mlb/matchup/yankees-astros-2019-04-09"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 9">NY Yankees @ Houston</a></li>
-                                                              <li><a href="/mlb/matchup/mariners-royals-2019-04-09"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 10">Seattle @ Kansas City</a></li>
-                                                              <li><a href="/mlb/matchup/braves-rockies-2019-04-09"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 11">Atlanta @ Colorado</a></li>
-                                                              <li><a href="/mlb/matchup/rangers-diamondbacks-2019-04-09"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 12">Texas @ Arizona</a></li>
-                                                              <li><a href="/mlb/matchup/padres-giants-2019-04-09"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 13">San Diego @ SF Giants</a></li>
-                                                              <li><a href="/mlb/matchup/brewers-angels-2019-04-09"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 14">Milwaukee @ LA Angels</a></li>
+                                                                                          <li><a href="/mlb/matchup/indians-tigers-2019-04-10"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 1">Cleveland @ Detroit</a></li>
+                                                              <li><a href="/mlb/matchup/rays-white-sox-2019-04-10"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 2">Tampa Bay @ Chi Sox</a></li>
+                                                              <li><a href="/mlb/matchup/braves-rockies-2019-04-10"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 3">Atlanta @ Colorado</a></li>
+                                                              <li><a href="/mlb/matchup/padres-giants-2019-04-10"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 4">San Diego @ SF Giants</a></li>
+                                                              <li><a href="/mlb/matchup/marlins-reds-2019-04-10"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 5">Miami @ Cincinnati</a></li>
+                                                              <li><a href="/mlb/matchup/athletics-orioles-2019-04-10"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 6">Oakland @ Baltimore</a></li>
+                                                              <li><a href="/mlb/matchup/nationals-phillies-2019-04-10"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 7">Washington @ Philadelphia</a></li>
+                                                              <li><a href="/mlb/matchup/twins-mets-2019-04-10"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 8">Minnesota @ NY Mets</a></li>
+                                                              <li><a href="/mlb/matchup/yankees-astros-2019-04-10"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 9">NY Yankees @ Houston</a></li>
+                                                              <li><a href="/mlb/matchup/dodgers-cardinals-2019-04-10"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 10">LA Dodgers @ St. Louis</a></li>
+                                                              <li><a href="/mlb/matchup/pirates-cubs-2019-04-10"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 11">Pittsburgh @ Chi Cubs</a></li>
+                                                              <li><a href="/mlb/matchup/mariners-royals-2019-04-10"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 12">Seattle @ Kansas City</a></li>
+                                                              <li><a href="/mlb/matchup/rangers-diamondbacks-2019-04-10"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 13">Texas @ Arizona</a></li>
+                                                              <li><a href="/mlb/matchup/brewers-angels-2019-04-10"   data-track-category="Mobile Nav" data-track-action="MLB Level 3" data-track-label="Matchup 14">Milwaukee @ LA Angels</a></li>
                                                           							</ul>
 		</li>
         <li><a href="#" class="expand-controller " data-track-category="Mobile Nav" data-track-action="MLB Level 2" data-track-label="Rankings">Rankings <svg class="icon"><use xlink:href="#icon-arrow-right2"></use></svg></a>
@@ -637,17 +637,17 @@
 				<li><a href="/nba/schedules/"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Daily Schedule">Daily Schedule</a></li>
 				<li><a href="/nba/schedules/season/"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Season Schedule">Season Schedule</a></li>
                                 
-                                                                                          <li><a href="/nba/matchup/rockets-thunder-2019-04-09"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 1">Houston @ Okla City</a></li>
-                                                              <li><a href="/nba/matchup/nuggets-jazz-2019-04-09"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 2">Denver @ Utah</a></li>
-                                                              <li><a href="/nba/matchup/76ers-heat-2019-04-09"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 3">Philadelphia @ Miami</a></li>
-                                                              <li><a href="/nba/matchup/raptors-timberwolves-2019-04-09"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 4">Toronto @ Minnesota</a></li>
-                                                              <li><a href="/nba/matchup/warriors-pelicans-2019-04-09"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 5">Golden State @ New Orleans</a></li>
-                                                              <li><a href="/nba/matchup/trail-blazers-lakers-2019-04-09"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 6">Portland @ LA Lakers</a></li>
-                                                              <li><a href="/nba/matchup/celtics-wizards-2019-04-09"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 7">Boston @ Washington</a></li>
-                                                              <li><a href="/nba/matchup/grizzlies-pistons-2019-04-09"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 8">Memphis @ Detroit</a></li>
-                                                              <li><a href="/nba/matchup/hornets-cavaliers-2019-04-09"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 9">Charlotte @ Cleveland</a></li>
-                                                              <li><a href="/nba/matchup/suns-mavericks-2019-04-09"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 10">Phoenix @ Dallas</a></li>
-                                                              <li><a href="/nba/matchup/knicks-bulls-2019-04-09"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 11">New York @ Chicago</a></li>
+                                                                                          <li><a href="/nba/matchup/jazz-clippers-2019-04-10"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 1">Utah @ LA Clippers</a></li>
+                                                              <li><a href="/nba/matchup/thunder-bucks-2019-04-10"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 2">Okla City @ Milwaukee</a></li>
+                                                              <li><a href="/nba/matchup/timberwolves-nuggets-2019-04-10"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 3">Minnesota @ Denver</a></li>
+                                                              <li><a href="/nba/matchup/magic-hornets-2019-04-10"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 4">Orlando @ Charlotte</a></li>
+                                                              <li><a href="/nba/matchup/heat-nets-2019-04-10"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 5">Miami @ Brooklyn</a></li>
+                                                              <li><a href="/nba/matchup/warriors-grizzlies-2019-04-10"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 6">Golden State @ Memphis</a></li>
+                                                              <li><a href="/nba/matchup/mavericks-spurs-2019-04-10"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 7">Dallas @ San Antonio</a></li>
+                                                              <li><a href="/nba/matchup/kings-trail-blazers-2019-04-10"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 8">Sacramento @ Portland</a></li>
+                                                              <li><a href="/nba/matchup/pacers-hawks-2019-04-10"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 9">Indiana @ Atlanta</a></li>
+                                                              <li><a href="/nba/matchup/bulls-76ers-2019-04-10"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 10">Chicago @ Philadelphia</a></li>
+                                                              <li><a href="/nba/matchup/pistons-knicks-2019-04-10"   data-track-category="Mobile Nav" data-track-action="NBA Level 3" data-track-label="Matchup 11">Detroit @ New York</a></li>
                                                           			</ul>
 		</li>
         <li><a href="#" class="expand-controller " data-track-category="Mobile Nav" data-track-action="NBA Level 2" data-track-label="Rankings">Rankings <svg class="icon"><use xlink:href="#icon-arrow-right2"></use></svg></a>
@@ -714,12 +714,15 @@
     <ul class="nav-list nav-list-with-lines ">  
         <li><a href="#" class="expand-controller" data-track-category="Mobile Nav" data-track-action="NCAAB Level 2" data-track-label="TR Brackets"><span class="long-name "><span class="tr-brackets-logo">TR Brackets</span></span><span class="short-name hidden">TR Brackets</span> <svg class="icon"><use xlink:href="#icon-arrow-right2"></use></svg></a>
 	    			        <ul class="nav-list hidden ncb-tr-brackets-nav-list">
-					<li><a href="/ncaa-bracket-picks/" data-track-category="Mobile Nav" data-track-action="NCAAB Level 3" data-track-label="NCAA Bracket Picks">NCAA Bracket Picks <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
-					<li><a href="/ncaa-tournament/game-predictor/" data-track-click-event data-track-category="Mobile Nav" data-track-action="NCAAB Level 3" data-track-label="Game Predictor">Game Predictor <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>				
-					<li><a href="/ncaa-tournament/bracket-strategy/" data-track-click-event data-track-category="Mobile Nav" data-track-action="NCAAB Level 3" data-track-label="Bracket Strategy">Bracket Strategy <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
+					<li><a href="/ncaa-bracket-picks/" data-track-category="Mobile Nav" data-track-action="NCAAB Level 3" data-track-label="Bracket Pool Picks">Bracket Pool Picks <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
+					<li><a href="/ncaa-tournament/bracket-predictions/" data-track-category="Mobile Nav" data-track-action="NCAAB Level 3" data-track-label="Bracket Predictions">Bracket Predictions <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
+					<li><a href="/ncaa-tournament/bracketology/" data-track-category="Mobile Nav" data-track-action="NCAAB Level 3" data-track-label="Bracketology">Bracketology <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
+					<li><a href="/ncb/conference-tournaments/" data-track-category="Mobile Nav" data-track-action="NCAAB Level 3" data-track-label="Conference Tournaments">Conference Tournaments <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
+					<li><a href="/ncb/rpi/" data-track-category="Mobile Nav" data-track-action="NCAAB Level 3" data-track-label="RPI Rankings">RPI Rankings <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
+					<li><a href="/ncaa-tournament/game-predictor/" data-track-category="Desktop Left Nav" data-track-action="NCAAB Level 3" data-track-label="Game Predictor">Game Predictor <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
 					<li><a href="/ncaa-tournament/printable-brackets/" data-track-category="Mobile Nav" data-track-action="NCAAB Level 3" data-track-label="Printable Brackets">Printable Brackets <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
 		        </ul>
-		            </li>       	
+			        </li>       	
         <li><a href="#" class="expand-controller " data-track-category="Mobile Nav" data-track-action="NCAAB Level 2" data-track-label="Betting Picks"><span class="long-name ">Betting Picks</span><span class="short-name hidden">Betting</span> <svg class="icon"><use xlink:href="#icon-arrow-right2"></use></svg></a>
 	        <ul class="nav-list hidden">
 				<li><a href="/ncaa-basketball-win-picks/" class=""  data-track-category="Mobile Nav" data-track-action="NCAAB Level 3" data-track-label="Game Winner Picks">Game Winner Picks</a></li>
@@ -811,21 +814,7 @@
 				<li><a href="/mlb/schedules/" data-track-category="Mobile Nav" data-track-action="Betting Level 3" data-track-label="MLB Matchups">Matchups</a></li>
 			 </ul>
 		</li>
-								<li><a href="#" class="expand-controller" data-track-category="Mobile Nav" data-track-action="Betting Level 2" data-track-label="NCAAB">NCAAB <svg class="icon"><use xlink:href="#icon-arrow-right2"></use></svg></a>
-			 <ul class="nav-list hidden">
-				<li><a href="/ncaa-basketball-betting-picks/" data-track-category="Mobile Nav" data-track-action="Betting Level 3" data-track-label="NCAAB Picks Grid">Picks Grid</a></li>
-				<li><a href="/ncaa-basketball-win-picks/" data-track-category="Mobile Nav" data-track-action="Betting Level 3" data-track-label="NCAAB Game Winner Picks">Game Winner Picks</a></li>
-				<li><a href="/ncaa-basketball-ats-picks/" data-track-category="Mobile Nav" data-track-action="Betting Level 3" data-track-label="NCAAB Point Spread Picks">Point Spread Picks</a></li>
-				<li><a href="/ncaa-basketball-over-under-picks/" data-track-category="Mobile Nav" data-track-action="Betting Level 3" data-track-label="NCAAB Over Under Picks">Over Under Picks</a></li>
-				<li><a href="/ncaa-basketball-money-line-picks/" data-track-category="Mobile Nav" data-track-action="Betting Level 3" data-track-label="NCAAB Money Line Picks">Money Line Picks</a></li>
-				<li><a href="/ncaa-basketball-upset-predictions/" data-track-category="Mobile Nav" data-track-action="Betting Level 3" data-track-label="NCAAB Most Likely Upsets">Most Likely Upsets</a></li>
-	        	<li><a href="/ncb/betting-models/" data-track-category="Mobile Nav" data-track-action="Betting Level 3" data-track-label="NCAAB Prediction Accuracy">Prediction Accuracy</a></li>
-				<li><a class="list-item-divider" href="/ncb/odds/" data-track-category="Mobile Nav" data-track-action="Betting Level 3" data-track-label="NCAAB Odds">Odds</a></li>
-				<li><a href="/ncb/trends/" data-track-category="Mobile Nav" data-track-action="Betting Level 3" data-track-label="NCAAB Trends">Trends</a></li>
-				<li><a href="/ncb/schedules/" data-track-category="Mobile Nav" data-track-action="Betting Level 3" data-track-label="NCAAB Matchups">Matchups</a></li>
-			 </ul>
-		</li>
-		    </ul>
+						    </ul>
 </div> <!-- betting -->		        </div> <!-- section-nav-wrapper -->
 		    	    </nav>
 		        
@@ -847,7 +836,7 @@
 					
 										
 					<li class="top-level-list-item has-subnav"><a class="top-level-list-link subnav-toggle fake-link" href="#">Betting <svg class="icon icon-arrow-right2"><use xlink:href="#icon-arrow-down"></use></svg></a>
-						<div class="main-nav-subnav betting-subnav three-subnav-columns">
+						<div class="main-nav-subnav betting-subnav two-subnav-columns">
     	    			        	
     	<div class="subnav-column">
         	<h5 class="subnav-category-heading">NBA</h5>
@@ -882,24 +871,7 @@
 				<li><a href="/mlb/trends/ou_trends/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="Betting Mega" data-track-label="MLB Over Under Trends">Over Under Trends</a></li>
         	</ul>
     	</div> <!-- subnav-column -->
-    	    	    	    	<div class="subnav-column">
-        	<h5 class="subnav-category-heading">NCAAB</h5>
-        	<ul class="nav-list">
-				<li><a href="/ncaa-basketball-betting-picks/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="Betting Mega" data-track-label="NCAAB Picks Grid">Picks Grid</a></li>
-				<li><a href="/ncaa-basketball-win-picks/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="Betting Mega" data-track-label="NCAAB Game Winner Picks">Game Winner Picks</a></li>
-				<li><a href="/ncaa-basketball-ats-picks/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="Betting Mega" data-track-label="NCAAB Point Spread Picks">Point Spread Picks</a></li>
-				<li><a href="/ncaa-basketball-over-under-picks/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="Betting Mega" data-track-label="NCAAB Over Under Picks">Over Under Picks</a></li>
-				<li><a href="/ncaa-basketball-money-line-picks/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="Betting Mega" data-track-label="NCAAB Money Line Picks">Money Line Picks</a></li>
-				<li><a href="/ncaa-basketball-upset-predictions/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="Betting Mega" data-track-label="NCAAB Most Likely Upsets">Most Likely Upsets</a></li>
-	        	<li><a href="/ncb/betting-models/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="Betting Mega" data-track-label="NCAAB Prediction Accuracy">Prediction Accuracy</a></li>
-				<li><a class="list-item-divider" href="/ncb/odds/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="Betting Mega" data-track-label="NCAAB Odds">Odds</a></li>
-				<li><a href="/ncb/schedules/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="Betting Mega" data-track-label="NCAAB Matchups">Matchups</a></li>
-				<li><a href="/ncb/trends/win_trends/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="Betting Mega" data-track-label="NCAAB Win/Loss Trends">Win/Loss Trends</a></li>
-				<li><a href="/ncb/trends/ats_trends/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="Betting Mega" data-track-label="NCAAB ATS Trends">ATS Trends</a></li>
-				<li><a href="/ncb/trends/ou_trends/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="Betting Mega" data-track-label="NCAAB Over Under Trends">Over Under Trends</a></li>
-        	</ul>
-    	</div> <!-- subnav-column -->
-    	</div> <!-- main-nav-subnav -->		        				
+    	    	    	</div> <!-- main-nav-subnav -->		        				
 					</li>
 										
 					
@@ -1018,9 +990,12 @@
 		<div class="subnav-column">
 			<h5 class="subnav-category-heading"><span class="brackets-subsite-subnav-category-heading">TR Brackets</span></h5>
 	    			    	<ul class="nav-list">
-					<li><a href="/ncaa-bracket-picks/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="NCAAB Mega" data-track-label="NCAA Bracket Picks">NCAA Bracket Picks <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
-						<li><a href="/ncaa-tournament/game-predictor/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="NCAAB Mega" data-track-label="Game Predictor">Game Predictor <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>				
-					<li><a href="/ncaa-tournament/bracket-strategy/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="NCAAB Mega" data-track-label="Bracket Strategy">Bracket Strategy <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
+					<li><a href="/ncaa-bracket-picks/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="NCAAB Mega" data-track-label="Bracket Pool Picks">Bracket Pool Picks <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
+						<li><a href="/ncaa-tournament/bracket-predictions/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="NCAAB Mega" data-track-label="Bracket Predictions">Bracket Predictions <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
+						<li><a href="/ncaa-tournament/bracketology/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="NCAAB Mega" data-track-label="Bracketology">Bracketology <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
+						<li><a href="/ncb/conference-tournaments/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="NCAAB Mega" data-track-label="Conference Tournaments">Conference Tournaments <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
+						<li><a href="/ncb/rpi/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="NCAAB Mega" data-track-label="RPI Rankings">RPI Rankings <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
+						<li><a href="/ncaa-tournament/game-predictor/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="NCAAB Mega" data-track-label="Game Predictor">Game Predictor <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>
 					<li><a href="/ncaa-tournament/printable-brackets/" data-track-click-event data-track-category="Desktop Main Nav" data-track-action="NCAAB Mega" data-track-label="Printable Brackets">Printable Brackets <svg class="icon icon-new-tab2"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-new-tab2"></use></svg></a></li>				
 		    	</ul>
 	    			</div> <!-- subnav-column -->
@@ -1149,7 +1124,7 @@
 
 
 
-	<h1 id="h1-title" >NBA Team Points per Game</h1>
+	<h1 id="h1-title" >NBA Team Opponent Points per Game</h1>
 
 
 
@@ -1409,314 +1384,314 @@
                         <th class="text-center sort-asc-first sort-first">Rank</th>
 
 			<th class="text-left sort-asc-first">Team</th>
-			<th class="text-right">2018</th>
-			<th class="text-right nowrap">Last 3</th>
-			<th class="text-right nowrap">Last 1</th>
-			<th class="text-right">Home</th>
-			<th class="text-right">Away</th>
-			<th class="text-right">2017</th>
+			<th class="text-right sort-asc-first">2018</th>
+			<th class="text-right nowrap sort-asc-first">Last 3</th>
+			<th class="text-right nowrap sort-asc-first">Last 1</th>
+			<th class="text-right sort-asc-first">Home</th>
+			<th class="text-right sort-asc-first">Away</th>
+			<th class="text-right sort-asc-first">2017</th>
 		</tr>
 	</thead>
 	<tbody>
 	        		        			<tr>
 			        <td class="rank text-center" data-sort="1">1</td>
-				<td class="text-left nowrap" data-sort="Milwaukee"><a href="https://www.teamrankings.com/nba/team/milwaukee-bucks">Milwaukee</a></td>
-				<td class="text-right" data-sort="118.148">118.1</td>
-				<td class="text-right" data-sort="123.667">123.7</td>
-				<td class="text-right" data-sort="115">115.0</td>
-				<td class="text-right" data-sort="119.95">120.0</td>
-				<td class="text-right" data-sort="116.39">116.4</td>
-				<td class="text-right" data-sort="106.112">106.1</td>
+				<td class="text-left nowrap" data-sort="Indiana"><a href="https://www.teamrankings.com/nba/team/indiana-pacers">Indiana</a></td>
+				<td class="text-right" data-sort="104.321">104.3</td>
+				<td class="text-right" data-sort="104.667">104.7</td>
+				<td class="text-right" data-sort="108">108.0</td>
+				<td class="text-right" data-sort="101.049">101.0</td>
+				<td class="text-right" data-sort="107.675">107.7</td>
+				<td class="text-right" data-sort="103.449">103.4</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="2">2</td>
-				<td class="text-left nowrap" data-sort="Golden State"><a href="https://www.teamrankings.com/nba/team/golden-state-warriors">Golden State</a></td>
-				<td class="text-right" data-sort="117.762">117.8</td>
-				<td class="text-right" data-sort="119.667">119.7</td>
-				<td class="text-right" data-sort="131">131.0</td>
-				<td class="text-right" data-sort="118.146">118.1</td>
-				<td class="text-right" data-sort="117.359">117.4</td>
-				<td class="text-right" data-sort="112.845">112.8</td>
+				<td class="text-left nowrap" data-sort="Miami"><a href="https://www.teamrankings.com/nba/team/miami-heat">Miami</a></td>
+				<td class="text-right" data-sort="105.938">105.9</td>
+				<td class="text-right" data-sort="113.333">113.3</td>
+				<td class="text-right" data-sort="117">117.0</td>
+				<td class="text-right" data-sort="105.95">106.0</td>
+				<td class="text-right" data-sort="105.925">105.9</td>
+				<td class="text-right" data-sort="103.586">103.6</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="3">3</td>
-				<td class="text-left nowrap" data-sort="New Orleans"><a href="https://www.teamrankings.com/nba/team/new-orleans-pelicans">New Orleans</a></td>
-				<td class="text-right" data-sort="115.593">115.6</td>
-				<td class="text-right" data-sort="122.667">122.7</td>
-				<td class="text-right" data-sort="133">133.0</td>
-				<td class="text-right" data-sort="115.425">115.4</td>
-				<td class="text-right" data-sort="115.756">115.8</td>
-				<td class="text-right" data-sort="111.549">111.5</td>
+				<td class="text-left nowrap" data-sort="Utah"><a href="https://www.teamrankings.com/nba/team/utah-jazz">Utah</a></td>
+				<td class="text-right" data-sort="105.988">106.0</td>
+				<td class="text-right" data-sort="102.667">102.7</td>
+				<td class="text-right" data-sort="113">113.0</td>
+				<td class="text-right" data-sort="104.7">104.7</td>
+				<td class="text-right" data-sort="107.275">107.3</td>
+				<td class="text-right" data-sort="100.398">100.4</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="4">4</td>
-				<td class="text-left nowrap" data-sort="Philadelphia"><a href="https://www.teamrankings.com/nba/team/philadelphia-76ers">Philadelphia</a></td>
-				<td class="text-right" data-sort="115.262">115.3</td>
-				<td class="text-right" data-sort="120">120.0</td>
-				<td class="text-right" data-sort="116">116.0</td>
-				<td class="text-right" data-sort="118.075">118.1</td>
-				<td class="text-right" data-sort="112.45">112.5</td>
-				<td class="text-right" data-sort="109.696">109.7</td>
+				<td class="text-left nowrap" data-sort="Memphis"><a href="https://www.teamrankings.com/nba/team/memphis-grizzlies">Memphis</a></td>
+				<td class="text-right" data-sort="106.075">106.1</td>
+				<td class="text-right" data-sort="119">119.0</td>
+				<td class="text-right" data-sort="129">129.0</td>
+				<td class="text-right" data-sort="103.85">103.8</td>
+				<td class="text-right" data-sort="108.3">108.3</td>
+				<td class="text-right" data-sort="105.537">105.5</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="5">5</td>
-				<td class="text-left nowrap" data-sort="LA Clippers"><a href="https://www.teamrankings.com/nba/team/la-clippers">LA Clippers</a></td>
-				<td class="text-right" data-sort="114.802">114.8</td>
+				<td class="text-left nowrap" data-sort="Orlando"><a href="https://www.teamrankings.com/nba/team/orlando-magic">Orlando</a></td>
+				<td class="text-right" data-sort="106.519">106.5</td>
+				<td class="text-right" data-sort="107">107.0</td>
 				<td class="text-right" data-sort="108">108.0</td>
-				<td class="text-right" data-sort="104">104.0</td>
-				<td class="text-right" data-sort="117.275">117.3</td>
-				<td class="text-right" data-sort="112.39">112.4</td>
-				<td class="text-right" data-sort="108.988">109.0</td>
+				<td class="text-right" data-sort="107.538">107.5</td>
+				<td class="text-right" data-sort="105.571">105.6</td>
+				<td class="text-right" data-sort="108.22">108.2</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="6">6</td>
-				<td class="text-left nowrap" data-sort="Portland"><a href="https://www.teamrankings.com/nba/team/portland-trail-blazers">Portland</a></td>
-				<td class="text-right" data-sort="114.525">114.5</td>
-				<td class="text-right" data-sort="113.667">113.7</td>
+				<td class="text-left nowrap" data-sort="Denver"><a href="https://www.teamrankings.com/nba/team/denver-nuggets">Denver</a></td>
+				<td class="text-right" data-sort="106.725">106.7</td>
+				<td class="text-right" data-sort="103.333">103.3</td>
 				<td class="text-right" data-sort="115">115.0</td>
-				<td class="text-right" data-sort="117.75">117.8</td>
-				<td class="text-right" data-sort="111.3">111.3</td>
-				<td class="text-right" data-sort="105.616">105.6</td>
+				<td class="text-right" data-sort="103.825">103.8</td>
+				<td class="text-right" data-sort="109.625">109.6</td>
+				<td class="text-right" data-sort="108.524">108.5</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="7">7</td>
-				<td class="text-left nowrap" data-sort="Toronto"><a href="https://www.teamrankings.com/nba/team/toronto-raptors">Toronto</a></td>
-				<td class="text-right" data-sort="114.37">114.4</td>
-				<td class="text-right" data-sort="114.333">114.3</td>
-				<td class="text-right" data-sort="117">117.0</td>
-				<td class="text-right" data-sort="115.146">115.1</td>
-				<td class="text-right" data-sort="113.575">113.6</td>
-				<td class="text-right" data-sort="111.185">111.2</td>
+				<td class="text-left nowrap" data-sort="Detroit"><a href="https://www.teamrankings.com/nba/team/detroit-pistons">Detroit</a></td>
+				<td class="text-right" data-sort="107.7">107.7</td>
+				<td class="text-right" data-sort="111.667">111.7</td>
+				<td class="text-right" data-sort="104">104.0</td>
+				<td class="text-right" data-sort="106.425">106.4</td>
+				<td class="text-right" data-sort="108.975">109.0</td>
+				<td class="text-right" data-sort="103.915">103.9</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="8">8</td>
-				<td class="text-left nowrap" data-sort="Okla City"><a href="https://www.teamrankings.com/nba/team/oklahoma-city-thunder">Okla City</a></td>
-				<td class="text-right" data-sort="114.35">114.3</td>
-				<td class="text-right" data-sort="124.667">124.7</td>
-				<td class="text-right" data-sort="132">132.0</td>
-				<td class="text-right" data-sort="114.55">114.5</td>
-				<td class="text-right" data-sort="114.15">114.2</td>
-				<td class="text-right" data-sort="107.398">107.4</td>
+				<td class="text-left nowrap" data-sort="Boston"><a href="https://www.teamrankings.com/nba/team/boston-celtics">Boston</a></td>
+				<td class="text-right" data-sort="107.926">107.9</td>
+				<td class="text-right" data-sort="105">105.0</td>
+				<td class="text-right" data-sort="116">116.0</td>
+				<td class="text-right" data-sort="107.317">107.3</td>
+				<td class="text-right" data-sort="108.55">108.5</td>
+				<td class="text-right" data-sort="100.475">100.5</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="9">9</td>
-				<td class="text-left nowrap" data-sort="Washington"><a href="https://www.teamrankings.com/nba/team/washington-wizards">Washington</a></td>
-				<td class="text-right" data-sort="114.074">114.1</td>
-				<td class="text-right" data-sort="112">112.0</td>
-				<td class="text-right" data-sort="110">110.0</td>
-				<td class="text-right" data-sort="116.974">117.0</td>
-				<td class="text-right" data-sort="111.381">111.4</td>
-				<td class="text-right" data-sort="106.648">106.6</td>
+				<td class="text-left nowrap" data-sort="Toronto"><a href="https://www.teamrankings.com/nba/team/toronto-raptors">Toronto</a></td>
+				<td class="text-right" data-sort="108.457">108.5</td>
+				<td class="text-right" data-sort="109">109.0</td>
+				<td class="text-right" data-sort="109">109.0</td>
+				<td class="text-right" data-sort="107.585">107.6</td>
+				<td class="text-right" data-sort="109.35">109.3</td>
+				<td class="text-right" data-sort="104.728">104.7</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="10">10</td>
-				<td class="text-left nowrap" data-sort="Sacramento"><a href="https://www.teamrankings.com/nba/team/sacramento-kings">Sacramento</a></td>
-				<td class="text-right" data-sort="113.975">114.0</td>
-				<td class="text-right" data-sort="114.667">114.7</td>
-				<td class="text-right" data-sort="129">129.0</td>
-				<td class="text-right" data-sort="114.927">114.9</td>
-				<td class="text-right" data-sort="113">113.0</td>
-				<td class="text-right" data-sort="98.8293">98.8</td>
+				<td class="text-left nowrap" data-sort="Milwaukee"><a href="https://www.teamrankings.com/nba/team/milwaukee-bucks">Milwaukee</a></td>
+				<td class="text-right" data-sort="109.037">109.0</td>
+				<td class="text-right" data-sort="120.667">120.7</td>
+				<td class="text-right" data-sort="107">107.0</td>
+				<td class="text-right" data-sort="107.3">107.3</td>
+				<td class="text-right" data-sort="110.732">110.7</td>
+				<td class="text-right" data-sort="106.438">106.4</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="11">11</td>
 				<td class="text-left nowrap" data-sort="Houston"><a href="https://www.teamrankings.com/nba/team/houston-rockets">Houston</a></td>
-				<td class="text-right" data-sort="113.951">114.0</td>
-				<td class="text-right" data-sort="134.667">134.7</td>
-				<td class="text-right" data-sort="149">149.0</td>
-				<td class="text-right" data-sort="116.78">116.8</td>
-				<td class="text-right" data-sort="111.05">111.0</td>
-				<td class="text-right" data-sort="111.081">111.1</td>
+				<td class="text-right" data-sort="109.111">109.1</td>
+				<td class="text-right" data-sort="104">104.0</td>
+				<td class="text-right" data-sort="113">113.0</td>
+				<td class="text-right" data-sort="109.683">109.7</td>
+				<td class="text-right" data-sort="108.525">108.5</td>
+				<td class="text-right" data-sort="103.747">103.7</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="12">12</td>
-				<td class="text-left nowrap" data-sort="Atlanta"><a href="https://www.teamrankings.com/nba/team/atlanta-hawks">Atlanta</a></td>
-				<td class="text-right" data-sort="113.086">113.1</td>
-				<td class="text-right" data-sort="116.667">116.7</td>
-				<td class="text-right" data-sort="107">107.0</td>
-				<td class="text-right" data-sort="115.325">115.3</td>
-				<td class="text-right" data-sort="110.902">110.9</td>
-				<td class="text-right" data-sort="103.354">103.4</td>
+				<td class="text-left nowrap" data-sort="San Antonio"><a href="https://www.teamrankings.com/nba/team/san-antonio-spurs">San Antonio</a></td>
+				<td class="text-right" data-sort="110.173">110.2</td>
+				<td class="text-right" data-sort="105">105.0</td>
+				<td class="text-right" data-sort="90">90.0</td>
+				<td class="text-right" data-sort="106.25">106.2</td>
+				<td class="text-right" data-sort="114">114.0</td>
+				<td class="text-right" data-sort="100.172">100.2</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="13">13</td>
-				<td class="text-left nowrap" data-sort="Minnesota"><a href="https://www.teamrankings.com/nba/team/minnesota-timberwolves">Minnesota</a></td>
-				<td class="text-right" data-sort="112.85">112.8</td>
-				<td class="text-right" data-sort="115.667">115.7</td>
-				<td class="text-right" data-sort="126">126.0</td>
-				<td class="text-right" data-sort="115">115.0</td>
-				<td class="text-right" data-sort="110.7">110.7</td>
-				<td class="text-right" data-sort="109.057">109.1</td>
+				<td class="text-left nowrap" data-sort="Dallas"><a href="https://www.teamrankings.com/nba/team/dallas-mavericks">Dallas</a></td>
+				<td class="text-right" data-sort="110.225">110.2</td>
+				<td class="text-right" data-sort="119.667">119.7</td>
+				<td class="text-right" data-sort="127">127.0</td>
+				<td class="text-right" data-sort="107.95">108.0</td>
+				<td class="text-right" data-sort="112.5">112.5</td>
+				<td class="text-right" data-sort="105.354">105.4</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="14">14</td>
-				<td class="text-left nowrap" data-sort="Boston"><a href="https://www.teamrankings.com/nba/team/boston-celtics">Boston</a></td>
-				<td class="text-right" data-sort="112.346">112.3</td>
-				<td class="text-right" data-sort="112.333">112.3</td>
+				<td class="text-left nowrap" data-sort="Portland"><a href="https://www.teamrankings.com/nba/team/portland-trail-blazers">Portland</a></td>
+				<td class="text-right" data-sort="110.325">110.3</td>
+				<td class="text-right" data-sort="105.333">105.3</td>
 				<td class="text-right" data-sort="108">108.0</td>
-				<td class="text-right" data-sort="114.098">114.1</td>
-				<td class="text-right" data-sort="110.55">110.5</td>
-				<td class="text-right" data-sort="103.515">103.5</td>
+				<td class="text-right" data-sort="109.3">109.3</td>
+				<td class="text-right" data-sort="111.35">111.3</td>
+				<td class="text-right" data-sort="103.558">103.6</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="15">15</td>
-				<td class="text-left nowrap" data-sort="Brooklyn"><a href="https://www.teamrankings.com/nba/team/brooklyn-nets">Brooklyn</a></td>
-				<td class="text-right" data-sort="112.235">112.2</td>
-				<td class="text-right" data-sort="115.333">115.3</td>
-				<td class="text-right" data-sort="108">108.0</td>
-				<td class="text-right" data-sort="113.85">113.8</td>
-				<td class="text-right" data-sort="110.659">110.7</td>
-				<td class="text-right" data-sort="106.598">106.6</td>
+				<td class="text-left nowrap" data-sort="Okla City"><a href="https://www.teamrankings.com/nba/team/oklahoma-city-thunder">Okla City</a></td>
+				<td class="text-right" data-sort="111.012">111.0</td>
+				<td class="text-right" data-sort="113">113.0</td>
+				<td class="text-right" data-sort="126">126.0</td>
+				<td class="text-right" data-sort="109.6">109.6</td>
+				<td class="text-right" data-sort="112.425">112.4</td>
+				<td class="text-right" data-sort="104.511">104.5</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="16">16</td>
-				<td class="text-left nowrap" data-sort="LA Lakers"><a href="https://www.teamrankings.com/nba/team/los-angeles-lakers">LA Lakers</a></td>
-				<td class="text-right" data-sort="111.901">111.9</td>
-				<td class="text-right" data-sort="108.333">108.3</td>
-				<td class="text-right" data-sort="113">113.0</td>
-				<td class="text-right" data-sort="111.25">111.2</td>
-				<td class="text-right" data-sort="112.537">112.5</td>
-				<td class="text-right" data-sort="108.073">108.1</td>
+				<td class="text-left nowrap" data-sort="Golden State"><a href="https://www.teamrankings.com/nba/team/golden-state-warriors">Golden State</a></td>
+				<td class="text-right" data-sort="111.062">111.1</td>
+				<td class="text-right" data-sort="102.667">102.7</td>
+				<td class="text-right" data-sort="104">104.0</td>
+				<td class="text-right" data-sort="111.512">111.5</td>
+				<td class="text-right" data-sort="110.59">110.6</td>
+				<td class="text-right" data-sort="106.049">106.0</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="17">17</td>
-				<td class="text-left nowrap" data-sort="San Antonio"><a href="https://www.teamrankings.com/nba/team/san-antonio-spurs">San Antonio</a></td>
-				<td class="text-right" data-sort="111.741">111.7</td>
-				<td class="text-right" data-sort="108.667">108.7</td>
-				<td class="text-right" data-sort="112">112.0</td>
-				<td class="text-right" data-sort="113">113.0</td>
-				<td class="text-right" data-sort="110.512">110.5</td>
-				<td class="text-right" data-sort="102.391">102.4</td>
+				<td class="text-left nowrap" data-sort="Charlotte"><a href="https://www.teamrankings.com/nba/team/charlotte-hornets">Charlotte</a></td>
+				<td class="text-right" data-sort="111.9">111.9</td>
+				<td class="text-right" data-sort="103.667">103.7</td>
+				<td class="text-right" data-sort="91">91.0</td>
+				<td class="text-right" data-sort="109.15">109.2</td>
+				<td class="text-right" data-sort="114.65">114.7</td>
+				<td class="text-right" data-sort="107.963">108.0</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="18">18</td>
-				<td class="text-left nowrap" data-sort="Utah"><a href="https://www.teamrankings.com/nba/team/utah-jazz">Utah</a></td>
-				<td class="text-right" data-sort="111.325">111.3</td>
-				<td class="text-right" data-sort="115.333">115.3</td>
-				<td class="text-right" data-sort="109">109.0</td>
-				<td class="text-right" data-sort="112.5">112.5</td>
-				<td class="text-right" data-sort="110.15">110.2</td>
-				<td class="text-right" data-sort="103.935">103.9</td>
+				<td class="text-left nowrap" data-sort="Philadelphia"><a href="https://www.teamrankings.com/nba/team/philadelphia-76ers">Philadelphia</a></td>
+				<td class="text-right" data-sort="112.412">112.4</td>
+				<td class="text-right" data-sort="118">118.0</td>
+				<td class="text-right" data-sort="96">96.0</td>
+				<td class="text-right" data-sort="110.225">110.2</td>
+				<td class="text-right" data-sort="114.6">114.6</td>
+				<td class="text-right" data-sort="105.261">105.3</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="19">19</td>
-				<td class="text-left nowrap" data-sort="Denver"><a href="https://www.teamrankings.com/nba/team/denver-nuggets">Denver</a></td>
-				<td class="text-right" data-sort="110.85">110.8</td>
-				<td class="text-right" data-sort="113.333">113.3</td>
-				<td class="text-right" data-sort="108">108.0</td>
-				<td class="text-right" data-sort="114.5">114.5</td>
-				<td class="text-right" data-sort="107.2">107.2</td>
-				<td class="text-right" data-sort="110">110.0</td>
+				<td class="text-left nowrap" data-sort="Brooklyn"><a href="https://www.teamrankings.com/nba/team/brooklyn-nets">Brooklyn</a></td>
+				<td class="text-right" data-sort="112.543">112.5</td>
+				<td class="text-right" data-sort="113">113.0</td>
+				<td class="text-right" data-sort="96">96.0</td>
+				<td class="text-right" data-sort="111.725">111.7</td>
+				<td class="text-right" data-sort="113.341">113.3</td>
+				<td class="text-right" data-sort="110.341">110.3</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="20">20</td>
-				<td class="text-left nowrap" data-sort="Charlotte"><a href="https://www.teamrankings.com/nba/team/charlotte-hornets">Charlotte</a></td>
-				<td class="text-right" data-sort="110.537">110.5</td>
-				<td class="text-right" data-sort="110.667">110.7</td>
-				<td class="text-right" data-sort="104">104.0</td>
-				<td class="text-right" data-sort="113.125">113.1</td>
-				<td class="text-right" data-sort="107.95">108.0</td>
-				<td class="text-right" data-sort="108.22">108.2</td>
+				<td class="text-left nowrap" data-sort="Chicago"><a href="https://www.teamrankings.com/nba/team/chicago-bulls">Chicago</a></td>
+				<td class="text-right" data-sort="113.425">113.4</td>
+				<td class="text-right" data-sort="114.333">114.3</td>
+				<td class="text-right" data-sort="116">116.0</td>
+				<td class="text-right" data-sort="113.825">113.8</td>
+				<td class="text-right" data-sort="113.025">113.0</td>
+				<td class="text-right" data-sort="109.963">110.0</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="21">21</td>
-				<td class="text-left nowrap" data-sort="Dallas"><a href="https://www.teamrankings.com/nba/team/dallas-mavericks">Dallas</a></td>
-				<td class="text-right" data-sort="108.912">108.9</td>
-				<td class="text-right" data-sort="116.333">116.3</td>
-				<td class="text-right" data-sort="129">129.0</td>
-				<td class="text-right" data-sort="110.075">110.1</td>
-				<td class="text-right" data-sort="107.75">107.8</td>
-				<td class="text-right" data-sort="102.317">102.3</td>
+				<td class="text-left nowrap" data-sort="LA Lakers"><a href="https://www.teamrankings.com/nba/team/los-angeles-lakers">LA Lakers</a></td>
+				<td class="text-right" data-sort="113.605">113.6</td>
+				<td class="text-right" data-sort="111.333">111.3</td>
+				<td class="text-right" data-sort="109">109.0</td>
+				<td class="text-right" data-sort="111.35">111.3</td>
+				<td class="text-right" data-sort="115.805">115.8</td>
+				<td class="text-right" data-sort="109.622">109.6</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="22">22</td>
-				<td class="text-left nowrap" data-sort="Indiana"><a href="https://www.teamrankings.com/nba/team/indiana-pacers">Indiana</a></td>
-				<td class="text-right" data-sort="107.679">107.7</td>
-				<td class="text-right" data-sort="100.333">100.3</td>
-				<td class="text-right" data-sort="96">96.0</td>
-				<td class="text-right" data-sort="108.683">108.7</td>
-				<td class="text-right" data-sort="106.65">106.7</td>
-				<td class="text-right" data-sort="105.169">105.2</td>
+				<td class="text-left nowrap" data-sort="Cleveland"><a href="https://www.teamrankings.com/nba/team/cleveland-cavaliers">Cleveland</a></td>
+				<td class="text-right" data-sort="113.963">114.0</td>
+				<td class="text-right" data-sort="116.333">116.3</td>
+				<td class="text-right" data-sort="112">112.0</td>
+				<td class="text-right" data-sort="112.225">112.2</td>
+				<td class="text-right" data-sort="115.659">115.7</td>
+				<td class="text-right" data-sort="108.433">108.4</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="23">23</td>
-				<td class="text-left nowrap" data-sort="Phoenix"><a href="https://www.teamrankings.com/nba/team/phoenix-suns">Phoenix</a></td>
-				<td class="text-right" data-sort="107.481">107.5</td>
-				<td class="text-right" data-sort="114.333">114.3</td>
-				<td class="text-right" data-sort="113">113.0</td>
-				<td class="text-right" data-sort="107.561">107.6</td>
-				<td class="text-right" data-sort="107.4">107.4</td>
-				<td class="text-right" data-sort="103.927">103.9</td>
+				<td class="text-left nowrap" data-sort="LA Clippers"><a href="https://www.teamrankings.com/nba/team/la-clippers">LA Clippers</a></td>
+				<td class="text-right" data-sort="114.012">114.0</td>
+				<td class="text-right" data-sort="129.333">129.3</td>
+				<td class="text-right" data-sort="131">131.0</td>
+				<td class="text-right" data-sort="114.05">114.0</td>
+				<td class="text-right" data-sort="113.976">114.0</td>
+				<td class="text-right" data-sort="108.951">109.0</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="24">24</td>
-				<td class="text-left nowrap" data-sort="Orlando"><a href="https://www.teamrankings.com/nba/team/orlando-magic">Orlando</a></td>
-				<td class="text-right" data-sort="107.136">107.1</td>
-				<td class="text-right" data-sort="126.333">126.3</td>
-				<td class="text-right" data-sort="116">116.0</td>
-				<td class="text-right" data-sort="110">110.0</td>
-				<td class="text-right" data-sort="104.476">104.5</td>
-				<td class="text-right" data-sort="103.402">103.4</td>
+				<td class="text-left nowrap" data-sort="Minnesota"><a href="https://www.teamrankings.com/nba/team/minnesota-timberwolves">Minnesota</a></td>
+				<td class="text-right" data-sort="114.088">114.1</td>
+				<td class="text-right" data-sort="116.333">116.3</td>
+				<td class="text-right" data-sort="132">132.0</td>
+				<td class="text-right" data-sort="111.55">111.5</td>
+				<td class="text-right" data-sort="116.625">116.6</td>
+				<td class="text-right" data-sort="107.46">107.5</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="25">25</td>
-				<td class="text-left nowrap" data-sort="Detroit"><a href="https://www.teamrankings.com/nba/team/detroit-pistons">Detroit</a></td>
-				<td class="text-right" data-sort="107.037">107.0</td>
-				<td class="text-right" data-sort="96.6667">96.7</td>
-				<td class="text-right" data-sort="91">91.0</td>
-				<td class="text-right" data-sort="108.875">108.9</td>
-				<td class="text-right" data-sort="105.2">105.2</td>
-				<td class="text-right" data-sort="103.768">103.8</td>
+				<td class="text-left nowrap" data-sort="New York"><a href="https://www.teamrankings.com/nba/team/new-york-knicks">New York</a></td>
+				<td class="text-right" data-sort="114.113">114.1</td>
+				<td class="text-right" data-sort="114.667">114.7</td>
+				<td class="text-right" data-sort="110">110.0</td>
+				<td class="text-right" data-sort="113.725">113.7</td>
+				<td class="text-right" data-sort="114.5">114.5</td>
+				<td class="text-right" data-sort="108.024">108.0</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="26">26</td>
-				<td class="text-left nowrap" data-sort="Miami"><a href="https://www.teamrankings.com/nba/team/miami-heat">Miami</a></td>
-				<td class="text-right" data-sort="105.65">105.7</td>
-				<td class="text-right" data-sort="106.667">106.7</td>
-				<td class="text-right" data-sort="109">109.0</td>
-				<td class="text-right" data-sort="105.625">105.6</td>
-				<td class="text-right" data-sort="105.675">105.7</td>
-				<td class="text-right" data-sort="103.414">103.4</td>
+				<td class="text-left nowrap" data-sort="Sacramento"><a href="https://www.teamrankings.com/nba/team/sacramento-kings">Sacramento</a></td>
+				<td class="text-right" data-sort="115.049">115.0</td>
+				<td class="text-right" data-sort="118.667">118.7</td>
+				<td class="text-right" data-sort="133">133.0</td>
+				<td class="text-right" data-sort="113.488">113.5</td>
+				<td class="text-right" data-sort="116.65">116.7</td>
+				<td class="text-right" data-sort="105.817">105.8</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="27">27</td>
-				<td class="text-left nowrap" data-sort="Chicago"><a href="https://www.teamrankings.com/nba/team/chicago-bulls">Chicago</a></td>
-				<td class="text-right" data-sort="105.125">105.1</td>
-				<td class="text-right" data-sort="105.333">105.3</td>
-				<td class="text-right" data-sort="96">96.0</td>
-				<td class="text-right" data-sort="104.025">104.0</td>
-				<td class="text-right" data-sort="106.225">106.2</td>
-				<td class="text-right" data-sort="102.927">102.9</td>
+				<td class="text-left nowrap" data-sort="Phoenix"><a href="https://www.teamrankings.com/nba/team/phoenix-suns">Phoenix</a></td>
+				<td class="text-right" data-sort="116.802">116.8</td>
+				<td class="text-right" data-sort="131">131.0</td>
+				<td class="text-right" data-sort="149">149.0</td>
+				<td class="text-right" data-sort="113.854">113.9</td>
+				<td class="text-right" data-sort="119.825">119.8</td>
+				<td class="text-right" data-sort="113.293">113.3</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="28">28</td>
-				<td class="text-left nowrap" data-sort="New York"><a href="https://www.teamrankings.com/nba/team/new-york-knicks">New York</a></td>
-				<td class="text-right" data-sort="104.875">104.9</td>
-				<td class="text-right" data-sort="103">103.0</td>
-				<td class="text-right" data-sort="113">113.0</td>
-				<td class="text-right" data-sort="106.325">106.3</td>
-				<td class="text-right" data-sort="103.425">103.4</td>
-				<td class="text-right" data-sort="104.463">104.5</td>
+				<td class="text-left nowrap" data-sort="New Orleans"><a href="https://www.teamrankings.com/nba/team/new-orleans-pelicans">New Orleans</a></td>
+				<td class="text-right" data-sort="116.827">116.8</td>
+				<td class="text-right" data-sort="125.667">125.7</td>
+				<td class="text-right" data-sort="129">129.0</td>
+				<td class="text-right" data-sort="116.1">116.1</td>
+				<td class="text-right" data-sort="117.537">117.5</td>
+				<td class="text-right" data-sort="110.451">110.5</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="29">29</td>
-				<td class="text-left nowrap" data-sort="Cleveland"><a href="https://www.teamrankings.com/nba/team/cleveland-cavaliers">Cleveland</a></td>
-				<td class="text-right" data-sort="104.568">104.6</td>
-				<td class="text-right" data-sort="102.667">102.7</td>
-				<td class="text-right" data-sort="90">90.0</td>
-				<td class="text-right" data-sort="105.375">105.4</td>
-				<td class="text-right" data-sort="103.78">103.8</td>
-				<td class="text-right" data-sort="108.808">108.8</td>
+				<td class="text-left nowrap" data-sort="Washington"><a href="https://www.teamrankings.com/nba/team/washington-wizards">Washington</a></td>
+				<td class="text-right" data-sort="116.938">116.9</td>
+				<td class="text-right" data-sort="119">119.0</td>
+				<td class="text-right" data-sort="113">113.0</td>
+				<td class="text-right" data-sort="115">115.0</td>
+				<td class="text-right" data-sort="118.738">118.7</td>
+				<td class="text-right" data-sort="106.239">106.2</td>
 			</tr>
 				        			<tr>
 			        <td class="rank text-center" data-sort="30">30</td>
-				<td class="text-left nowrap" data-sort="Memphis"><a href="https://www.teamrankings.com/nba/team/memphis-grizzlies">Memphis</a></td>
-				<td class="text-right" data-sort="103.312">103.3</td>
-				<td class="text-right" data-sort="112.667">112.7</td>
-				<td class="text-right" data-sort="127">127.0</td>
-				<td class="text-right" data-sort="103.925">103.9</td>
-				<td class="text-right" data-sort="102.7">102.7</td>
-				<td class="text-right" data-sort="99.3293">99.3</td>
+				<td class="text-left nowrap" data-sort="Atlanta"><a href="https://www.teamrankings.com/nba/team/atlanta-hawks">Atlanta</a></td>
+				<td class="text-right" data-sort="119.173">119.2</td>
+				<td class="text-right" data-sort="128.667">128.7</td>
+				<td class="text-right" data-sort="115">115.0</td>
+				<td class="text-right" data-sort="119.425">119.4</td>
+				<td class="text-right" data-sort="118.927">118.9</td>
+				<td class="text-right" data-sort="108.805">108.8</td>
 			</tr>
 			</tbody>
 </table></main>
@@ -1737,37 +1712,29 @@
 			
 			</div>
 	  	
-			        <h2>More Scoring Stats</h2>
+			        <h2>More Scoring Defense Stats</h2>
         <ul>
-                	        		        			<li>Points per Game</li>
-        		        	                	        		        			<li><a href="/nba/stat/average-scoring-margin">Average Scoring Margin</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/offensive-efficiency">Offensive Efficiency</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/floor-percentage">Floor %</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/1st-quarter-points-per-game">1st Quarter Points per Game</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/2nd-quarter-points-per-game">2nd Quarter Points per Game</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/3rd-quarter-points-per-game">3rd Quarter Points per Game</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/4th-quarter-points-per-game">4th Quarter Points per Game</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/1st-half-points-per-game">1st Half Points per Game</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/2nd-half-points-per-game">2nd Half Points per Game</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/overtime-points-per-game">Overtime Points per Game</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/points-in-paint-per-game">Points in Paint per Game</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/fastbreak-points-per-game">Fastbreak Points per Game</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/fastbreak-efficiency">Fastbreak Efficiency</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/average-biggest-lead">Average Biggest Lead</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/average-1st-quarter-margin">Average 1st Quarter Margin</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/average-2nd-quarter-margin">Average 2nd Quarter Margin</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/average-3rd-quarter-margin">Average 3rd Quarter Margin</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/average-4th-quarter-margin">Average 4th Quarter Margin</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/average-1st-half-margin">Average 1st Half Margin</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/average-2nd-half-margin">Average 2nd Half Margin</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/average-overtime-margin">Average Overtime Margin</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/average-margin-thru-3-quarters">Average Margin Thru 3 Quarters</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/points-from-2-pointers">Points from 2 pointers</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/points-from-3-pointers">Points from 3 pointers</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/percent-of-points-from-2-pointers">Percent of Points from 2 Pointers</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/percent-of-points-from-3-pointers">Percent of Points from 3 Pointers</a></li>
-        		        	                	        		        			<li><a href="/nba/stat/percent-of-points-from-free-throws">Percent of Points from Free Throws</a></li>
-        		        	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                </ul>
+                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	        		        			<li>Opponent Points per Game</li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-average-scoring-margin">Opponent Average Scoring Margin</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/defensive-efficiency">Defensive Efficiency</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-floor-percentage">Opponent Floor %</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-1st-quarter-points-per-game">Opponent 1st Quarter Points per Game</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-2nd-quarter-points-per-game">Opponent 2nd Quarter Points per Game</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-3rd-quarter-points-per-game">Opponent 3rd Quarter Points per Game</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-4th-quarter-points-per-game">Opponent 4th Quarter Points per Game</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-overtime-points-per-game">Opponent Overtime Points per Game</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-points-in-paint-per-game">Opponent Points in Paint per Game</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-fastbreak-points-per-game">Opponent Fastbreak Points per Game</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-fastbreak-efficiency">Opponent Fastbreak Efficiency</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-average-biggest-lead">Opponent Average Biggest Lead</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-1st-half-points-per-game">Opponent 1st Half Points per Game</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-2nd-half-points-per-game">Opponent 2nd Half Points per Game</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-points-from-2-pointers">Opponent Points from 2 pointers</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-points-from-3-pointers">Opponent Points from 3 pointers</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-percent-of-points-from-2-pointers">Opponent Percent of Points from 2 Pointers</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-percent-of-points-from-3-pointers">Opponent Percent of Points from 3 Pointers</a></li>
+        		        	                	        		        			<li><a href="/nba/stat/opponent-percent-of-points-from-free-throws">Opponent Percent of Points from Free Throws</a></li>
+        		        	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                	                </ul>
 </aside>			</div> <!-- main-wrapper -->
 				<div class="left-sidebar desktop-only">
 						  			<h2 class="extra-section-nav-header">Premium Picks</h2>
@@ -1801,17 +1768,17 @@
 				<li><a href="/nba/schedules/"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Daily Schedule">Daily Schedule</a></li>
 				<li><a href="/nba/schedules/season/"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Season Schedule">Season Schedule</a></li>
                                 
-                                                                                          <li><a href="/nba/matchup/rockets-thunder-2019-04-09"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 1">Houston @ Okla City</a></li>
-                                                              <li><a href="/nba/matchup/nuggets-jazz-2019-04-09"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 2">Denver @ Utah</a></li>
-                                                              <li><a href="/nba/matchup/76ers-heat-2019-04-09"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 3">Philadelphia @ Miami</a></li>
-                                                              <li><a href="/nba/matchup/raptors-timberwolves-2019-04-09"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 4">Toronto @ Minnesota</a></li>
-                                                              <li><a href="/nba/matchup/warriors-pelicans-2019-04-09"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 5">Golden State @ New Orleans</a></li>
-                                                              <li><a href="/nba/matchup/trail-blazers-lakers-2019-04-09"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 6">Portland @ LA Lakers</a></li>
-                                                              <li><a href="/nba/matchup/celtics-wizards-2019-04-09"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 7">Boston @ Washington</a></li>
-                                                              <li><a href="/nba/matchup/grizzlies-pistons-2019-04-09"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 8">Memphis @ Detroit</a></li>
-                                                              <li><a href="/nba/matchup/hornets-cavaliers-2019-04-09"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 9">Charlotte @ Cleveland</a></li>
-                                                              <li><a href="/nba/matchup/suns-mavericks-2019-04-09"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 10">Phoenix @ Dallas</a></li>
-                                                              <li><a href="/nba/matchup/knicks-bulls-2019-04-09"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 11">New York @ Chicago</a></li>
+                                                                                          <li><a href="/nba/matchup/jazz-clippers-2019-04-10"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 1">Utah @ LA Clippers</a></li>
+                                                              <li><a href="/nba/matchup/thunder-bucks-2019-04-10"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 2">Okla City @ Milwaukee</a></li>
+                                                              <li><a href="/nba/matchup/timberwolves-nuggets-2019-04-10"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 3">Minnesota @ Denver</a></li>
+                                                              <li><a href="/nba/matchup/magic-hornets-2019-04-10"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 4">Orlando @ Charlotte</a></li>
+                                                              <li><a href="/nba/matchup/heat-nets-2019-04-10"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 5">Miami @ Brooklyn</a></li>
+                                                              <li><a href="/nba/matchup/warriors-grizzlies-2019-04-10"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 6">Golden State @ Memphis</a></li>
+                                                              <li><a href="/nba/matchup/mavericks-spurs-2019-04-10"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 7">Dallas @ San Antonio</a></li>
+                                                              <li><a href="/nba/matchup/kings-trail-blazers-2019-04-10"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 8">Sacramento @ Portland</a></li>
+                                                              <li><a href="/nba/matchup/pacers-hawks-2019-04-10"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 9">Indiana @ Atlanta</a></li>
+                                                              <li><a href="/nba/matchup/bulls-76ers-2019-04-10"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 10">Chicago @ Philadelphia</a></li>
+                                                              <li><a href="/nba/matchup/pistons-knicks-2019-04-10"  data-track-click-event data-track-category="Desktop Left Nav" data-track-action="NBA Level 3" data-track-label="Matchup 11">Detroit @ New York</a></li>
                                                           			</ul>
 		</li>
         <li><a href="#" class="expand-controller " data-track-category="Desktop Left Nav" data-track-action="NBA Level 2" data-track-label="Rankings">Rankings <svg class="icon"><use xlink:href="#icon-plus3"></use></svg></a>
@@ -1874,28 +1841,68 @@
 			<div class="desktop-nav-overlay"></div>
 		</div> <!-- content-wrapper -->
 
-		<footer role="contentinfo" class="subsite-brackets">
+		<footer role="contentinfo" class="subsite-tr">
 			
 		<div class="footer-list-wrapper">
-							<div class="brackets-footer-list-container">
-					<div class="footer-row clearfix">
-    	    <ul class="footer-list">
-		    <li class="footer-list-heading">Bracket Picks & Odds</li>
-		    <li><a href="/ncaa-bracket-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="Bracket Picks 2019">Bracket Picks 2019</a></li>	
-		    			    <li><a href="/ncaa-tournament/game-predictor/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="Game Predictor 2019">Game Predictor 2019</a></li>
-					    <li><a href="/ncaa-tournament/bracket-strategy/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="Bracket Strategy 2019">Bracket Strategy 2019</a></li>
-		    <li><a href="/ncaa-tournament/printable-brackets/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="Printable Bracket 2019">Printable Bracket 2019</a></li>
-	    </ul>
-	
-	    <ul class="footer-list">
-		    <li class="footer-list-heading">NCAA Tournament Picks</li>
-			<li><a href="/ncaa-tournament/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NCAA Picks 2019">NCAA Picks 2019</a></li>
-			<li><a href="/ncaa-basketball-betting-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NCAA Betting Picks">NCAA Betting Picks</a></li>
-			<li><a href="/ncaa-basketball-ats-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NCAA Spread Picks">NCAA Spread Picks</a></li>
-			<li><a href="/ncaa-tournament/odds-lines-spreads/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NCAA Odds 2019">NCAA Odds 2019</a></li>
-	    </ul>
-	</div> <!-- footer-row -->				</div> <!-- brackets-footer-list-container -->	
-						    		</div> <!-- footer-list-wrapper -->
+											<div class="footer-row four-footer-columns clearfix">
+    <ul class="footer-list">
+	    <li><a href="/football-pool-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NFL Football Pool Picks">NFL Football Pool Picks</a></li>	
+	    <li><a href="/nfl-survivor-pool-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NFL Survivor Pool Picks">NFL Survivor Pool Picks</a></li>
+	    <li><a href="/ncaa-bracket-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NCAA Bracket Picks">NCAA Bracket Picks</a></li>
+	    <li><a href="/college-bowl-pool-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="College Bowl Pool Picks">College Bowl Pool Picks</a></li>
+	    <li><a href="/football-pool-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="College Football Pool Picks">College Football Pool Picks</a></li>	
+    </ul>
+
+    <ul class="footer-list">
+	    <li><a href="/nfl-betting-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NFL Picks">NFL Picks</a></li>
+	    <li><a href="/nba-betting-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NBA Picks">NBA Picks</a></li>
+	    <li><a href="/mlb-betting-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="MLB Picks">MLB Picks</a></li>
+	    <li><a href="/college-football-betting-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="College Football Picks">College Football Picks</a></li>
+	    <li><a href="/ncaa-basketball-betting-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="College Basketball Picks">College Basketball Picks</a></li>
+    </ul>
+
+    <ul class="footer-list">
+	    <li><a href="/nfl-win-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NFL Predictions">NFL Predictions</a></li>
+	    <li><a href="/nba-win-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NBA Predictions">NBA Predictions</a></li>
+	    <li><a href="/mlb-win-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="MLB Predictions">MLB Predictions</a></li>
+	    <li><a href="/college-football-win-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="College Football Predictions">College Football Predictions</a></li>
+	    <li><a href="/ncaa-basketball-win-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="College Basketball Predictions">College Basketball Predictions</a></li>
+    </ul>
+
+    <ul class="footer-list">
+	    <li><a href="/nfl-ats-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NFL Spread Picks">NFL Spread Picks</a></li>
+	    <li><a href="/nba-ats-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NBA Spread Picks">NBA Spread Picks</a></li>
+	    <li><a href="/mlb-run-line-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="MLB Spread Picks">MLB Spread Picks</a></li>
+	    <li><a href="/college-football-ats-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="College Football Spread Picks">College Football Spread Picks</a></li>
+	    <li><a href="/ncaa-basketball-ats-picks/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="College Basketball Spread Picks">College Basketball Spread Picks</a></li>
+    </ul>
+</div> <!-- footer-row -->
+
+<div class="footer-row three-footer-columns clearfix">
+    <ul class="footer-list">
+	    <li><a href="/nfl/rankings/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NFL Rankings">NFL Rankings</a></li>
+	    <li><a href="/nba/rankings/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NBA Rankings">NBA Rankings</a></li>
+	    <li><a href="/mlb/rankings/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="MLB Rankings">MLB Rankings</a></li>
+	    <li><a href="/ncf/rankings/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="College Football Rankings">College Football Rankings</a></li>
+	    <li><a href="/ncb/rankings/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="College Basketball Rankings">College Basketball Rankings</a></li>
+    </ul>
+
+    <ul class="footer-list">
+	    <li><a href="/nfl/stats/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NFL Stats">NFL Stats</a></li>
+	    <li><a href="/nba/stats/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NBA Stats">NBA Stats</a></li>
+	    <li><a href="/mlb/stats/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="MLB Stats">MLB Stats</a></li>
+	    <li><a href="/ncf/stats/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="College Football Stats">College Football Stats</a></li>
+	    <li><a href="/ncb/stats/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="College Basketball Stats">College Basketball Stats</a></li>
+    </ul>
+
+    <ul class="footer-list">
+	    <li><a href="/nfl/odds/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NFL Odds">NFL Odds</a></li>
+	    <li><a href="/nba/odds/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="NBA Odds">NBA Odds</a></li>
+	    <li><a href="/mlb/odds/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="MLB Odds">MLB Odds</a></li>
+	    <li><a href="/ncf/odds/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="College Football Odds">College Football Odds</a></li>
+	    <li><a href="/ncb/odds/" data-track-click-event data-track-category="Footer link" data-track-action="click" data-track-label="College Basketball Odds">College Basketball Odds</a></li>
+	</ul>
+</div> <!-- footer-row -->		    		</div> <!-- footer-list-wrapper -->
 		
 		<div class="persistent-footer clearfix">
 	<div class="footer-tr-logo-wrapper">
@@ -1950,7 +1957,7 @@
 
 
 <!-- Start TR tag -->
-	<iframe src="/logger.php?page_key=nba%2Fstat%2Fpoints-per-game&amp;page_league=nba&amp;page_type=stat&amp;funnel_page_type=&amp;trk=&amp;uri=%2Fnba%2Fstat%2Fpoints-per-game&amp;refer=&amp;check=7b71a3d12c49709774e0262f2df27bcb" width="0" height="0" frameborder="0"></iframe>
+	<iframe src="/logger.php?page_key=nba%2Fstat%2Fopponent-points-per-game&amp;page_league=nba&amp;page_type=stat&amp;funnel_page_type=&amp;trk=&amp;uri=%2Fnba%2Fstat%2Fopponent-points-per-game&amp;refer=&amp;check=bc0f92fe4a91e3203130a8ae487c46ab" width="0" height="0" frameborder="0"></iframe>
 <!-- End TR tag -->
 
 

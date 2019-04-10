@@ -77,7 +77,7 @@ class NBA {
     void setStat(string url, int statID);
 
     //calls setStat for each stat
-    void initializeAllStats();
+    void initializeRoster();
     /*
     * Setters
     * calls setStat(contextualURL, contextualID);
@@ -98,10 +98,12 @@ class NBA {
     //prints all the team names in the hashTable
     void printAllTeams();
 
+    team* searchTable(std::string word);
+
   private:
     /* member functions */
     unsigned int getHash(std::string word);
-    team* searchTable(std::string word);
+
 
     /* instance variables */
     team** teamHashTable;

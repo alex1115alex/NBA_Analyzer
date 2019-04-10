@@ -11,7 +11,6 @@ NBA::NBA(int hashTableSize)
   {
     teamHashTable[i] = nullptr; //nullptr all teams
   }
-  cout << "successfully constructed" << endl;
 }
 
 NBA::~NBA()
@@ -32,10 +31,8 @@ NBA::~NBA()
 //addWord(string word) -> adds word to the teamHashTable
 void NBA::addTeam(string name)
 {
-  cout << "adding team: " << name << endl;
   if(searchTable(name) == nullptr) //word does not exist in the array
   {
-    cout << name << " does not exist yet" << endl;
     team* p = teamHashTable[getHash(name)]; //create a pointer towards where the word should be
     if(p == nullptr) //the list at hashTable[getHash(word)] is empty
     {
@@ -47,7 +44,6 @@ void NBA::addTeam(string name)
     }
     else //there is a collision at hashTable[getHas(word)]
     {
-      cout << name << " already exists" << endl;
       team* newTeam = new team; //create a new team
       newTeam->name = name; //initialize values
       newTeam->count = 1;
@@ -68,7 +64,7 @@ void NBA::incrementCount(string name)
 {
   team* p = searchTable(name); //create a pointer towards the word
   //TEAMS DO NOT HAVE A COUNT
-  //p->count++; //increment the team's count
+  p->count++; //increment the team's count
 }
 
 //helper function to sort the teams
@@ -145,10 +141,18 @@ void NBA::printAllTeams()
       while(p != nullptr)
       {
         cout << "===" << p->name << "===" << endl;
-        cout << "points per game: " << p->pointsPerGame << endl;
-        cout << "shooting percentage: " << p->shootingPercentage << "%" << endl;
-        cout << "rebound percentage: " << p->reboundPercentage << "%" << endl;
-        cout << "defensive rebounding percentage: " << p->defensiveReboundingPercentage << "%" << endl;
+        cout << "Points per game: " << p->pointsPerGame << endl;
+        cout << "Shooting percentage: " << p->shootingPercentage << "%" << endl;
+        cout << "Rebound percentage: " << p->reboundPercentage << "%" << endl;
+        cout << "Defensive rebounding percentage: " << p->defensiveReboundingPercentage << "%" << endl;
+        cout << "Block percentage: " << p->blockPercentage << "%" << endl;
+        cout << "Steals per defensive play: " << p->stealsPerDefensivePlay << endl;
+        cout << "Turnovers per possession: " << p->turnoversPerPossession << endl;
+        cout << "Opponent shooting percentage: " << p->opponentShootingPercentage << endl;
+        cout << "Opponent rebound percentage: " << p->opponentReboundPercentage << "%" << endl;
+        cout << "Opponent turnovers per possession percentage: " << p->opponentTurnoversPerPossessionPercentage << "%" << endl;
+        cout << "Opponent points per game: " << p->opponentPointsPerGame << endl;
+        cout << endl;
         p = p->next;
       }
     }
@@ -239,7 +243,6 @@ void NBA::setStat(string url, int statID)
             //locate the name within the line
             int nameIndex = line.find("td class=\"text-left nowrap\" data-sort=\"") + 39; //the index of line at which the name starts
             string name = line.substr(nameIndex, line.find("\"><a") - nameIndex); //' "><a ' is the location at which the name ends
-            cout << "Team name: " << name << endl;
 
             //because the "last 3" statistic is two lines down from the line with the team name,
             //we need to go two lines down by calling getline twice.
@@ -249,44 +252,41 @@ void NBA::setStat(string url, int statID)
             //locate the statistic within the line
             int statisticIndex = line.find(">") + 1; //the index of the statistic within the line
             string statistic = line.substr(statisticIndex, line.find("<", statisticIndex) - statisticIndex);
-            cout << statistic << endl;
-            cout << stod(statistic) << endl;
 
             switch(statID)
             {
               case 0:
-                teamHashTable[getHash(name)]->pointsPerGame = stod(statistic);
-                cout << teamHashTable[getHash(name)]->pointsPerGame << endl;
+                searchTable(name)->pointsPerGame = stod(statistic);
               break;
               case 1:
-                teamHashTable[getHash(name)]->shootingPercentage = stod(statistic);
+                searchTable(name)->shootingPercentage = stod(statistic);
               break;
               case 2:
-                teamHashTable[getHash(name)]->reboundPercentage = stod(statistic);
+                searchTable(name)->reboundPercentage = stod(statistic);
               break;
               case 3:
-                teamHashTable[getHash(name)]->defensiveReboundingPercentage = stod(statistic);
+                searchTable(name)->defensiveReboundingPercentage = stod(statistic);
               break;
               case 4:
-                teamHashTable[getHash(name)]->blockPercentage = stod(statistic);
+                searchTable(name)->blockPercentage = stod(statistic);
               break;
               case 5:
-                teamHashTable[getHash(name)]->stealsPerDefensivePlay = stod(statistic);
+                searchTable(name)->stealsPerDefensivePlay = stod(statistic);
               break;
               case 6:
-                teamHashTable[getHash(name)]->turnoversPerPossession = stod(statistic);
+                searchTable(name)->turnoversPerPossession = stod(statistic);
               break;
               case 7:
-                teamHashTable[getHash(name)]->opponentShootingPercentage = stod(statistic);
+                searchTable(name)->opponentShootingPercentage = stod(statistic);
               break;
               case 8:
-                teamHashTable[getHash(name)]->opponentReboundPercentage = stod(statistic);
+                searchTable(name)->opponentReboundPercentage = stod(statistic);
               break;
               case 9:
-                teamHashTable[getHash(name)]->opponentTurnoversPerPossessionPercentage = stod(statistic);
+                searchTable(name)->opponentTurnoversPerPossessionPercentage = stod(statistic);
               break;
               case 10:
-                teamHashTable[getHash(name)]->opponentPointsPerGame = stod(statistic);
+                searchTable(name)->opponentPointsPerGame = stod(statistic);
               break;
               default:
               cout << "What the fuck did you type in?" << endl;
@@ -332,15 +332,13 @@ void NBA::setTeamNames()
   myfilestream.close(); //close the file stream
 }
 
-void NBA::initializeAllStats()
+void NBA::initializeRoster()
 {
+  setTeamNames(); //initialize all teams
   setStat("https://www.teamrankings.com/nba/stat/points-per-game", 0);
-/*
   setStat("https://www.teamrankings.com/nba/stat/shooting-pct", 1);
   setStat("https://www.teamrankings.com/nba/stat/offensive-rebounding-pct", 2);
-
   setStat("https://www.teamrankings.com/nba/stat/defensive-rebounding-pct", 3);
-
   setStat("https://www.teamrankings.com/nba/stat/block-pct", 4);
   setStat("https://www.teamrankings.com/nba/stat/steal-pct", 5);
   setStat("https://www.teamrankings.com/nba/stat/turnovers-per-possession", 6);
@@ -348,5 +346,5 @@ void NBA::initializeAllStats()
   setStat("https://www.teamrankings.com/nba/stat/opponent-offensive-rebounding-pct", 8);
   setStat("https://www.teamrankings.com/nba/stat/opponent-turnovers-per-possession", 9);
   setStat("https://www.teamrankings.com/nba/stat/opponent-points-per-game", 10);
-  */
+
 }
