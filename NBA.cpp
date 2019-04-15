@@ -1,5 +1,7 @@
 #include "NBA.hpp"
 
+//hello brother
+
 NBA::NBA(int hashTableSize)
 {
   teamHashTable = new team*[hashTableSize];
