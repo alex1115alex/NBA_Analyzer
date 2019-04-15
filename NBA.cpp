@@ -363,5 +363,25 @@ void NBA::initializeRoster()
   setStat("https://www.teamrankings.com/nba/stat/opponent-offensive-rebounding-pct", 8);
   setStat("https://www.teamrankings.com/nba/stat/opponent-turnovers-per-possession", 9);
   setStat("https://www.teamrankings.com/nba/stat/opponent-points-per-game", 10);
+}
 
+void NBA::initalizeScores()
+{
+  for(int i = 0; i < hashTableSize; i++)
+  {
+    if(teamHashTable[i] != nullptr)
+    {
+      team* p = teamHashTable[i]; //create a pointer towards the current hashTable element
+      while(p != nullptr)
+      { //For each team -> decide score
+
+        /*
+        TODO:
+        CODE FOR SCORE CALCULATION GOES HERE
+        */
+
+        p = p->next;
+      }
+    }
+  }
 }

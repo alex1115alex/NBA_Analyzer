@@ -78,22 +78,9 @@ class NBA {
 
     //calls setStat for each stat
     void initializeRoster();
-    /*
-    * Setters
-    * calls setStat(contextualURL, contextualID);
 
-    void setTeamPointsPerGame();
-    void setTeamShootingPercentage();
-    void setTeamReboundingPercentage();
-    void setTeamDefensiveReboundingPercentage();
-    void setTeamBlockPercentage();
-    void setTeamStealsPerDefensivePlay();
-    void setTeamTurnoversPerPossession();
-    void setTeamOpponentShootingPercentage();
-    void setTeamOpponentReboundPercentage();
-    void setOpponentTurnoversPerPossessionPercentage();
-    void setTeamOpponentPointsPerGame();
-    */
+    //for each team, figure out its score
+    void initializeScores();
 
     //prints all the team names in the hashTable
     void printAllTeams();
