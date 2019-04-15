@@ -131,6 +131,23 @@ int NBA::getTotalNumWords()
   return total;
 }
 
+void NBA::printTeam(string name)
+{
+  team *p = searchTable(name);
+  cout << "===" << p->name << "===" << endl;
+  cout << "Points per game: " << p->pointsPerGame << endl;
+  cout << "Shooting percentage: " << p->shootingPercentage << "%" << endl;
+  cout << "Rebound percentage: " << p->reboundPercentage << "%" << endl;
+  cout << "Defensive rebounding percentage: " << p->defensiveReboundingPercentage << "%" << endl;
+  cout << "Block percentage: " << p->blockPercentage << "%" << endl;
+  cout << "Steals per defensive play: " << p->stealsPerDefensivePlay << endl;
+  cout << "Turnovers per possession: " << p->turnoversPerPossession << endl;
+  cout << "Opponent shooting percentage: " << p->opponentShootingPercentage << endl;
+  cout << "Opponent rebound percentage: " << p->opponentReboundPercentage << "%" << endl;
+  cout << "Opponent turnovers per possession percentage: " << p->opponentTurnoversPerPossessionPercentage << "%" << endl;
+  cout << "Opponent points per game: " << p->opponentPointsPerGame << endl;
+}
+
 void NBA::printAllTeams()
 {
   for(int i = 0; i < hashTableSize; i++)

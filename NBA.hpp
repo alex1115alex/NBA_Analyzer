@@ -52,7 +52,7 @@ class NBA {
     int getNumCollisions();
     int getNumItems();
     int getTotalNumWords();
-
+    void printTeam(string name);
     /*
     * Name setter
     * For each name within file
