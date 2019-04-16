@@ -368,64 +368,149 @@ void NBA::initializeRoster()
 //////////////////////////////////////////////////
 ///     INITIALIZE SCORES HELPER FUNCTIONS      //
 //////////////////////////////////////////////////
-int calcPointsPerGameScore(int n){
+int calcPointsPerGameScore(double n){//0
+  int score = 0;
+  if(n >= 123){
+    score = 22;
+  }else if(n >= 120 && n < 123){
+    score = 20;
+  }else if(n >= 117 && n < 120){
+    score = 18;
+  }else if(n >= 114 && n < 117){
+    score = 16;
+  }else if(n >= 111 && n < 114){
+    score = 14;
+  }else if(n >= 108 && n < 111){
+    score = 12;
+  }else if(n >= 105 && n < 108){
+    score = 10;
+  }else if(n >= 102 && n < 105){
+    score = 8;
+  }else if(n >= 99 && n < 102){
+    score = 4;
+  }else if(n >= 96 && n < 99){
+    score = 2;
+  }else if(n >= 93 && n < 96){
+    score = 0;
+  }
+  return score;
+}
+
+int calcShootintPercentageScore(double n){//1
+  int score;
+  if(n >= 50){
+    score = 10;
+  }else if(n >= 49 && n < 50){
+    score = 9;
+  }else if(n >= 48 && n < 49){
+    score = 8;
+  }else if(n >= 47 && n < 48){
+    score = 7;
+  }else if(n >= 46 && n < 47){
+    score = 6;
+  }else if(n >= 45 && n < 46){
+    score = 5;
+  }else if(n >= 44 && n < 45){
+    score = 4;
+  }else if(n >= 43 && n < 44){
+    score = 3;
+  }else if(n >= 42 && n < 43){
+    score = 2;
+  }else if(n >= 41 && n < 42){
+    score = 1;
+  }
+  return score;
+}
+
+int calcOffensiveReboundingScore(double n){//2
 
 }
 
-int calcShootintPercentageScore(int n){
+int calcDefensiveReboundingScore(double n){//3
 
 }
 
-int calcOffensiveReboundingScore(int n){
+int calcBlockScore(double n){//4
 
 }
 
-int calcDefensiveReboundingScore(int n){
+int calcStealsScore(double n){//5
 
 }
 
-int calcBlockScore(int n){
+int calcTurnoverScore(double n){//6
 
 }
 
-int calcStealsScore(int n){
+int calcOpponentShootingScore(double n){//7
 
 }
 
-int calcTurnoverScore(int n){
+int calcOpponentOffensiveReboundScore(double n){//8
 
 }
 
-int calcOpponentShootingScore(int n){
+int calcOpponentTurnoverScore(double n){//9
 
 }
 
-int calcOpponentOffensiveReboundScore(int n){
-
-}
-
-int calcOpponentTurnoverScore(int n){
-
-}
-
-int calcOpponentPointsPerGame(int n){
+int calcOpponentPointsPerGame(int n){//10
 
 }
 
 void NBA::initializeScores()
 {
-  for(int i = 0; i < hashTableSize; i++)
+  for(double i = 0; i < hashTableSize; i++)
   {
     if(teamHashTable[i] != nullptr)
     {
       team* p = teamHashTable[i]; //create a pointer towards the current hashTable element
       while(p != nullptr)
       { //For each team -> decide score
-
+        int sum = 0;
         /*
         TODO:
         CODE FOR SCORE CALCULATION GOES HERE
         */
+        for(int x = 0; x <= 10; x++){
+          switch(x){
+            case 0:
+              sum += calcPointsPerGameScore(p->pointsPerGame);
+              break;
+            case 1:
+              sum += calcShootintPercentageScore(p->shootingPercentage);
+              break;
+            case 2:
+              sum += calcOffensiveReboundingScore(p->reboundPercentage);
+              break;
+            case 3:
+              sum += calcDefensiveReboundingScore(p->defensiveReboundingPercentage);
+              break;
+            case 4:
+              sum += calcBlockScore(p->blockPercentage);
+              break;
+            case 5:
+              sum += calcStealsScore(p->stealsPerDefensivePlay);
+              break;
+            case 6:
+              sum += calcTurnoverScore(p->turnoversPerPossession);
+              break;
+            case 7:
+              sum += calcOpponentShootingScore(p->opponentShootingPercentage);
+              break;
+            case 8:
+              sum += calcOpponentOffensiveReboundScore(p->opponentReboundPercentage);
+              break;
+            case 9:
+              sum += calcOpponentTurnoverScore(p->opponentTurnoversPerPossessionPercentage);
+              break;
+            case 10:
+              sum ++ calcOpponentPointsPerGame(p->opponentPointsPerGame);
+              break;
+          }
+        }
+
+        p->score = sum;
         //each stat has an ID that we use to get data with
         // double pointsPerGame; //ID 0
         // double shootingPercentage; //ID 1

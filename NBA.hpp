@@ -79,7 +79,7 @@ class NBA {
     //calls setStat for each stat
     void initializeRoster();
 
-    //for each team, figure out its score
+    //for each team, set its score
     void initializeScores();
 
     //prints all the team names in the hashTable
