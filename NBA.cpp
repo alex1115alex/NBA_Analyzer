@@ -47,7 +47,7 @@ void NBA::addTeam(string name)
       team* newTeam = new team; //create a new team
       newTeam->name = name; //initialize values
       newTeam->count = 1;
-      newTeam->next = p; //set the team's next equal to the current team in its position
+      newTeam->next = p; //set the team's next equal to the head of Bucket LL
       teamHashTable[getHash(name)] = newTeam; //stick it in the array
       numCollisions++; //increment numCollisions
     }
@@ -365,7 +365,54 @@ void NBA::initializeRoster()
   setStat("https://www.teamrankings.com/nba/stat/opponent-points-per-game", 10);
 }
 
-void NBA::initalizeScores()
+//////////////////////////////////////////////////
+///     INITIALIZE SCORES HELPER FUNCTIONS      //
+//////////////////////////////////////////////////
+int calcPointsPerGameScore(int n){
+
+}
+
+int calcShootintPercentageScore(int n){
+
+}
+
+int calcOffensiveReboundingScore(int n){
+
+}
+
+int calcDefensiveReboundingScore(int n){
+
+}
+
+int calcBlockScore(int n){
+
+}
+
+int calcStealsScore(int n){
+
+}
+
+int calcTurnoverScore(int n){
+
+}
+
+int calcOpponentShootingScore(int n){
+
+}
+
+int calcOpponentOffensiveReboundScore(int n){
+
+}
+
+int calcOpponentTurnoverScore(int n){
+
+}
+
+int calcOpponentPointsPerGame(int n){
+
+}
+
+void NBA::initializeScores()
 {
   for(int i = 0; i < hashTableSize; i++)
   {
@@ -379,6 +426,19 @@ void NBA::initalizeScores()
         TODO:
         CODE FOR SCORE CALCULATION GOES HERE
         */
+        //each stat has an ID that we use to get data with
+        // double pointsPerGame; //ID 0
+        // double shootingPercentage; //ID 1
+        // double reboundPercentage; //ID 2
+        // double defensiveReboundingPercentage;//ID 3
+        // double blockPercentage;//ID 4
+        // double stealsPerDefensivePlay;//ID 5
+        // double turnoversPerPossession;//ID 6
+        // double opponentShootingPercentage;//ID 7
+        // double opponentReboundPercentage;//ID 8
+        // double opponentTurnoversPerPossessionPercentage;//ID 9
+        // double opponentPointsPerGame;//ID 10
+
 
         p = p->next;
       }
