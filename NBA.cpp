@@ -255,6 +255,7 @@ team* NBA::getBestTeam()
       }
     }
   }
+  //cout << best->score << endl;
   return best;
 }
 

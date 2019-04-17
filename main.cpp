@@ -58,11 +58,11 @@ int main()
         compare = myNBA.compareTeams(line1, line2);
         if(compare > 0)
         {
-          cout << "Team 1 is " << compare << " points better" << endl;
+          cout << line1 << " is " << compare << " points better than " << line2 << endl;
         }
         else
         {
-          cout << "Team 1 is " << -1 * compare << " points better" << endl;
+          cout << line2 << " is " << -1 * compare << " points better than " << line1 << endl;
         }
       }
       else
@@ -79,7 +79,7 @@ int main()
       break;
       default:
       cout << "Invalid option" << endl;
-      myNBA.printAllTeams();
+      //myNBA.printAllTeams();
       break;
     }
   }
