@@ -501,6 +501,7 @@ int calcBlockScore(double n){//4
 }
 
 int calcStealsScore(double n){//5
+  int score = 0;
   if(n >= 12){
     score = 15;
   }else if(n >= 11 && n < 12){
@@ -554,6 +555,7 @@ int calcTurnoverScore(double n){//6
 }
 
 int calcOpponentShootingScore(double n){//7
+  int score = 0;
   if(n >= 51){
     score = 1;
   }else if(n >= 50 && n < 51){
@@ -627,43 +629,19 @@ void NBA::initializeScores()
         TODO:
         CODE FOR SCORE CALCULATION GOES HERE
         */
-        for(int x = 0; x <= 10; x++){
-          switch(x){
-            case 0:
-              sum += calcPointsPerGameScore(p->pointsPerGame);
-              break;
-            case 1:
-              sum += calcShootintPercentageScore(p->shootingPercentage);
-              break;
-            case 2:
-              sum += calcOffensiveReboundingScore(p->reboundPercentage);
-              break;
-            case 3:
-              sum += calcDefensiveReboundingScore(p->defensiveReboundingPercentage);
-              break;
-            case 4:
-              sum += calcBlockScore(p->blockPercentage);
-              break;
-            case 5:
-              sum += calcStealsScore(p->stealsPerDefensivePlay);
-              break;
-            case 6:
-              sum += calcTurnoverScore(p->turnoversPerPossession);
-              break;
-            case 7:
-              sum += calcOpponentShootingScore(p->opponentShootingPercentage);
-              break;
-            case 8:
-              sum += calcOpponentOffensiveReboundScore(p->opponentReboundPercentage);
-              break;
-            case 9:
-              sum += calcOpponentTurnoverScore(p->opponentTurnoversPerPossessionPercentage);
-              break;
-            case 10:
-              sum ++ calcOpponentPointsPerGame(p->opponentPointsPerGame);
-              break;
-          }
-        }
+        sum += calcPointsPerGameScore(p->pointsPerGame);
+        sum += calcShootintPercentageScore(p->shootingPercentage);
+        sum += calcOffensiveReboundingScore(p->reboundPercentage);
+        sum += calcDefensiveReboundingScore(p->defensiveReboundingPercentage);
+        sum += calcBlockScore(p->blockPercentage);
+        sum += calcStealsScore(p->stealsPerDefensivePlay);
+        sum += calcTurnoverScore(p->turnoversPerPossession);
+        sum += calcOpponentShootingScore(p->opponentShootingPercentage);
+        sum += calcOpponentOffensiveReboundScore(p->opponentReboundPercentage);
+        sum += calcOpponentTurnoverScore(p->opponentTurnoversPerPossessionPercentage);
+        sum += calcOpponentPointsPerGame(p->opponentPointsPerGame);
+
+
 
         p->score = sum;
         //each stat has an ID that we use to get data with

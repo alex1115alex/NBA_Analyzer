@@ -5,6 +5,7 @@
 #include <iomanip>
 #include <stdio.h>
 #include <fstream>
+#include <cstring>
 #include "curlIN/curl.h"
 using namespace std;
 
