@@ -577,6 +577,7 @@ int calcOpponentShootingScore(double n){//7
   }else if(n >= 41 && n < 42){
     score = 10;
   }
+  return score;
 }
 
 int calcOpponentOffensiveReboundScore(double n){//8
@@ -608,16 +609,20 @@ int calcOpponentOffensiveReboundScore(double n){//8
 }
 
 int calcOpponentTurnoverScore(double n){//9
+  int score = 0;
 
+  return score;
 }
 
 int calcOpponentPointsPerGame(int n){//10
+  int score = 0;
 
+  return score;
 }
 
 void NBA::initializeScores()
 {
-  for(double i = 0; i < hashTableSize; i++)
+  for(int i = 0; i < hashTableSize; i++)
   {
     if(teamHashTable[i] != nullptr)
     {
@@ -625,10 +630,6 @@ void NBA::initializeScores()
       while(p != nullptr)
       { //For each team -> decide score
         int sum = 0;
-        /*
-        TODO:
-        CODE FOR SCORE CALCULATION GOES HERE
-        */
         sum += calcPointsPerGameScore(p->pointsPerGame);
         sum += calcShootintPercentageScore(p->shootingPercentage);
         sum += calcOffensiveReboundingScore(p->reboundPercentage);
@@ -640,9 +641,6 @@ void NBA::initializeScores()
         sum += calcOpponentOffensiveReboundScore(p->opponentReboundPercentage);
         sum += calcOpponentTurnoverScore(p->opponentTurnoversPerPossessionPercentage);
         sum += calcOpponentPointsPerGame(p->opponentPointsPerGame);
-
-
-
         p->score = sum;
         //each stat has an ID that we use to get data with
         // double pointsPerGame; //ID 0
@@ -656,8 +654,6 @@ void NBA::initializeScores()
         // double opponentReboundPercentage;//ID 8
         // double opponentTurnoversPerPossessionPercentage;//ID 9
         // double opponentPointsPerGame;//ID 10
-
-
         p = p->next;
       }
     }
