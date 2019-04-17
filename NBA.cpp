@@ -134,6 +134,12 @@ int NBA::getTotalNumWords()
 void NBA::printTeam(string name)
 {
   team *p = searchTable(name);
+
+  if(p == nullptr)
+  {
+      cout << name << " is not a valid team name, or it has not been initialized properly." << endl;
+  }
+
   cout << "===" << p->name << "===" << endl;
   cout << "Points per game: " << p->pointsPerGame << endl;
   cout << "Shooting percentage: " << p->shootingPercentage << "%" << endl;
@@ -146,6 +152,23 @@ void NBA::printTeam(string name)
   cout << "Opponent rebound percentage: " << p->opponentReboundPercentage << "%" << endl;
   cout << "Opponent turnovers per possession percentage: " << p->opponentTurnoversPerPossessionPercentage << "%" << endl;
   cout << "Opponent points per game: " << p->opponentPointsPerGame << endl;
+  cout << "Overall score: " << p->score << endl;
+}
+
+void NBA::printNames()
+{
+  for(int i = 0; i < hashTableSize; i++)
+  {
+    if(teamHashTable[i] != nullptr)
+    {
+      team* p = teamHashTable[i]; //create a pointer towards the current hashTable element
+      while(p != nullptr)
+      {
+        cout << p->name << endl;
+        p = p->next;
+      }
+    }
+  }
 }
 
 void NBA::printAllTeams()
@@ -169,12 +192,15 @@ void NBA::printAllTeams()
         cout << "Opponent rebound percentage: " << p->opponentReboundPercentage << "%" << endl;
         cout << "Opponent turnovers per possession percentage: " << p->opponentTurnoversPerPossessionPercentage << "%" << endl;
         cout << "Opponent points per game: " << p->opponentPointsPerGame << endl;
+        cout << "Overall score: " << p->score << endl;
         cout << endl;
         p = p->next;
       }
     }
   }
 }
+
+
 
 //Helper functions
 
@@ -207,6 +233,29 @@ team* NBA::searchTable(string name)
     }
   }
   return p; //if p is nullptr or it's the correct team, return it
+}
+
+//returns a poiter to the team struct with the highest score
+team* NBA::getBestTeam()
+{
+  team* best;
+  for(int i = 0; i < hashTableSize; i++)
+  {
+    if(teamHashTable[i] != nullptr)
+    {
+      team* p = teamHashTable[i]; //create a pointer towards the current hashTable element
+      while(p != nullptr)
+      {
+        if(best == nullptr || p->score > best->score)
+        {
+            best = p;
+        }
+
+        p = p->next;
+      }
+    }
+  }
+  return best;
 }
 
 //helper function for downloadURL
@@ -363,6 +412,7 @@ void NBA::initializeRoster()
   setStat("https://www.teamrankings.com/nba/stat/opponent-offensive-rebounding-pct", 8);
   setStat("https://www.teamrankings.com/nba/stat/opponent-turnovers-per-possession", 9);
   setStat("https://www.teamrankings.com/nba/stat/opponent-points-per-game", 10);
+  initializeScores();
 }
 
 //////////////////////////////////////////////////
@@ -610,11 +660,8 @@ int calcOpponentOffensiveReboundScore(double n){//8
 
 int calcOpponentTurnoverScore(double n){//9
   int score = 0;
-<<<<<<< HEAD
-=======
 
   return score;
->>>>>>> 59fb028304396ce355008d7693fed88b0fea8e1c
 }
 
 int calcOpponentPointsPerGame(int n){//10
@@ -661,4 +708,14 @@ void NBA::initializeScores()
       }
     }
   }
+}
+
+int NBA::compareTeams(string team1, string team2)
+{
+  if(isInTable(team1) && isInTable(team2))
+  {
+    return(searchTable(team1)->score - searchTable(team2)->score);
+  }
+
+  return 9999999;
 }

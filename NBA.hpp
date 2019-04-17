@@ -83,10 +83,24 @@ class NBA {
     //for each team, set its score
     void initializeScores();
 
+    //prints all team names
+    void printNames();
+
     //prints all the team names in the hashTable
     void printAllTeams();
 
-    team* searchTable(std::string word);
+    //put in a team name and get the corrseponding team struct. Return nullptr if it does not exist
+    team* searchTable(string team);
+
+    //returns a poiter to the team struct with the highest score
+    team* getBestTeam();
+
+    //compare two teams, the difference between team1 and team2's scores
+    //a high positive number --> team1 is much better
+    //low positive score --> team1 is slightly better
+    //high negative --> team2 much better
+    //low negative --> team2 slightly better
+    int compareTeams(string team1, string team2);
 
   private:
     /* member functions */
