@@ -397,7 +397,7 @@ int calcPointsPerGameScore(double n){//0
 }
 
 int calcShootintPercentageScore(double n){//1
-  int score;
+  int score = 0;
   if(n >= 50){
     score = 10;
   }else if(n >= 49 && n < 50){
@@ -423,31 +423,186 @@ int calcShootintPercentageScore(double n){//1
 }
 
 int calcOffensiveReboundingScore(double n){//2
-
+  int score = 0;
+  if(n >= 34){
+    score = 20;
+  }else if(n >= 32 && n < 34){
+    score = 18;
+  }else if(n >= 30 && n < 32){
+    score = 16;
+  }else if(n >= 28 && n < 30){
+    score = 14;
+  }else if(n >= 26 && n < 28){
+    score = 12;
+  }else if(n >= 24 && n < 26){
+    score = 10;
+  }else if(n >= 22 && n < 24){
+    score = 8;
+  }else if(n >= 20 && n < 22){
+    score = 6;
+  }else if(n >= 18 && n < 20){
+    score = 4;
+  }else if(n >= 16 && n < 18){
+    score = 2;
+  }
+  return score;
 }
 
 int calcDefensiveReboundingScore(double n){//3
-
+  int score = 0;
+  if(n >= 86){
+    score = 20;
+  }else if(n >= 84 && n < 86){
+    score = 18;
+  }else if(n >= 82 && n < 84){
+    score = 16;
+  }else if(n >= 80 && n < 82){
+    score = 14;
+  }else if(n >= 78 && n < 80){
+    score = 12;
+  }else if(n >= 76 && n < 78){
+    score = 10;
+  }else if(n >= 74 && n < 76){
+    score = 8;
+  }else if(n >= 72 && n < 74){
+    score = 6;
+  }else if(n >= 70 && n < 72){
+    score = 4;
+  }else if(n >= 68 && n < 70){
+    score = 2;
+  }
+  return score;
 }
 
 int calcBlockScore(double n){//4
-
+  int score = 0;
+  if(n >= 11){
+    score = 10;
+  }else if(n >= 10 && n < 11){
+    score = 9;
+  }else if(n >= 9 && n < 10){
+    score = 8;
+  }else if(n >= 8 && n < 9){
+    score = 7;
+  }else if(n >= 7 && n < 8){
+    score = 6;
+  }else if(n >= 6 && n < 7){
+    score = 5;
+  }else if(n >= 5 && n < 6){
+    score = 4;
+  }else if(n >= 4 && n < 5){
+    score = 3;
+  }else if(n >= 3 && n < 4){
+    score = 2;
+  }else if(n >= 2 && n < 3){
+    score = 1;
+  }
+  return score;
 }
 
 int calcStealsScore(double n){//5
-
+  if(n >= 12){
+    score = 15;
+  }else if(n >= 11 && n < 12){
+    score = 14;
+  }else if(n >= 10 && n < 11){
+    score = 12;
+  }else if(n >= 9 && n < 10){
+    score = 10;
+  }else if(n >= 8 && n < 9){
+    score = 9;
+  }else if(n >= 7 && n < 8){
+    score = 8;
+  }else if(n >= 6 && n < 7){
+    score = 6;
+  }else if(n >= 5 && n < 6){
+    score = 5;
+  }else if(n >= 4 && n < 5){
+    score = 3;
+  }else if(n >= 3 && n < 4){
+    score = 2;
+  }
+  return score;
 }
 
 int calcTurnoverScore(double n){//6
-
+  int score = 0;
+  if(n >= 20){
+    score = 1;
+  }else if(n >= 19 && n < 20){
+    score = 2;
+  }else if(n >= 18 && n < 19){
+    score = 3;
+  }else if(n >= 17 && n < 18){
+    score = 4;
+  }else if(n >= 16 && n < 17){
+    score = 5;
+  }else if(n >= 15 && n < 16){
+    score = 6;
+  }else if(n >= 14 && n < 15){
+    score = 7;
+  }else if(n >= 13 && n < 14){
+    score = 8;
+  }else if(n >= 12 && n < 13){
+    score = 9;
+  }else if(n >= 11 && n < 12){
+    score = 10;
+  }else if(n >= 10 && n < 11){
+    score = 11;
+  }
+  return score;
 }
 
 int calcOpponentShootingScore(double n){//7
-
+  if(n >= 51){
+    score = 1;
+  }else if(n >= 50 && n < 51){
+    score = 2;
+  }else if(n >= 48 && n < 40){
+    score = 3;
+  }else if(n >= 47 && n < 48){
+    score = 4;
+  }else if(n >= 46 && n < 47){
+    score = 5;
+  }else if(n >= 45 && n < 46){
+    score = 6;
+  }else if(n >= 44 && n < 45){
+    score = 7;
+  }else if(n >= 43 && n < 44){
+    score = 8;
+  }else if(n >= 42 && n < 43){
+    score = 9;
+  }else if(n >= 41 && n < 42){
+    score = 10;
+  }
 }
 
 int calcOpponentOffensiveReboundScore(double n){//8
-
+  int score = 0;
+  if(n >= 32 && n < 34){
+    score = 2;
+  }else if(n >= 30 && n < 32){
+    score = 4;
+  }else if(n >= 28 && n < 30){
+    score = 6;
+  }else if(n >= 26 && n < 28){
+    score = 8;
+  }else if(n >= 24 && n < 26){
+    score = 10;
+  }else if(n >= 22 && n < 24){
+    score = 12;
+  }else if(n >= 20 && n < 22){
+    score = 14;
+  }else if(n >= 18 && n < 20){
+    score = 16;
+  }else if(n >= 16 && n < 18){
+    score = 18;
+  }else if(n >= 14 && n < 16){
+    score = 20;
+  }else if(n >= 12 && n < 14){
+    score = 22;
+  }
+  return score;
 }
 
 int calcOpponentTurnoverScore(double n){//9
