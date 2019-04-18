@@ -608,7 +608,7 @@ int calcOpponentOffensiveReboundScore(double n){//8
 }
 
 int calcOpponentTurnoverScore(double n){//9
-
+  int score = 0;
 }
 
 int calcOpponentPointsPerGame(int n){//10
