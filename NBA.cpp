@@ -134,6 +134,12 @@ int NBA::getTotalNumWords()
 void NBA::printTeam(string name)
 {
   team *p = searchTable(name);
+
+  if(p == nullptr)
+  {
+      cout << name << " is not a valid team name, or it has not been initialized properly." << endl;
+  }
+
   cout << "===" << p->name << "===" << endl;
   cout << "Points per game: " << p->pointsPerGame << endl;
   cout << "Shooting percentage: " << p->shootingPercentage << "%" << endl;
@@ -146,6 +152,23 @@ void NBA::printTeam(string name)
   cout << "Opponent rebound percentage: " << p->opponentReboundPercentage << "%" << endl;
   cout << "Opponent turnovers per possession percentage: " << p->opponentTurnoversPerPossessionPercentage << "%" << endl;
   cout << "Opponent points per game: " << p->opponentPointsPerGame << endl;
+  cout << "Overall score: " << p->score << endl;
+}
+
+void NBA::printNames()
+{
+  for(int i = 0; i < hashTableSize; i++)
+  {
+    if(teamHashTable[i] != nullptr)
+    {
+      team* p = teamHashTable[i]; //create a pointer towards the current hashTable element
+      while(p != nullptr)
+      {
+        cout << p->name << endl;
+        p = p->next;
+      }
+    }
+  }
 }
 
 void NBA::printAllTeams()
@@ -169,12 +192,15 @@ void NBA::printAllTeams()
         cout << "Opponent rebound percentage: " << p->opponentReboundPercentage << "%" << endl;
         cout << "Opponent turnovers per possession percentage: " << p->opponentTurnoversPerPossessionPercentage << "%" << endl;
         cout << "Opponent points per game: " << p->opponentPointsPerGame << endl;
+        cout << "Overall score: " << p->score << endl;
         cout << endl;
         p = p->next;
       }
     }
   }
 }
+
+
 
 //Helper functions
 
@@ -207,6 +233,30 @@ team* NBA::searchTable(string name)
     }
   }
   return p; //if p is nullptr or it's the correct team, return it
+}
+
+//returns a poiter to the team struct with the highest score
+team* NBA::getBestTeam()
+{
+  team* best;
+  for(int i = 0; i < hashTableSize; i++)
+  {
+    if(teamHashTable[i] != nullptr)
+    {
+      team* p = teamHashTable[i]; //create a pointer towards the current hashTable element
+      while(p != nullptr)
+      {
+        if(best == nullptr || p->score > best->score)
+        {
+            best = p;
+        }
+
+        p = p->next;
+      }
+    }
+  }
+  //cout << best->score << endl;
+  return best;
 }
 
 //helper function for downloadURL
@@ -363,6 +413,7 @@ void NBA::initializeRoster()
   setStat("https://www.teamrankings.com/nba/stat/opponent-offensive-rebounding-pct", 8);
   setStat("https://www.teamrankings.com/nba/stat/opponent-turnovers-per-possession", 9);
   setStat("https://www.teamrankings.com/nba/stat/opponent-points-per-game", 10);
+  initializeScores();
 }
 
 //////////////////////////////////////////////////
@@ -610,57 +661,13 @@ int calcOpponentOffensiveReboundScore(double n){//8
 
 int calcOpponentTurnoverScore(double n){//9
   int score = 0;
-  // if(n >= 20){
-  //   score = 11;
-  // }else if(n >= 19 && n < 20){
-  //   score = 10;
-  // }else if(n >= 18 && n < 19){
-  //   score = 9;
-  // }else if(n >= 17 && n < 18){
-  //   score = 8;
-  // }else if(n >= 16 && n < 17){
-  //   score = 7;
-  // }else if(n >= 15 && n < 16){
-  //   score = 6;
-  // }else if(n >= 14 && n < 15){
-  //   score = 5;
-  // }else if(n >= 13 && n < 14){
-  //   score = 4;
-  // }else if(n >= 12 && n < 13){
-  //   score = 3;
-  // }else if(n >= 11 && n < 12){
-  //   score = 2;
-  // }else if(n >= 10 && n < 11){
-  //   score = 1;
-  // }
+
   return score;
 }
 
 int calcOpponentPointsPerGame(int n){//10
   int score = 0;
-  // if(n >= 123){
-  //   score = 2;
-  // }else if(n >= 120 && n < 123){
-  //   score = 4;
-  // }else if(n >= 117 && n < 120){
-  //   score = 6;
-  // }else if(n >= 114 && n < 117){
-  //   score = 8;
-  // }else if(n >= 111 && n < 114){
-  //   score = 10;
-  // }else if(n >= 108 && n < 111){
-  //   score = 12;
-  // }else if(n >= 105 && n < 108){
-  //   score = 14;
-  // }else if(n >= 102 && n < 105){
-  //   score = 16;
-  // }else if(n >= 99 && n < 102){
-  //   score = 18;
-  // }else if(n >= 96 && n < 99){
-  //   score = 20;
-  // }else if(n >= 93 && n < 96){
-  //   score = 22;
-  // }
+
   return score;
 }
 
@@ -702,4 +709,14 @@ void NBA::initializeScores()
       }
     }
   }
+}
+
+int NBA::compareTeams(string team1, string team2)
+{
+  if(isInTable(team1) && isInTable(team2))
+  {
+    return(searchTable(team1)->score - searchTable(team2)->score);
+  }
+
+  return 9999999;
 }
