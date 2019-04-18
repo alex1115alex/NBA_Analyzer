@@ -610,16 +610,57 @@ int calcOpponentOffensiveReboundScore(double n){//8
 
 int calcOpponentTurnoverScore(double n){//9
   int score = 0;
-<<<<<<< HEAD
-=======
-
+  // if(n >= 20){
+  //   score = 11;
+  // }else if(n >= 19 && n < 20){
+  //   score = 10;
+  // }else if(n >= 18 && n < 19){
+  //   score = 9;
+  // }else if(n >= 17 && n < 18){
+  //   score = 8;
+  // }else if(n >= 16 && n < 17){
+  //   score = 7;
+  // }else if(n >= 15 && n < 16){
+  //   score = 6;
+  // }else if(n >= 14 && n < 15){
+  //   score = 5;
+  // }else if(n >= 13 && n < 14){
+  //   score = 4;
+  // }else if(n >= 12 && n < 13){
+  //   score = 3;
+  // }else if(n >= 11 && n < 12){
+  //   score = 2;
+  // }else if(n >= 10 && n < 11){
+  //   score = 1;
+  // }
   return score;
->>>>>>> 59fb028304396ce355008d7693fed88b0fea8e1c
 }
 
 int calcOpponentPointsPerGame(int n){//10
   int score = 0;
-
+  // if(n >= 123){
+  //   score = 2;
+  // }else if(n >= 120 && n < 123){
+  //   score = 4;
+  // }else if(n >= 117 && n < 120){
+  //   score = 6;
+  // }else if(n >= 114 && n < 117){
+  //   score = 8;
+  // }else if(n >= 111 && n < 114){
+  //   score = 10;
+  // }else if(n >= 108 && n < 111){
+  //   score = 12;
+  // }else if(n >= 105 && n < 108){
+  //   score = 14;
+  // }else if(n >= 102 && n < 105){
+  //   score = 16;
+  // }else if(n >= 99 && n < 102){
+  //   score = 18;
+  // }else if(n >= 96 && n < 99){
+  //   score = 20;
+  // }else if(n >= 93 && n < 96){
+  //   score = 22;
+  // }
   return score;
 }
 
