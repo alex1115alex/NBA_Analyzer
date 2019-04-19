@@ -239,7 +239,7 @@ team* NBA::searchTable(string name)
 //returns a poiter to the team struct with the highest score
 team* NBA::getBestTeam()
 {
-  team* best;
+  team* best = nullptr;
   for(int i = 0; i < hashTableSize; i++)
   {
     if(teamHashTable[i] != nullptr)
@@ -415,6 +415,7 @@ void NBA::initializeRoster()
   setStat("https://www.teamrankings.com/nba/stat/opponent-turnovers-per-possession", 9);
   setStat("https://www.teamrankings.com/nba/stat/opponent-points-per-game", 10);
   initializeScores();
+  remove("fileOPT"); //delete the download
 }
 
 //////////////////////////////////////////////////
