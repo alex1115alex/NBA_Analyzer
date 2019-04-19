@@ -137,7 +137,8 @@ void NBA::printTeam(string name)
 
   if(p == nullptr)
   {
-      cout << name << " is not a valid team name, or it has not been initialized properly." << endl;
+      cout << name << " is not a valid team name." << endl;
+      return;
   }
 
   cout << "===" << p->name << "===" << endl;
