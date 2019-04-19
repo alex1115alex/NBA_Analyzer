@@ -1,0 +1,3 @@
+#!/bin/bash
+# Easily compiles the NBA Analyzer
+g++ -std=c++11 -o NBA_Analyzer.out main.cpp NBA.cpp -lcurl
