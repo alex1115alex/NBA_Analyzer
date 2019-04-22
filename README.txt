@@ -17,3 +17,4 @@ Idk about windows.
 -add all top teams that have same score (or make a deciding factor)
 -add homecourt advantage calculated into compareTeams (add a amount to score based on homecourt record)
 -add log file w/date
+-add best matchups (compare all teams and print the best matchups)
