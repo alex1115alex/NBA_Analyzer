@@ -5,7 +5,6 @@ NBA::NBA(int hashTableSize)
   teamHashTable = new team*[hashTableSize];
   this->hashTableSize = hashTableSize;
   numItems = 0;
-  numCollisions = 0;
 
   for(int i = 0; i < hashTableSize; i++)
   {
@@ -49,7 +48,6 @@ void NBA::addTeam(string name)
       newTeam->count = 1;
       newTeam->next = p; //set the team's next equal to the head of Bucket LL
       teamHashTable[getHash(name)] = newTeam; //stick it in the array
-      numCollisions++; //increment numCollisions
     }
     numItems++; //increment numItems
   }
@@ -60,75 +58,9 @@ bool NBA::isInTable(string name)
   return(searchTable(name) != nullptr);
 }
 
-void NBA::incrementCount(string name)
-{
-  team* p = searchTable(name); //create a pointer towards the word
-  //TEAMS DO NOT HAVE A COUNT
-  p->count++; //increment the team's count
-}
-
-//helper function to sort the teams
-int insertIntoSortedArray(team* teams[], int size, team* key, int capacity)
-{
-  if (size >= capacity)
-  {
-    return size;
-  }
-  int i;
-  for (i = size - 1; (i >= 0  && teams[i]->count > key->count); i--)
-  {
-    teams[i + 1] = teams[i];
-  }
-  teams[i + 1] = key;
-  return (size + 1);
-}
-
-void NBA::printTopN(int n)
-{
-  int index = 0;
-  team* teams[numItems];
-  for(int i = 0; i < hashTableSize; i++)
-  {
-    team* p = teamHashTable[i]; //create a pointer towards the current hashTable element
-    while(p != nullptr)
-    {
-      index = insertIntoSortedArray(teams, index, p, numItems);
-      p = p->next;
-    }
-  }
-
-  for(int i = 0; i < n; i++)
-  {
-    cout << fixed << setprecision(4) << (float)teams[numItems - 1 - i]->count/getTotalNumWords() << " - " << teams[numItems - 1 - i]->name << endl; //print out
-  }
-}
-
-int NBA::getNumCollisions()
-{
-  return numCollisions;
-}
-
 int NBA::getNumItems()
 {
   return numItems;
-}
-
-int NBA::getTotalNumWords()
-{
-  int total = 0;
-  for(int i = 0; i < hashTableSize; i++)
-  {
-    if(teamHashTable[i] != nullptr)
-    {
-      team* p = teamHashTable[i]; //create a pointer towards the current hashTable element
-      while(p != nullptr)
-      {
-        total += p->count;
-        p = p->next;
-      }
-    }
-  }
-  return total;
 }
 
 void NBA::printTeam(string name)

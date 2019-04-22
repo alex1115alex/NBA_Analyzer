@@ -47,13 +47,15 @@ class NBA {
     ~NBA();
 
     void addTeam(string team); //create a new team struct with name "name" and add it to the hashTable
+
+    //returns if the given team is in the table
     bool isInTable(string team);
-    void incrementCount(string team);
-    void printTopN(int n);
-    int getNumCollisions();
+
     int getNumItems();
-    int getTotalNumWords();
+
+    //print a specific team's information
     void printTeam(string name);
+    
     /*
     * Name setter
     * For each name within file
@@ -102,6 +104,9 @@ class NBA {
     //low negative --> team2 slightly better
     int compareTeams(string team1, string team2);
 
+    //prints the best n matchups
+    void printTopNMatchups(int n);
+
   private:
     /* member functions */
     unsigned int getHash(std::string word);
@@ -111,7 +116,6 @@ class NBA {
     team** teamHashTable;
     int hashTableSize;
     int numItems;
-    int numCollisions;
 };
 
 #endif
