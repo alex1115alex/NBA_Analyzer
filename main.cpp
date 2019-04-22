@@ -17,8 +17,8 @@ int main()
   NBA myNBA(30);
 
   cout << "=== NBA Analyzer ===" << endl;
-  cout << "By Alex Israelov, Ryan Horn, and some kid Dan" << endl;
-  cout << "All data is pulled from TeamRankings.com who wouldn't give us an API. Dicks.\n" << endl;
+  cout << "By Alex Israelov, Ryan Horn, and Dan" << endl;
+  cout << "All data is pulled from TeamRankings.com\n" << endl;
 
   string choice = "11";
   string line1 = "";
@@ -75,7 +75,7 @@ int main()
       cout << myNBA.getBestTeam()->name << " is the best team with a score of " << myNBA.getBestTeam()->score << "." << endl;
       break;
       case 6:
-      cout << "BYEBYE" << endl;
+      cout << "Goodbye!" << endl;
       break;
       default:
       cout << "Invalid option" << endl;
