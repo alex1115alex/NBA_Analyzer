@@ -9,6 +9,15 @@
 #include "curlIN/curl.h"
 using namespace std;
 
+//struct that represents a player
+struct player
+{
+  string position;
+  int age;
+  int height; //total height in inches
+  int weight; //weight in lbs
+};
+
 //struct that represents a team
 struct team
 {
