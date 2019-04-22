@@ -698,3 +698,45 @@ int NBA::compareTeams(string team1, string team2)
 
   return 9999999;
 }
+
+///////////////////////////
+/////  max heap stuff /////
+///////////////////////////
+/*
+Swaps two integer values
+*/
+void swap(teamComparison *a, teamComparison *b)
+{
+  teamComparison temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
+/*
+Constructor for our MinHeap implementation
+*/
+MinHeap::MinHeap(int cap)
+{
+  currentSize = 0;
+  capacity = cap;
+  heapArr = new teamComparison[capacity];
+}
+
+void MinHeap::heapify(int i)
+{
+  // 'i' is the index to heapify @
+  int l = leftChild(i);  // left child index
+  int r = rightChild(i); // right child index
+  int largest = i;
+
+  if (l < currentSize && heapArr[l]->spread > heapArr[i]->spread){
+    largest = l;
+  }
+  if (r < currentSize && heapArr[r]->spread > heapArr[smallest]->spread){
+    largest = r;
+  }
+  if (largest != i){
+    swap (&heapArr[i], &heapArr[smallest]);
+    heapify(largest);
+  }
+}

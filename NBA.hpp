@@ -32,6 +32,14 @@ struct team
     double opponentPointsPerGame;//ID 10
 };
 
+//struct that represents the comparison of two teams
+struct teamComparison
+{
+  team* team1;
+  team* team2;
+  int spread;
+};
+
 
 /* class HashTable for storing words.
  *   You will create two hash tables in your driver:
@@ -55,7 +63,7 @@ class NBA {
 
     //print a specific team's information
     void printTeam(string name);
-    
+
     /*
     * Name setter
     * For each name within file
