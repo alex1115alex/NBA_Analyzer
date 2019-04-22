@@ -17,7 +17,7 @@ int main()
   NBA myNBA(30);
 
   cout << "=== NBA Analyzer ===" << endl;
-  cout << "By Alex Israelov, Ryan Horn, and Dan" << endl;
+  cout << "By Alex Israelov, Ryan Horn, and Daniel Vignanker" << endl;
   cout << "All data is pulled from TeamRankings.com\n" << endl;
 
   string choice = "11";
