@@ -40,18 +40,12 @@ struct teamComparison
   int spread;
 };
 
-
-/* class HashTable for storing words.
- *   You will create two hash tables in your driver:
- *      - one for storing stop words
- *      - one for storing unique non-stop words
- *   Why? We can load all the stopwords into the first table.
- *   Then, we can quickly check that first hash table to see if
- *   a word is a stopword before adding it to the second.
- */
-class NBA {
+class NBA
+{
   public:
+
     NBA(int hashTableSize);
+
     ~NBA();
 
     void addTeam(string team); //create a new team struct with name "name" and add it to the hashTable
@@ -96,6 +90,8 @@ class NBA {
     //prints all team names
     void printNames();
 
+    void getPPPP();
+
     //prints all the team names in the hashTable
     void printAllTeams();
 
@@ -113,12 +109,7 @@ class NBA {
     int compareTeams(string team1, string team2);
 
     //prints the best n matchups
-    void printTopNMatchups(int n);
-
-    //Helper function for getComparisons
-    void combinationUtil(int arr[], int data[], int start, int end, int index);
-
-    void getComparisons();
+    //void printTopNMatchups(int n);
 
   private:
     /* member functions */
@@ -139,14 +130,14 @@ class MaxHeap
   teamComparison peekTopComparison();
   bool isFull();
   bool isEmpty();
-private:
+  private:
   int parent(int index);
   int leftChild(int index);
   int rightChild(int index);
-  teamComparison* heap;//pointer to array
+  teamComparison* heapArr;//pointer to array
   int currentSize;
   int heapSize;
-
+  int capacity;
 };
 
 #endif
