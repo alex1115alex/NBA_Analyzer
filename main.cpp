@@ -77,15 +77,22 @@ int main()
       cout << myNBA.getBestTeam()->name << " is the best team with a score of " << myNBA.getBestTeam()->score << "." << endl;
       break;
       case 6:
-      myNBA.heapify(0);
-      myNBA.printTopNMatchups(10);
+      //myNBA.heapify(0);
+      //myNBA.heapify(1);
+      cout << "How many top matchups to print?" << endl;
+      getline(cin, line1);
+      //for(int i = 0; i < stoi(line1); i++)
+      //{
+        //myNBA.heapify(i);
+      //}
+      myNBA.heapSort();
+      myNBA.printTopNMatchups(stoi(line1));
       break;
       case 7:
       cout << "Goodbye!" << endl;
       break;
       default:
       cout << "Invalid option" << endl;
-      //myNBA.printAllTeams();
       break;
     }
   }

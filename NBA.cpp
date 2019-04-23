@@ -815,6 +815,21 @@ void NBA::heapify(int i)
   }
 }
 
+void NBA::heapSort()
+{
+  for(int i = capacity / 2 - 1; i >= 0; i--)
+  {
+    heapify(i);
+  }
+
+  for(int i = capacity - 1; i >= 0; i--)
+  {
+    swap(heapArr[0], heapArr[i]);
+    currentSize = i;
+    heapify(0);
+  }
+}
+
 void NBA::addToHeap(teamComparison comparison){
   if(currentSize == capacity)
   {
@@ -831,6 +846,8 @@ void NBA::addToHeap(teamComparison comparison){
    swap(&heapArr[index], &heapArr[parent(index)]);
    index = parent(index);
   }
+
+  repairUpward(index);
 }
 
 teamComparison* NBA::peekTopComparison(){
@@ -876,7 +893,7 @@ void NBA::repairDownward(int nodeIndex){
   if (l < currentSize && heapArr[l].spread > heapArr[nodeIndex].spread){
     largest = l;
   }
-  if (r < currentSize && heapArr[r].spread < heapArr[largest].spread){
+  if (r < currentSize && heapArr[r].spread > heapArr[largest].spread){
     largest = r;
   }
   if (largest != nodeIndex){
@@ -887,10 +904,12 @@ void NBA::repairDownward(int nodeIndex){
 
 void NBA::printTopNMatchups(int n)
 {
-  for(int i = 0; i < n; i++)
+  int counter = 0;
+  for(int i = capacity - 1; i >= 435 - n; i--)
   {
-
-    cout << "#" << i + 1 << ":" << endl;
+    counter++;
+    cout << "#" << counter << ":" << endl;
+    cout << heapArr[i].t1 << " vs " << heapArr[i].t2 << endl;
     if(heapArr[i].t1Wins)
     {
       cout << "Predicted Winner: " << heapArr[i].t1 << endl;
@@ -903,6 +922,6 @@ void NBA::printTopNMatchups(int n)
     }
     cout << "Spread: " << heapArr[i].spread << endl;
     cout << endl;
-    
+
   }
 }

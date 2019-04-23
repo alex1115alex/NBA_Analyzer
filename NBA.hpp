@@ -118,6 +118,7 @@ class NBA
 
     //cool wacky MaxHeap public shiznit
     void heapify(int index);
+    void heapSort();
     void addToHeap(teamComparison comparison);
     teamComparison* peekTopComparison();
     bool isFull();
