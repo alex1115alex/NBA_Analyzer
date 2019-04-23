@@ -703,7 +703,7 @@ int NBA::compareTeams(string team1, string team2)
 /////  max heap stuff /////
 ///////////////////////////
 /*
-Swaps two integer values
+Swaps two team Comparisons
 */
 void swap(teamComparison *a, teamComparison *b)
 {
@@ -713,16 +713,16 @@ void swap(teamComparison *a, teamComparison *b)
 }
 
 /*
-Constructor for our MinHeap implementation
+Constructor for our MaxHeap implementation
 */
-MinHeap::MinHeap(int cap)
+MaxHeap::MaxHeap(int cap)
 {
   currentSize = 0;
   capacity = cap;
   heapArr = new teamComparison[capacity];
 }
 
-void MinHeap::heapify(int i)
+void MaxHeap::heapify(int i)
 {
   // 'i' is the index to heapify @
   int l = leftChild(i);  // left child index
@@ -739,4 +739,46 @@ void MinHeap::heapify(int i)
     swap (&heapArr[i], &heapArr[smallest]);
     heapify(largest);
   }
+}
+
+void Heap::addToHeap(teamComparison comparison){
+  if(currentSize == capacity)
+  {
+    cout<<"Maximum heap size reached. Cannot insert anymore"<<endl;
+    return;
+  }
+
+  currentSize = currentSize + 1;
+  int index = currentSize - 1;
+  heap[index] = value;
+
+  while (index != 0 && heap[parent(index)]->comparison < heap[index]->comparison) // <-for minHeap // for maxHeap-> (index != 0 && heap[parent(index)] < heap[index])
+    {
+       swap(&heap[index], &heap[parent(index)]);
+       index = parent(index);
+    }
+}
+
+int MaxHeap::peekValue(){
+  return heap[0];
+}
+
+bool MaxHeap::isFull(){
+  return currentSize == heapSize;
+}
+
+bool MaxHeap::isEmpty(){
+  return currentSize == 0;
+}
+
+int MaxHeap::parent(int nodeIndex){
+  return (nodeIndex-1)/2;
+}
+
+int MaxHeap::leftChild(int nodeIndex){
+  return ((2*nodeIndex) + 1);
+}
+
+int MaxHeap::rightChild(int nodeIndex){
+  return ((2*nodeIndex) + 2);
 }
