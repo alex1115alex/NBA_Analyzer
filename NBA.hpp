@@ -90,6 +90,10 @@ class NBA
     //prints all team names
     void printNames();
 
+    //helper function for getPPPP
+    void ppppUtil(team arr[], team temp[], int start, int end, int index);
+
+    //get all team comparisons and load them into the heap
     void getPPPP();
 
     //prints all the team names in the hashTable
@@ -109,7 +113,7 @@ class NBA
     int compareTeams(string team1, string team2);
 
     //prints the best n matchups
-    //void printTopNMatchups(int n);
+    void printTopNMatchups(int n);
 
     //cool wacky MaxHeap public shiznit
     void heapify(int index);

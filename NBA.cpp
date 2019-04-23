@@ -714,18 +714,25 @@ start & end ---> Staring and
 Ending indexes in arr[]
 index ---> Current index in temp[]
 r ---> Size of a combination to be printed */
-void ppppUtil(team arr[], team temp[], int start, int end, int index)
+void NBA::ppppUtil(team arr[], team temp[], int start, int end, int index)
 {
   //int r = 2;
   // Current combination is ready
   // to be printed, print it
   if (index == 2)
   {
-    for (int j = 0; j < 2; j++)
+    /*for (int j = 0; j < 2; j++)
     {
       cout << temp[j].name << " ";
     }
-    cout << endl;
+    cout << endl;*/
+    teamComparison t;
+    t.team1 = &temp[0];
+    t.team2 = &temp[1];
+    t.spread = compareTeams(t.team1->name, t.team2->name);
+    cout << t.team1->name << endl;
+    cout << t.team2->name << endl;
+    addToHeap(t);
     return;
   }
 
@@ -818,14 +825,14 @@ void NBA::addToHeap(teamComparison comparison){
   heapArr[index] = comparison;
 
   while (index != 0 && heapArr[parent(index)].spread < heapArr[index].spread)
-    {
-       swap(&heapArr[index], &heapArr[parent(index)]);
-       index = parent(index);
-    }
+  {
+   swap(&heapArr[index], &heapArr[parent(index)]);
+   index = parent(index);
+  }
 }
 
 teamComparison* NBA::peekTopComparison(){
-  return heapArr[0];
+  return &heapArr[0];
 }
 
 bool NBA::isFull(){
@@ -873,5 +880,15 @@ void NBA::repairDownward(int nodeIndex){
   if (largest != nodeIndex){
     swap (&heapArr[nodeIndex], &heapArr[largest]);
     repairDownward(largest);
+  }
+}
+
+void NBA::printTopNMatchups(int n)
+{
+  for(int i = 0; i < n; i++)
+  {
+    cout << "Team1: " << heapArr[i].team1->name << endl;
+    cout << "Team2: " << heapArr[i].team2->name << endl;
+    cout << "Spread: " << heapArr[i].spread << endl;
   }
 }

@@ -36,6 +36,8 @@ int main()
       myNBA.initializeRoster();
       cout << "Database successfully initialized!" << endl;
       myNBA.getPPPP();
+      cout << "got all comparisons" << endl;
+      myNBA.printTopNMatchups(10);
       break;
       case 2:
       //list all team names
