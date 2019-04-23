@@ -721,17 +721,19 @@ void NBA::ppppUtil(team arr[], team temp[], int start, int end, int index)
   // to be printed, print it
   if (index == 2)
   {
-    /*for (int j = 0; j < 2; j++)
-    {
-      cout << temp[j].name << " ";
-    }
-    cout << endl;*/
     teamComparison t;
-    t.team1 = &temp[0];
-    t.team2 = &temp[1];
-    t.spread = compareTeams(t.team1->name, t.team2->name);
-    cout << t.team1->name << endl;
-    cout << t.team2->name << endl;
+    t.t1 = temp[0].name;
+    t.t2 = temp[1].name;
+    t.spread = compareTeams(t.t1, t.t2);
+    if(t.spread >= 0)
+    {
+      t.t1Wins = true;
+    }
+    else
+    {
+      t.t1Wins = false;
+      t.spread = -1 * t.spread;
+    }
     addToHeap(t);
     return;
   }
@@ -816,7 +818,7 @@ void NBA::heapify(int i)
 void NBA::addToHeap(teamComparison comparison){
   if(currentSize == capacity)
   {
-    cout<<"Maximum heap size reached. Cannot insert anymore"<<endl;
+    cout << "Maximum heap size reached. Cannot insert anymore." <<endl;
     return;
   }
 
@@ -887,8 +889,20 @@ void NBA::printTopNMatchups(int n)
 {
   for(int i = 0; i < n; i++)
   {
-    cout << "Team1: " << heapArr[i].team1->name << endl;
-    cout << "Team2: " << heapArr[i].team2->name << endl;
+
+    cout << "#" << i + 1 << ":" << endl;
+    if(heapArr[i].t1Wins)
+    {
+      cout << "Predicted Winner: " << heapArr[i].t1 << endl;
+      cout << "Predicted Loser: " << heapArr[i].t2 << endl;
+    }
+    else
+    {
+      cout << "Predicted Winner: " << heapArr[i].t2 << endl;
+      cout << "Predicted Loser: " << heapArr[i].t1 << endl;
+    }
     cout << "Spread: " << heapArr[i].spread << endl;
+    cout << endl;
+    
   }
 }

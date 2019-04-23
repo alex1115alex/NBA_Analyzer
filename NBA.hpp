@@ -35,9 +35,10 @@ struct team
 //struct that represents the comparison of two teams
 struct teamComparison
 {
-  team* team1;
-  team* team2;
+  string t1;
+  string t2;
   int spread;
+  bool t1Wins;
 };
 
 class NBA

@@ -9,7 +9,8 @@ void displayMenu()
   cout << "3. Team lookup" << endl;
   cout << "4. Compare two teams" << endl;
   cout << "5. Determine current best team" << endl;
-  cout << "6. Quit" << endl;
+  cout << "6. Print top 10 matchups" << endl;
+  cout << "7. Quit" << endl;
 }
 
 int main()
@@ -24,7 +25,7 @@ int main()
   string line1 = "";
   string line2 = "";
   int compare = 0;
-  while(stoi(choice) != 6)
+  while(stoi(choice) != 7)
   {
     displayMenu();
     getline(cin, choice);
@@ -36,8 +37,6 @@ int main()
       myNBA.initializeRoster();
       cout << "Database successfully initialized!" << endl;
       myNBA.getPPPP();
-      cout << "got all comparisons" << endl;
-      myNBA.printTopNMatchups(10);
       break;
       case 2:
       //list all team names
@@ -78,6 +77,10 @@ int main()
       cout << myNBA.getBestTeam()->name << " is the best team with a score of " << myNBA.getBestTeam()->score << "." << endl;
       break;
       case 6:
+      myNBA.heapify(0);
+      myNBA.printTopNMatchups(10);
+      break;
+      case 7:
       cout << "Goodbye!" << endl;
       break;
       default:
