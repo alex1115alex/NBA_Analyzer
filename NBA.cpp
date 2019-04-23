@@ -20,6 +20,7 @@ NBA::NBA(int hashTableSize)
 
 NBA::~NBA()
 {
+  delete[] heapArr;
   for(int i = 0; i < hashTableSize; i++)
   {
     team* p = teamHashTable[i];
@@ -103,7 +104,7 @@ void NBA::printNames()
       team* p = teamHashTable[i]; //create a pointer towards the current hashTable element
       while(p != nullptr)
       {
-        cout << p->name << endl;
+        cout << p->name << " - score: " << p->score << endl;
         p = p->next;
       }
     }
@@ -185,9 +186,19 @@ team* NBA::getBestTeam()
       team* p = teamHashTable[i]; //create a pointer towards the current hashTable element
       while(p != nullptr)
       {
-        if(best == nullptr || p->score > best->score)
+        if(best == nullptr || p->score >= best->score)
         {
+          if(best != nullptr && p->score == best->score) //if they're equal, go by points per game
+          {
+            if(p->pointsPerGame > best->pointsPerGame)
+            {
+              best = p;
+            }
+          }
+          else
+          {
             best = p;
+          }
         }
 
         p = p->next;

@@ -62,9 +62,13 @@ int main()
         {
           cout << line1 << " is " << compare << " points better than " << line2 << endl;
         }
-        else
+        else if(compare < 0)
         {
           cout << line2 << " is " << -1 * compare << " points better than " << line1 << endl;
+        }
+        else
+        {
+          cout << line1 << " is approximately equal to " << line2 << endl;
         }
       }
       else
@@ -77,15 +81,13 @@ int main()
       cout << myNBA.getBestTeam()->name << " is the best team with a score of " << myNBA.getBestTeam()->score << "." << endl;
       break;
       case 6:
-      //myNBA.heapify(0);
-      //myNBA.heapify(1);
       cout << "How many top matchups to print?" << endl;
       getline(cin, line1);
-      //for(int i = 0; i < stoi(line1); i++)
-      //{
-        //myNBA.heapify(i);
-      //}
       myNBA.heapSort();
+      if(stoi(line1) > 420)
+      {
+        line1 = "420"; //dude weed lmao
+      }
       myNBA.printTopNMatchups(stoi(line1));
       break;
       case 7:
