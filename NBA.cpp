@@ -699,12 +699,14 @@ int NBA::compareTeams(string team1, string team2)
   return 9999999;
 }
 
+
 ///////////////////////////
 /////  max heap stuff /////
 ///////////////////////////
 /*
 Swaps two team Comparisons
 */
+/*
 void swap(teamComparison *a, teamComparison *b)
 {
   teamComparison temp = *a;
@@ -712,9 +714,9 @@ void swap(teamComparison *a, teamComparison *b)
   *b = temp;
 }
 
-/*
-Constructor for our MaxHeap implementation
-*/
+
+//Constructor for our MaxHeap implementation
+
 MaxHeap::MaxHeap(int cap)
 {
   currentSize = 0;
@@ -772,7 +774,7 @@ bool MaxHeap::isEmpty(){
 }
 
 int MaxHeap::parent(int nodeIndex){
-  return (nodeIndex-1)/2;
+  return (nodeIndex / 2 + 1);
 }
 
 int MaxHeap::leftChild(int nodeIndex){
@@ -809,4 +811,79 @@ void MaxHeap::repairDownward(int nodeIndex){
     swap (&heap[nodeIndex], &heap[smallest]);
     repairDownward(smallest);
   }
+}
+*/
+//THESE FUNCTIONS USED TO FIND ALL COMBOS OF TEAMS
+
+/* arr[] ---> Input Array
+data[] ---> Temporary array to
+store current combination
+start & end ---> Staring and
+Ending indexes in arr[]
+index ---> Current index in temp[]
+r ---> Size of a combination to be printed */
+void NBA::combinationUtil(team arr[], team temp[], int start, int end, int index)
+{
+  //int r = 2;
+    // Current combination is ready
+    // to be printed, print it
+    if (index == 2)
+    {
+      for (int j = 0; j < 2; j++)
+      {
+        cout << temp[j] << " ";
+      }
+      cout << endl;
+      return;
+    }
+
+    // replace index with all possible
+    // elements. The condition "end-i+1 >= 2-index"
+    // makes sure that including one element
+    // at index will make a combination with
+    // remaining elements at remaining positions
+    for (int i = start; i <= end && end - i + 1 >= 2 - index; i++)
+    {
+        temp[index] = arr[i];
+        combinationUtil(arr, temp, i+1, end, index+1, 2);
+    }
+}
+
+
+// The main function that prints
+// all combinations of size r
+// in arr[] of size n. This function
+// mainly uses combinationUtil()
+void NBA::getComparisons()
+{
+    team arr[numItems];
+    int index = 0;
+    //while(index < numItems)
+    //{
+    cout << "insert start" << endl;
+      for(int i = 0; i < hashTableSize; i++)
+      {
+        if(teamHashTable[i] != nullptr)
+        {
+          team* p = teamHashTable[i]; //create a pointer towards the current hashTable element
+          while(p != nullptr)
+          {
+            arr[index] = p;
+            index++;
+            p = p->next;
+          }
+        }
+      }
+      cout << "insert done" << endl;
+      for(int i = 0; i < numItems; i++)
+      {
+        cout << arr[i]->name << endl;
+      }
+    // A temporary array to store
+    // all combination one by one
+    team temp[r];
+
+    // Print all combination using
+    // temprary array 'temp[]'
+    combinationUtil(arr, temp, 0, numItems - 1, 0);
 }

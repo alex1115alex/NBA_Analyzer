@@ -35,6 +35,7 @@ int main()
       cout << "Downloading team stats. Please wait." << endl;
       myNBA.initializeRoster();
       cout << "Database successfully initialized!" << endl;
+      myNBA.getComparisons();
       break;
       case 2:
       //list all team names

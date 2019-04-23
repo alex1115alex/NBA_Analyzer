@@ -115,6 +115,11 @@ class NBA {
     //prints the best n matchups
     void printTopNMatchups(int n);
 
+    //Helper function for getComparisons
+    void combinationUtil(int arr[], int data[], int start, int end, int index);
+
+    void getComparisons();
+
   private:
     /* member functions */
     unsigned int getHash(std::string word);
