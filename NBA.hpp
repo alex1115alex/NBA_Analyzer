@@ -126,4 +126,22 @@ class NBA {
     int numItems;
 };
 
+class MaxHeap
+{
+  MaxHeap(int capacity);
+  void heapify(int index);
+  void addToHeap(teamComparison comparison);
+  teamComparison peekTopComparison();
+  bool isFull();
+  bool isEmpty();
+private:
+  int parent(int index);
+  int leftChild(int index);
+  int rightChild(int index);
+  teamComparison* heap;//pointer to array
+  int currentSize;
+  int heapSize;
+
+};
+
 #endif

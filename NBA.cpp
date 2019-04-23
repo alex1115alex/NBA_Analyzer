@@ -752,14 +752,14 @@ void Heap::addToHeap(teamComparison comparison){
   int index = currentSize - 1;
   heap[index] = value;
 
-  while (index != 0 && heap[parent(index)]->comparison < heap[index]->comparison) // <-for minHeap // for maxHeap-> (index != 0 && heap[parent(index)] < heap[index])
+  while (index != 0 && heap[parent(index)]->spread < heap[index]->spread)
     {
        swap(&heap[index], &heap[parent(index)]);
        index = parent(index);
     }
 }
 
-int MaxHeap::peekValue(){
+teamComparison MaxHeap::peekTopComparison(){
   return heap[0];
 }
 
@@ -781,4 +781,32 @@ int MaxHeap::leftChild(int nodeIndex){
 
 int MaxHeap::rightChild(int nodeIndex){
   return ((2*nodeIndex) + 2);
+}
+
+void MaxHeap::repairUpward(int nodeIndex){
+  int p = parent(nodeIndex);
+  int largest = nodeIndex;
+
+  if(heap[p]->spread < heap[nodeIndex]->spread){
+    swap (&heap[nodeIndex], &heap[p]);
+    repairUpward(p);
+  }
+}
+
+void MaxHeap::repairDownward(int nodeIndex){
+  // 'nodeIndex' is the index to heapify @
+  int l = leftChild(nodeIndex);  // left child index
+  int r = rightChild(nodeIndex); // right child index
+  int smallest = nodeIndex;
+
+  if (l < currentSize && heap[l]->spread > heap[nodeIndex]->spread){
+    smallest = l;
+  }
+  if (r < currentSize && heap[r]->spread < heap[smallest]->spread){
+    smallest = r;
+  }
+  if (smallest != nodeIndex){
+    swap (&heap[nodeIndex], &heap[smallest]);
+    repairDownward(smallest);
+  }
 }
