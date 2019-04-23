@@ -111,33 +111,32 @@ class NBA
     //prints the best n matchups
     //void printTopNMatchups(int n);
 
+    //cool wacky MaxHeap public shiznit
+    void heapify(int index);
+    void addToHeap(teamComparison comparison);
+    teamComparison* peekTopComparison();
+    bool isFull();
+    bool isEmpty();
+
   private:
-    /* member functions */
+    //getHash
     unsigned int getHash(std::string word);
 
-
-    /* instance variables */
+    //instance variables
     team** teamHashTable;
     int hashTableSize;
     int numItems;
-};
 
-class MaxHeap
-{
-  MaxHeap(int capacity);
-  void heapify(int index);
-  void addToHeap(teamComparison comparison);
-  teamComparison peekTopComparison();
-  bool isFull();
-  bool isEmpty();
-  private:
-  int parent(int index);
-  int leftChild(int index);
-  int rightChild(int index);
-  teamComparison* heapArr;//pointer to array
-  int currentSize;
-  int heapSize;
-  int capacity;
+    //MaxHeap private stuff
+    void repairUpward(int nodeIndex);
+    void repairDownward(int nodeIndex);
+    int parent(int index);
+    int leftChild(int index);
+    int rightChild(int index);
+    teamComparison* heapArr;//pointer to array
+    int currentSize;
+    int heapSize;
+    int capacity;
 };
 
 #endif

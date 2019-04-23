@@ -10,6 +10,12 @@ NBA::NBA(int hashTableSize)
   {
     teamHashTable[i] = nullptr; //nullptr all teams
   }
+
+  //initalize heap
+  currentSize = 0;
+  //435 is the total number of possible team comparisons
+  capacity = 435;
+  heapArr = new teamComparison[435];
 }
 
 NBA::~NBA()
@@ -711,31 +717,29 @@ r ---> Size of a combination to be printed */
 void ppppUtil(team arr[], team temp[], int start, int end, int index)
 {
   //int r = 2;
-    // Current combination is ready
-    // to be printed, print it
-    if (index == 2)
+  // Current combination is ready
+  // to be printed, print it
+  if (index == 2)
+  {
+    for (int j = 0; j < 2; j++)
     {
-      for (int j = 0; j < 2; j++)
-      {
-        cout << temp[j].name << " ";
-      }
-      cout << endl;
-      return;
+      cout << temp[j].name << " ";
     }
+    cout << endl;
+    return;
+  }
 
-    // replace index with all possible
-    // elements. The condition "end-i+1 >= 2-index"
-    // makes sure that including one element
-    // at index will make a combination with
-    // remaining elements at remaining positions
-    for (int i = start; i <= end && end - i + 1 >= 2 - index; i++)
-    {
-        temp[index] = arr[i];
-        ppppUtil(arr, temp, i + 1, end, index + 1);
-    }
+  // replace index with all possible
+  // elements. The condition "end-i+1 >= 2-index"
+  // makes sure that including one element
+  // at index will make a combination with
+  // remaining elements at remaining positions
+  for (int i = start; i <= end && end - i + 1 >= 2 - index; i++)
+  {
+    temp[index] = arr[i];
+    ppppUtil(arr, temp, i + 1, end, index + 1);
+  }
 }
-
-
 
 // The main function that prints
 // all combinations of size r
@@ -743,36 +747,30 @@ void ppppUtil(team arr[], team temp[], int start, int end, int index)
 // mainly uses combinationUtil()
 void NBA::getPPPP()
 {
-    team arr[numItems];
-    int index = 0;
-    //while(index < numItems)
-    //{
-    cout << "insert start" << endl;
-      for(int i = 0; i < hashTableSize; i++)
+  //make a new array and copy all the teams into it
+  team arr[numItems];
+  int index = 0;
+  for(int i = 0; i < hashTableSize; i++)
+  {
+    if(teamHashTable[i] != nullptr)
+    {
+      team* p = teamHashTable[i]; //create a pointer towards the current hashTable element
+      while(p != nullptr)
       {
-        if(teamHashTable[i] != nullptr)
-        {
-          team* p = teamHashTable[i]; //create a pointer towards the current hashTable element
-          while(p != nullptr)
-          {
-            arr[index] = *p;
-            index++;
-            p = p->next;
-          }
-        }
+        arr[index] = *p;
+        index++;
+        p = p->next;
       }
-      cout << "insert done" << endl;
-      for(int i = 0; i < numItems; i++)
-      {
-        cout << arr[i].name << endl;
-      }
-    // A temporary array to store
-    // all combination one by one
-    team temp[2];
+    }
+  }
 
-    // Print all combination using
-    // temprary array 'temp[]'
-    ppppUtil(arr, temp, 0, numItems - 1, 0);
+  // A temporary array to store
+  // all combination one by one
+  team temp[2];
+
+  // Print all combination using
+  // temprary array 'temp[]'
+  ppppUtil(arr, temp, 0, numItems - 1, 0);
 }
 
 ///////////////////////////
@@ -789,36 +787,26 @@ void swap(teamComparison *a, teamComparison *b)
   *b = temp;
 }
 
-
-//Constructor for our MaxHeap implementation
-
-MaxHeap::MaxHeap(int cap)
-{
-  currentSize = 0;
-  capacity = cap;
-  heapArr = new teamComparison[capacity];
-}
-
-void MaxHeap::heapify(int i)
+void NBA::heapify(int i)
 {
   // 'i' is the index to heapify @
   int l = leftChild(i);  // left child index
   int r = rightChild(i); // right child index
   int largest = i;
 
-  if (l < currentSize && heapArr[l]->spread > heapArr[i]->spread){
+  if (l < currentSize && heapArr[l].spread > heapArr[i].spread){
     largest = l;
   }
-  if (r < currentSize && heapArr[r]->spread > heapArr[smallest]->spread){
+  if (r < currentSize && heapArr[r].spread > heapArr[largest].spread){
     largest = r;
   }
   if (largest != i){
-    swap (&heapArr[i], &heapArr[smallest]);
+    swap (&heapArr[i], &heapArr[largest]);
     heapify(largest);
   }
 }
 
-void Heap::addToHeap(teamComparison comparison){
+void NBA::addToHeap(teamComparison comparison){
   if(currentSize == capacity)
   {
     cout<<"Maximum heap size reached. Cannot insert anymore"<<endl;
@@ -827,64 +815,63 @@ void Heap::addToHeap(teamComparison comparison){
 
   currentSize = currentSize + 1;
   int index = currentSize - 1;
-  heap[index] = value;
+  heapArr[index] = comparison;
 
-  while (index != 0 && heap[parent(index)]->spread < heap[index]->spread)
+  while (index != 0 && heapArr[parent(index)].spread < heapArr[index].spread)
     {
-       swap(&heap[index], &heap[parent(index)]);
+       swap(&heapArr[index], &heapArr[parent(index)]);
        index = parent(index);
     }
 }
 
-teamComparison MaxHeap::peekTopComparison(){
-  return heap[0];
+teamComparison* NBA::peekTopComparison(){
+  return heapArr[0];
 }
 
-bool MaxHeap::isFull(){
+bool NBA::isFull(){
   return currentSize == heapSize;
 }
 
-bool MaxHeap::isEmpty(){
+bool NBA::isEmpty(){
   return currentSize == 0;
 }
 
-int MaxHeap::parent(int nodeIndex){
+int NBA::parent(int nodeIndex){
   return (nodeIndex / 2 + 1);
 }
 
-int MaxHeap::leftChild(int nodeIndex){
+int NBA::leftChild(int nodeIndex){
   return ((2*nodeIndex) + 1);
 }
 
-int MaxHeap::rightChild(int nodeIndex){
+int NBA::rightChild(int nodeIndex){
   return ((2*nodeIndex) + 2);
 }
 
-void MaxHeap::repairUpward(int nodeIndex){
+void NBA::repairUpward(int nodeIndex){
   int p = parent(nodeIndex);
   int largest = nodeIndex;
 
-  if(heap[p]->spread < heap[nodeIndex]->spread){
-    swap (&heap[nodeIndex], &heap[p]);
+  if(heapArr[p].spread < heapArr[nodeIndex].spread){
+    swap (&heapArr[nodeIndex], &heapArr[p]);
     repairUpward(p);
   }
 }
 
-void MaxHeap::repairDownward(int nodeIndex){
+void NBA::repairDownward(int nodeIndex){
   // 'nodeIndex' is the index to heapify @
   int l = leftChild(nodeIndex);  // left child index
   int r = rightChild(nodeIndex); // right child index
-  int smallest = nodeIndex;
+  int largest = nodeIndex;
 
-  if (l < currentSize && heap[l]->spread > heap[nodeIndex]->spread){
-    smallest = l;
+  if (l < currentSize && heapArr[l].spread > heapArr[nodeIndex].spread){
+    largest = l;
   }
-  if (r < currentSize && heap[r]->spread < heap[smallest]->spread){
-    smallest = r;
+  if (r < currentSize && heapArr[r].spread < heapArr[largest].spread){
+    largest = r;
   }
-  if (smallest != nodeIndex){
-    swap (&heap[nodeIndex], &heap[smallest]);
-    repairDownward(smallest);
+  if (largest != nodeIndex){
+    swap (&heapArr[nodeIndex], &heapArr[largest]);
+    repairDownward(largest);
   }
 }
-*/
