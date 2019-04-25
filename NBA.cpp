@@ -933,15 +933,15 @@ void NBA::printTopNMatchups(int n)
     }
     cout << "Spread: " << heapArr[i].spread << endl;
     cout << endl;
-
   }
 }
 
-void NBA::printSpreadAboveN(int n)
+void NBA::printSpreadAboveN(int x)
 {
   int counter = 0;
   for(int i = capacity - 1; i >= 435 - n; i--)
   {
+    if(heap)
     counter++;
     cout << "#" << counter << ":" << endl;
     cout << heapArr[i].t1 << " vs " << heapArr[i].t2 << endl;
@@ -957,6 +957,10 @@ void NBA::printSpreadAboveN(int n)
     }
     cout << "Spread: " << heapArr[i].spread << endl;
     cout << endl;
-
   }
+}
+
+void NBA::printNextNGames(int n)
+{
+
 }
