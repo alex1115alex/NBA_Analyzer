@@ -364,6 +364,7 @@ void NBA::initializeRoster()
   setStat("https://www.teamrankings.com/nba/stat/opponent-turnovers-per-possession", 9);
   setStat("https://www.teamrankings.com/nba/stat/opponent-points-per-game", 10);
   initializeScores();
+  initializeUpcomingGames("https://www.teamrankings.com/nba/schedules/season/");
   remove("fileOPT"); //delete the download
 }
 
@@ -935,8 +936,13 @@ void NBA::printTopNMatchups(int n)
     cout << endl;
   }
 }
+<<<<<<< HEAD
 
 void NBA::printSpreadAboveN(int n)
+=======
+/*
+void NBA::printSpreadAboveN(int x)
+>>>>>>> b056f806cef240ce4bf190e2eb3bb5453b3b5066
 {
   int counter = 0;
   for(int i = capacity - 1; i >= 0; i--)
@@ -959,10 +965,116 @@ void NBA::printSpreadAboveN(int n)
       cout << "Spread: " << heapArr[i].spread << endl;
       cout << endl;
       }
+<<<<<<< HEAD
+  }
+=======
+    }
+<<<<<<< HEAD
+    cout << "Spread: " << heapArr[i].spread << endl;
+    cout << endl;
+  }
+}*/
+=======
+
+>>>>>>> b056f806cef240ce4bf190e2eb3bb5453b3b5066
+}
+>>>>>>> ba804f9a59ec217b5cbe93d6000864e65db72815
+
+string NBA::getDay()
+{
+      time_t tt;
+      struct tm * ti;
+      time (&tt);
+      ti = localtime(&tt);
+      string date = asctime(ti);
+      return date.substr(0, 10);
+}
+
+void NBA::initializeUpcomingGames(string url)
+{ // url = "https://www.teamrankings.com/nba/schedules/season/";
+
+  bool passedDate = false;
+  ifstream myfilestream;
+  myfilestream.open(downloadURL(url, "fileOPT"));
+  if (myfilestream.is_open()) //check if the stream is open
+  {
+      string line = "";
+      while (getline(myfilestream, line)) //while there are more lines to be added
+      {
+        string date;
+        string team1;
+        string team2;
+
+        if(!passedDate && line.find(getDay()) != -1) //if the line contains today's date
+        {
+          passedDate = true; //set passedDate to true
+        }
+
+        if(passedDate && line.find("text-left nowrap sort-asc-first\"") != -1 &&
+        line.find("Location") == -1) //we're at or passed today's date, so pull in games!
+        { //We have found a line that contains the date
+          date = line.substr(line.find("40%") + 6, 10);
+
+          for(int i = 0; i < 7; i++)
+          {
+            getline(myfilestream, line);
+          }
+          //now we're on the line containing name
+          //int aIndex = line.find("a href");
+          int name1index = line.find(">", line.find("a href")) + 1;
+          int name1end = line.find("@") - name1index - 2;
+          team1 = line.substr(name1index, name1end);
+
+          int team2end = line.find("<", line.find("@")) - line.find("@") - 3;
+          team2 = line.substr(line.find("@") + 3, team2end);
+
+          teamComparison newGame;
+          newGame.t1 = team1;
+          newGame.t2 = team2;
+          newGame.spread = compareTeams(team1, team2);
+          if(newGame.spread >= 0)
+          {
+            newGame.t1Wins = true;
+          }
+          else
+          {
+            newGame.t1Wins = false;
+            newGame.spread = -1 * newGame.spread;
+          }
+          newGame.date = date;
+
+          upcomingGames.push_back(newGame);
+        }
+      }
+  }
+  else //if it couldn't be opened, print this
+  {
+      cout << "Failed to open the file." << endl;
+  }
+  myfilestream.close(); //close the file stream
+}
+
+void NBA::printUpcomingGames()
+{
+  for(int i = 0; i < upcomingGames.size(); i++)
+  {
+    cout << upcomingGames[i].t1 << " vs " << upcomingGames[i].t2 << endl;
+    cout << "Predicted winner: ";
+    if(upcomingGames[i].t1Wins)
+    {
+      cout << upcomingGames[i].t1 << endl;
+    }
+    else
+    {
+      cout << upcomingGames[i].t2 << endl;
+    }
+    cout << "Spread: " << upcomingGames[i].spread << endl;
+    cout << "Date: " << upcomingGames[i].date << endl;
+    cout << endl;
   }
 }
 
-void NBA::printNextNGames(int n)
+/*void NBA::printNextNGames(int n)
 {
 
-}
+}*/
