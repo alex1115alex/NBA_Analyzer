@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <fstream>
 #include <cstring>
+#include <vector>
 #include "curlIN/curl.h"
 using namespace std;
 
@@ -35,10 +36,11 @@ struct team
 //struct that represents the comparison of two teams
 struct teamComparison
 {
-  string t1;
+  string t1; //name of team 1
   string t2;
   int spread;
-  bool t1Wins;
+  bool t1Wins; //holds true if team1 is the predicted winner
+  string date;
 };
 
 class NBA
@@ -58,6 +60,9 @@ class NBA
 
     //print a specific team's information
     void printTeam(string name);
+
+    //returns the date as "Weekday Month Day"
+    string getDay();
 
     /*
     * Name setter
@@ -88,6 +93,11 @@ class NBA
     //for each team, set its score
     void initializeScores();
 
+    //gets the upcoming games starting at the current date
+    void initializeUpcomingGames(string url);
+
+    //void printSpreadAboveN(int n);
+
     //prints all team names
     void printNames();
 
@@ -116,6 +126,8 @@ class NBA
     //prints the best n matchups
     void printTopNMatchups(int n);
 
+    void printUpcomingGames();
+
     //cool wacky MaxHeap public shiznit
     void heapify(int index);
     void heapSort();
@@ -132,6 +144,9 @@ class NBA
     team** teamHashTable;
     int hashTableSize;
     int numItems;
+
+    //vector to store the upcoming games
+    vector<teamComparison> upcomingGames;
 
     //MaxHeap private stuff
     void repairUpward(int nodeIndex);

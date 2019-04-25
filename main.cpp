@@ -11,6 +11,7 @@ void displayMenu()
   cout << "5. Determine current best team" << endl;
   cout << "6. Print top 10 matchups" << endl;
   cout << "7. Quit" << endl;
+  cout << "8. Check <" << endl;
 }
 
 int main()
@@ -92,6 +93,9 @@ int main()
       break;
       case 7:
       cout << "Goodbye!" << endl;
+      break;
+      case 8:
+      myNBA.printUpcomingGames();
       break;
       default:
       cout << "Invalid option" << endl;
