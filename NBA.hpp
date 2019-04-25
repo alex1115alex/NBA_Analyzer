@@ -39,6 +39,7 @@ struct teamComparison
   string t1; //name of team 1
   string t2;
   int spread;
+  bool TBD;
   bool t1Wins; //holds true if team1 is the predicted winner
   string date;
 };
@@ -115,6 +116,9 @@ class NBA
 
     //returns a poiter to the team struct with the highest score
     team* getBestTeam();
+
+    //returns true if an upcoming game with these teams already exists
+    bool upcomingGameAlreadyExists(string team1, string team2);
 
     //compare two teams, the difference between team1 and team2's scores
     //a high positive number --> team1 is much better

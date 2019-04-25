@@ -993,6 +993,19 @@ string NBA::getDay()
       return date.substr(0, 10);
 }
 
+bool NBA::upcomingGameAlreadyExists(string team1, string team2)
+{
+  for(int i = 0; i < upcomingGames.size(); i++)
+  {
+    if((upcomingGames[i].t1 == team1 && upcomingGames[i].t2 == team2) ||
+    (upcomingGames[i].t1 == team2 && upcomingGames[i].t2 == team1))
+    { //if the team combo already exists
+      return true;
+    }
+  }
+  return false;
+}
+
 void NBA::initializeUpcomingGames(string url)
 { // url = "https://www.teamrankings.com/nba/schedules/season/";
 
@@ -1034,16 +1047,25 @@ void NBA::initializeUpcomingGames(string url)
           teamComparison newGame;
           newGame.t1 = team1;
           newGame.t2 = team2;
-          newGame.spread = compareTeams(team1, team2);
-          if(newGame.spread >= 0)
+          if(!upcomingGameAlreadyExists(team1, team2))
           {
-            newGame.t1Wins = true;
+            newGame.spread = compareTeams(team1, team2);
+            newGame.TBD = false;
+            if(newGame.spread >= 0)
+            {
+              newGame.t1Wins = true;
+            }
+            else
+            {
+              newGame.t1Wins = false;
+              newGame.spread = -1 * newGame.spread;
+            }
           }
           else
           {
-            newGame.t1Wins = false;
-            newGame.spread = -1 * newGame.spread;
+              newGame.TBD = true;
           }
+
           newGame.date = date;
 
           upcomingGames.push_back(newGame);
@@ -1063,15 +1085,22 @@ void NBA::printUpcomingGames(int n)
   {
     cout << upcomingGames[i].t1 << " vs " << upcomingGames[i].t2 << endl;
     cout << "Predicted winner: ";
-    if(upcomingGames[i].t1Wins)
+    if(!upcomingGames[i].TBD)
     {
-      cout << upcomingGames[i].t1 << endl;
+      if(upcomingGames[i].t1Wins)
+      {
+        cout << upcomingGames[i].t1 << endl;
+      }
+      else if(!upcomingGames[i].t1Wins)
+      {
+        cout << upcomingGames[i].t2 << endl;
+      }
+        cout << "Spread: " << upcomingGames[i].spread << endl;
     }
     else
     {
-      cout << upcomingGames[i].t2 << endl;
+        cout << "TBD" << endl;
     }
-    cout << "Spread: " << upcomingGames[i].spread << endl;
     cout << "Game Evaluation: ";
     if(upcomingGames[i].spread > 0 && upcomingGames[i].spread <= 15){
       cout << "Close Game | No Bet" << endl;
