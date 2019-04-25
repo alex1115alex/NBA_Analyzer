@@ -72,16 +72,6 @@ int main()
         {
           cout << line1 << " is approximately equal to " << line2 << endl;
         }
-        cout << "Game Evaluation: ";
-        if(compare > 0 && compare <= 15){
-          cout << "Close Game | No Bet" << endl;
-        }else if(compare > 15 && compare <= 30){
-          cout << "Good Game | Maybe Bet" << endl;
-        }else if(compare > 30 && compare <= 60){
-          cout << "Great Game | Could Bet" << endl;
-        }else if(compare > 60){
-          cout << "Awesome Game | Should Bet" << endl;
-        }
       }
       else
       {

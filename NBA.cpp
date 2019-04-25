@@ -933,6 +933,16 @@ void NBA::printTopNMatchups(int n)
       cout << "Predicted Loser: " << heapArr[i].t1 << endl;
     }
     cout << "Spread: " << heapArr[i].spread << endl;
+    cout << "Game Evaluation: ";
+    if(heapArr[i].spread > 0 && heapArr[i].spread <= 15){
+      cout << "Close Game | No Bet" << endl;
+    }else if(heapArr[i].spread > 15 && heapArr[i].spread <= 30){
+      cout << "Good Game | Maybe Bet" << endl;
+    }else if(heapArr[i].spread > 30 && heapArr[i].spread <= 60){
+      cout << "Great Game | Could Bet" << endl;
+    }else if(heapArr[i].spread > 60){
+      cout << "Awesome Game | Should Bet" << endl;
+    }
     cout << endl;
   }
 }
@@ -958,6 +968,16 @@ void NBA::printSpreadAboveN(int n)
         cout << "Predicted Loser: " << heapArr[i].t1 << endl;
       }
       cout << "Spread: " << heapArr[i].spread << endl;
+      cout << "Game Evaluation: ";
+      if(heapArr[i].spread > 0 && heapArr[i].spread <= 15){
+        cout << "Close Game | No Bet" << endl;
+      }else if(heapArr[i].spread > 15 && heapArr[i].spread <= 30){
+        cout << "Good Game | Maybe Bet" << endl;
+      }else if(heapArr[i].spread > 30 && heapArr[i].spread <= 60){
+        cout << "Great Game | Could Bet" << endl;
+      }else if(heapArr[i].spread > 60){
+        cout << "Awesome Game | Should Bet" << endl;
+      }
       cout << endl;
       }
   }
@@ -1052,6 +1072,16 @@ void NBA::printUpcomingGames(int n)
       cout << upcomingGames[i].t2 << endl;
     }
     cout << "Spread: " << upcomingGames[i].spread << endl;
+    cout << "Game Evaluation: ";
+    if(upcomingGames[i].spread > 0 && upcomingGames[i].spread <= 15){
+      cout << "Close Game | No Bet" << endl;
+    }else if(upcomingGames[i].spread > 15 && upcomingGames[i].spread <= 30){
+      cout << "Good Game | Maybe Bet" << endl;
+    }else if(upcomingGames[i].spread > 30 && upcomingGames[i].spread <= 60){
+      cout << "Great Game | Could Bet" << endl;
+    }else if(upcomingGames[i].spread > 60){
+      cout << "Awesome Game | Should Bet" << endl;
+    }
     cout << "Date: " << upcomingGames[i].date << endl;
     cout << endl;
   }
