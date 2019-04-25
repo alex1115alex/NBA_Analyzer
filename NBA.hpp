@@ -132,6 +132,8 @@ class NBA
 
     void printUpcomingGames(int n);
 
+    void printTeamComparison(teamComparison tc);
+
     //cool wacky MaxHeap public shiznit
     void heapify(int index);
     void heapSort();
