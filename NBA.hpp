@@ -96,7 +96,7 @@ class NBA
     //gets the upcoming games starting at the current date
     void initializeUpcomingGames(string url);
 
-    //void printSpreadAboveN(int n);
+    void printSpreadAboveN(int n);
 
     //prints all team names
     void printNames();
@@ -126,7 +126,7 @@ class NBA
     //prints the best n matchups
     void printTopNMatchups(int n);
 
-    void printUpcomingGames();
+    void printUpcomingGames(int n);
 
     //cool wacky MaxHeap public shiznit
     void heapify(int index);

@@ -9,9 +9,10 @@ void displayMenu()
   cout << "3. Team lookup" << endl;
   cout << "4. Compare two teams" << endl;
   cout << "5. Determine current best team" << endl;
-  cout << "6. Print top 10 matchups" << endl;
-  cout << "7. Quit" << endl;
-  cout << "8. Check <" << endl;
+  cout << "6. Print top N matchups" << endl;
+  cout << "7. Print matchups with spread above N" << endl;
+  cout << "8. Print next N upcoming games" << endl;
+  cout << "9. Quit" << endl;
 }
 
 int main()
@@ -26,7 +27,7 @@ int main()
   string line1 = "";
   string line2 = "";
   int compare = 0;
-  while(stoi(choice) != 7)
+  while(stoi(choice) != 9)
   {
     displayMenu();
     getline(cin, choice);
@@ -102,10 +103,17 @@ int main()
       myNBA.printTopNMatchups(stoi(line1));
       break;
       case 7:
-      cout << "Goodbye!" << endl;
+      cout << "Enter spread threshold: " << endl;
+      getline(cin, line1);
+      myNBA.printSpreadAboveN(stoi(line1));
       break;
       case 8:
-      myNBA.printUpcomingGames();
+      cout << "Enter number of games to print: " << endl;
+      getline(cin, line1);
+      myNBA.printUpcomingGames(stoi(line1));
+      break;
+      case 9:
+      cout << "Goodbye" << endl;
       break;
       default:
       cout << "Invalid option" << endl;

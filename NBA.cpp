@@ -936,7 +936,8 @@ void NBA::printTopNMatchups(int n)
     cout << endl;
   }
 }
-void NBA::printSpreadAboveN(int x)
+
+void NBA::printSpreadAboveN(int n)
 {
   int counter = 0;
   for(int i = capacity - 1; i >= 0; i--)
@@ -1036,9 +1037,9 @@ void NBA::initializeUpcomingGames(string url)
   myfilestream.close(); //close the file stream
 }
 
-void NBA::printUpcomingGames()
+void NBA::printUpcomingGames(int n)
 {
-  for(int i = 0; i < upcomingGames.size(); i++)
+  for(int i = 0; i < upcomingGames.size() && i < n; i++)
   {
     cout << upcomingGames[i].t1 << " vs " << upcomingGames[i].t2 << endl;
     cout << "Predicted winner: ";
