@@ -939,25 +939,28 @@ void NBA::printTopNMatchups(int n)
 void NBA::printSpreadAboveN(int x)
 {
   int counter = 0;
-  for(int i = capacity - 1; i >= 435 - n; i--)
+  for(int i = capacity - 1; i >= 435 - n || x ; i--)
   {
-    if(heap)
-    counter++;
-    cout << "#" << counter << ":" << endl;
-    cout << heapArr[i].t1 << " vs " << heapArr[i].t2 << endl;
-    if(heapArr[i].t1Wins)
+    if(heapArr[i].spread > x)
     {
-      cout << "Predicted Winner: " << heapArr[i].t1 << endl;
-      cout << "Predicted Loser: " << heapArr[i].t2 << endl;
+      counter++;
+      cout << "#" << counter << ":" << endl;
+      cout << heapArr[i].t1 << " vs " << heapArr[i].t2 << endl;
+      if(heapArr[i].t1Wins)
+      {
+        cout << "Predicted Winner: " << heapArr[i].t1 << endl;
+        cout << "Predicted Loser: " << heapArr[i].t2 << endl;
+      }
+      else
+      {
+        cout << "Predicted Winner: " << heapArr[i].t2 << endl;
+        cout << "Predicted Loser: " << heapArr[i].t1 << endl;
+      }
+      cout << "Spread: " << heapArr[i].spread << endl;
+      cout << endl;
+      }
     }
-    else
-    {
-      cout << "Predicted Winner: " << heapArr[i].t2 << endl;
-      cout << "Predicted Loser: " << heapArr[i].t1 << endl;
-    }
-    cout << "Spread: " << heapArr[i].spread << endl;
-    cout << endl;
-  }
+
 }
 
 void NBA::printNextNGames(int n)
