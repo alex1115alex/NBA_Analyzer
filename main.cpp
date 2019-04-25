@@ -10,8 +10,8 @@ void displayMenu()
   cout << "4. Compare two teams" << endl;
   cout << "5. Determine current best team" << endl;
   cout << "6. Print top N matchups" << endl;
-  cout << "7. Print matchups with spread above N" << endl;
-  cout << "8. Print next N upcoming games" << endl;
+  cout << "7. Print matchups with spread above threshold" << endl;
+  cout << "8. Print upcoming games" << endl;
   cout << "9. Quit" << endl;
 }
 
