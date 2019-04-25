@@ -936,7 +936,7 @@ void NBA::printTopNMatchups(int n)
     cout << endl;
   }
 }
-/*
+
 void NBA::printSpreadAboveN(int x)
 {
   int counter = 0;
@@ -961,15 +961,8 @@ void NBA::printSpreadAboveN(int x)
       cout << endl;
       }
     }
-<<<<<<< HEAD
-    cout << "Spread: " << heapArr[i].spread << endl;
-    cout << endl;
-  }
-}*/
-=======
 
 }
->>>>>>> ba804f9a59ec217b5cbe93d6000864e65db72815
 
 string NBA::getDay()
 {
