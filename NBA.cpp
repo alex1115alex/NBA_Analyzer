@@ -990,6 +990,7 @@ string NBA::getDay()
       time (&tt);
       ti = localtime(&tt);
       string date = asctime(ti);
+      cout << date.substr(3, 4);
       return date.substr(0, 10);
 }
 
