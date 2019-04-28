@@ -1084,37 +1084,43 @@ void NBA::printUpcomingGames(int n)
 {
   for(int i = 0; i < upcomingGames.size() && i < n; i++)
   {
-    cout << upcomingGames[i].t1 << " vs " << upcomingGames[i].t2 << endl;
-    cout << "Predicted winner: ";
-    if(!upcomingGames[i].TBD)
-    {
-      if(upcomingGames[i].t1Wins)
-      {
-        cout << upcomingGames[i].t1 << endl;
-      }
-      else if(!upcomingGames[i].t1Wins)
-      {
-        cout << upcomingGames[i].t2 << endl;
-      }
-        cout << "Spread: " << upcomingGames[i].spread << endl;
-    }
-    else
-    {
-        cout << "TBD" << endl;
-    }
-    cout << "Game Evaluation: ";
-    if(upcomingGames[i].spread > 0 && upcomingGames[i].spread <= 15){
-      cout << "Close Game | No Bet" << endl;
-    }else if(upcomingGames[i].spread > 15 && upcomingGames[i].spread <= 30){
-      cout << "Good Game | Maybe Bet" << endl;
-    }else if(upcomingGames[i].spread > 30 && upcomingGames[i].spread <= 60){
-      cout << "Great Game | Could Bet" << endl;
-    }else if(upcomingGames[i].spread > 60){
-      cout << "Awesome Game | Should Bet" << endl;
-    }
-    cout << "Date: " << upcomingGames[i].date << endl;
-    cout << endl;
+    printTeamComparison(upcomingGames[i]);
   }
+}
+
+void NBA::printTeamComparison(teamComparison tc)
+{
+  cout << tc.t1 << " vs " << tc.t2 << endl;
+  cout << "Predicted winner: ";
+  if(!tc.TBD)
+  {
+    if(tc.t1Wins)
+    {
+      cout << tc.t1 << endl;
+    }
+    else if(!tc.t1Wins)
+    {
+      cout << tc.t2 << endl;
+    }
+      cout << "Spread: " << tc.spread << endl;
+
+      cout << "Game Evaluation: ";
+      if(tc.spread > 0 && tc.spread <= 15){
+        cout << "Close Game | No Bet" << endl;
+      }else if(tc.spread > 15 && tc.spread <= 30){
+        cout << "Good Game | Maybe Bet" << endl;
+      }else if(tc.spread > 30 && tc.spread <= 60){
+        cout << "Great Game | Could Bet" << endl;
+      }else if(tc.spread > 60){
+        cout << "Awesome Game | Should Bet" << endl;
+      }
+  }
+  else
+  {
+      cout << "TBD" << endl;
+  }
+  cout << "Date: " << tc.date << endl;
+  cout << endl;
 }
 
 /*void NBA::printNextNGames(int n)
