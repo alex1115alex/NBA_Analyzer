@@ -65,6 +65,7 @@ class NBA
     //returns the date as "Weekday Month Day"
     string getDay();
 
+    string getMonth();
     /*
     * Name setter
     * For each name within file
@@ -133,6 +134,8 @@ class NBA
     void printUpcomingGames(int n);
 
     void printTeamComparison(teamComparison tc);
+
+    void printUpcomingGamesWithSpreadAboveN(int spreadThreshold);
 
     //cool wacky MaxHeap public shiznit
     void heapify(int index);

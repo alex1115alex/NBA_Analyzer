@@ -4,15 +4,16 @@
 void displayMenu()
 {
   cout << "\n===Main Menu===" << endl;
-  cout << "1. Intialize database from the web" << endl;
+  cout << "1. Rebuild database from the web" << endl;
   cout << "2. List all teams" << endl;
   cout << "3. Team lookup" << endl;
   cout << "4. Compare two teams" << endl;
-  cout << "5. Determine current best team" << endl;
-  cout << "6. Print top N matchups" << endl;
+  cout << "5. Print current best team" << endl;
+  cout << "6. Determine top N matchups" << endl;
   cout << "7. Print matchups with spread above threshold" << endl;
   cout << "8. Print upcoming games" << endl;
-  cout << "9. Quit" << endl;
+  cout << "9. Print upcoming games with spread above theshold" << endl;
+  cout << "10. Quit" << endl;
 }
 
 int main()
@@ -22,12 +23,14 @@ int main()
   cout << "=== NBA Analyzer ===" << endl;
   cout << "By Alex Israelov, Ryan Horn, and Daniel Vignanker" << endl;
   cout << "All data is pulled from TeamRankings.com\n" << endl;
+  cout << "Downloading data....." << endl;
+  myNBA.initializeRoster();
 
   string choice = "11";
   string line1 = "";
   string line2 = "";
   int compare = 0;
-  while(stoi(choice) != 9)
+  while(stoi(choice) != 10)
   {
     displayMenu();
     getline(cin, choice);
@@ -38,7 +41,7 @@ int main()
       cout << "Downloading team stats. Please wait." << endl;
       myNBA.initializeRoster();
       cout << "Database successfully initialized!" << endl;
-      myNBA.getPPPP();
+      //myNBA.getPPPP();
       break;
       case 2:
       //list all team names
@@ -103,6 +106,11 @@ int main()
       myNBA.printUpcomingGames(stoi(line1));
       break;
       case 9:
+      cout << "Enter spread threshold: " << endl;
+      getline(cin, line2);
+      myNBA.printUpcomingGamesWithSpreadAboveN(stoi(line2));
+      break;
+      case 10:
       cout << "Goodbye" << endl;
       break;
       default:

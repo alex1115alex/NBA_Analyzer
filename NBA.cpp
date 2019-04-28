@@ -351,7 +351,21 @@ void NBA::setTeamNames()
 
 void NBA::initializeRoster()
 {
+  //wipe out the hashTable
+  for(int i = 0; i < hashTableSize; i++)
+  {
+    team* p = teamHashTable[i];
+    team* p2 = teamHashTable[i];
+    while(p != nullptr)
+    {
+      p2 = p;
+      p = p->next;
+      delete p2;
+    }
+  }
+
   setTeamNames(); //initialize all teams
+
   setStat("https://www.teamrankings.com/nba/stat/points-per-game", 0);
   setStat("https://www.teamrankings.com/nba/stat/shooting-pct", 1);
   setStat("https://www.teamrankings.com/nba/stat/offensive-rebounding-pct", 2);
@@ -363,9 +377,14 @@ void NBA::initializeRoster()
   setStat("https://www.teamrankings.com/nba/stat/opponent-offensive-rebounding-pct", 8);
   setStat("https://www.teamrankings.com/nba/stat/opponent-turnovers-per-possession", 9);
   setStat("https://www.teamrankings.com/nba/stat/opponent-points-per-game", 10);
+
   initializeScores();
+
   initializeUpcomingGames("https://www.teamrankings.com/nba/schedules/season/");
+
   remove("fileOPT"); //delete the download
+  
+  getPPPP();
 }
 
 //////////////////////////////////////////////////
@@ -983,6 +1002,17 @@ void NBA::printSpreadAboveN(int n)
   }
 }
 
+string NBA::getMonth()
+{
+      time_t tt;
+      struct tm * ti;
+      time (&tt);
+      ti = localtime(&tt);
+      string date = asctime(ti);
+      //cout << date.substr(8, 2) << endl;
+      return date.substr(4, 3);
+}
+
 string NBA::getDay()
 {
       time_t tt;
@@ -990,8 +1020,8 @@ string NBA::getDay()
       time (&tt);
       ti = localtime(&tt);
       string date = asctime(ti);
-      cout << date.substr(3, 4);
-      return date.substr(0, 10);
+      return date.substr(8, 2);
+      //return date.substr(4, 3);
 }
 
 bool NBA::upcomingGameAlreadyExists(string team1, string team2)
@@ -1015,63 +1045,67 @@ void NBA::initializeUpcomingGames(string url)
   myfilestream.open(downloadURL(url, "fileOPT"));
   if (myfilestream.is_open()) //check if the stream is open
   {
-      string line = "";
-      while (getline(myfilestream, line)) //while there are more lines to be added
+    string line = "";
+    while (getline(myfilestream, line)) //while there are more lines to be added
+    {
+      string date;
+      string team1;
+      string team2;
+
+      if(!passedDate && line.find(getMonth()) != -1 && stoi(line.substr(line.find("40%") + 14, 2)) >= stoi(getDay())) //if the line contains today's date
       {
-        string date;
-        string team1;
-        string team2;
-
-        if(!passedDate && line.find(getDay()) != -1) //if the line contains today's date
-        {
-          passedDate = true; //set passedDate to true
-        }
-
-        if(passedDate && line.find("text-left nowrap sort-asc-first\"") != -1 &&
-        line.find("Location") == -1) //we're at or passed today's date, so pull in games!
-        { //We have found a line that contains the date
-          date = line.substr(line.find("40%") + 6, 10);
-
-          for(int i = 0; i < 7; i++)
-          {
-            getline(myfilestream, line);
-          }
-          //now we're on the line containing name
-          //int aIndex = line.find("a href");
-          int name1index = line.find(">", line.find("a href")) + 1;
-          int name1end = line.find("@") - name1index - 2;
-          team1 = line.substr(name1index, name1end);
-
-          int team2end = line.find("<", line.find("@")) - line.find("@") - 3;
-          team2 = line.substr(line.find("@") + 3, team2end);
-
-          teamComparison newGame;
-          newGame.t1 = team1;
-          newGame.t2 = team2;
-          if(!upcomingGameAlreadyExists(team1, team2))
-          {
-            newGame.spread = compareTeams(team1, team2);
-            newGame.TBD = false;
-            if(newGame.spread >= 0)
-            {
-              newGame.t1Wins = true;
-            }
-            else
-            {
-              newGame.t1Wins = false;
-              newGame.spread = -1 * newGame.spread;
-            }
-          }
-          else
-          {
-              newGame.TBD = true;
-          }
-
-          newGame.date = date;
-
-          upcomingGames.push_back(newGame);
-        }
+        passedDate = true; //set passedDate to true
       }
+
+      if(passedDate && line.find("text-left nowrap sort-asc-first\"") != -1 &&
+      line.find("Location") == -1) //we're at or passed today's date, so pull in games!
+      { //We have found a line that contains the date
+
+        date = line.substr(line.find("40%") + 6, 10);
+
+        for(int i = 0; i < 7; i++)
+        {
+          getline(myfilestream, line);
+        }
+
+        //now we're on the line containing name
+        //int aIndex = line.find("a href");
+        int name1index = line.find(">", line.find("a href")) + 1;
+        int name1end = line.find("@") - name1index - 2;
+        team1 = line.substr(name1index, name1end);
+
+        int team2end = line.find("<", line.find("@")) - line.find("@") - 3;
+        team2 = line.substr(line.find("@") + 3, team2end);
+
+        teamComparison newGame;
+        newGame.t1 = team1;
+        newGame.t2 = team2;
+
+        newGame.spread = compareTeams(team1, team2);
+
+        if(upcomingGameAlreadyExists(team1, team2))
+        {
+          newGame.TBD = true;
+        }
+        else
+        {
+          newGame.TBD = false;
+        }
+
+        if(newGame.spread >= 0)
+        {
+          newGame.t1Wins = true;
+        }
+        else
+        {
+          newGame.t1Wins = false;
+          newGame.spread = -1 * newGame.spread;
+        }
+        newGame.date = date;
+
+        upcomingGames.push_back(newGame);
+      }
+    }
   }
   else //if it couldn't be opened, print this
   {
@@ -1088,38 +1122,60 @@ void NBA::printUpcomingGames(int n)
   }
 }
 
+void NBA::printUpcomingGamesWithSpreadAboveN(int spreadThreshold)
+{
+  for(int i = 0; i < upcomingGames.size(); i++)
+  {
+    if( upcomingGames[i].spread >= spreadThreshold)
+    {
+      printTeamComparison(upcomingGames[i]);
+    }
+  }
+}
+
 void NBA::printTeamComparison(teamComparison tc)
 {
+  cout << "===" << tc.date << "===" << endl;
   cout << tc.t1 << " vs " << tc.t2 << endl;
   cout << "Predicted winner: ";
-  if(!tc.TBD)
-  {
-    if(tc.t1Wins)
-    {
-      cout << tc.t1 << endl;
-    }
-    else if(!tc.t1Wins)
-    {
-      cout << tc.t2 << endl;
-    }
-      cout << "Spread: " << tc.spread << endl;
 
-      cout << "Game Evaluation: ";
-      if(tc.spread > 0 && tc.spread <= 15){
-        cout << "Close Game | No Bet" << endl;
-      }else if(tc.spread > 15 && tc.spread <= 30){
-        cout << "Good Game | Maybe Bet" << endl;
-      }else if(tc.spread > 30 && tc.spread <= 60){
-        cout << "Great Game | Could Bet" << endl;
-      }else if(tc.spread > 60){
-        cout << "Awesome Game | Should Bet" << endl;
-      }
+  if(tc.t1Wins)
+  {
+    cout << tc.t1 << endl;
   }
   else
   {
-      cout << "TBD" << endl;
+    cout << tc.t2 << endl;
   }
-  cout << "Date: " << tc.date << endl;
+
+  if(tc.TBD)
+  {
+    cout << "Spread: TBD -> predicted: " << tc.spread << endl;
+  }
+  else
+  {
+    cout << "Spread: " << tc.spread << endl;
+  }
+
+  cout << "Game Evaluation: ";
+
+  if (tc.spread > 0 && tc.spread <= 15)
+  {
+    cout << "Bad Bet" << endl;
+  }
+  else if (tc.spread > 10 && tc.spread <= 30)
+  {
+    cout << "Iffy Bet" << endl;
+  }
+  else if (tc.spread > 30 && tc.spread <= 55)
+  {
+    cout << "Good Bet" << endl;
+  }
+  else if(tc.spread > 55)
+  {
+    cout << "GREAT Bet" << endl;
+  }
+
   cout << endl;
 }
 
