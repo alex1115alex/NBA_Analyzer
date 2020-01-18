@@ -1,8 +1,10 @@
-On MacOS compile with:
+Note:
+This program pulls data from TeamRankings.com. The parser will break if they change their website layout, so there's no guarantee this program will work after it was last used (April 2019).
+
+On Linux or MacOS compile with:
 ./COMPILE
 
-Idk about windows.
-
+It's untested on Windows.
 
 //////////////////////////
 //   Things to add      //
